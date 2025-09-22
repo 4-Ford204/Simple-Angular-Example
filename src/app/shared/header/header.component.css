@@ -6,3 +6,14 @@
     background-color: var(--header-background-color);
     color: var(--header-color);
 }
+
+.nav-links a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--header-color);
+
+    &.active {
+        border-bottom: 2px solid white;
+        font-weight: bold;
+    }
+}
