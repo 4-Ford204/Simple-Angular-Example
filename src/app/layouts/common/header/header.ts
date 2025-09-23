@@ -5,7 +5,6 @@ import { NavLink } from './header.model';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.css',
