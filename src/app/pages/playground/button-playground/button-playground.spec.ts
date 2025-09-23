@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Layout } from '../layouts/layout';
+import { ButtonPlayground } from './button-playground';
 
-describe('Layout', () => {
-  let component: Layout;
-  let fixture: ComponentFixture<Layout>;
+describe('ButtonPlayground', () => {
+  let component: ButtonPlayground;
+  let fixture: ComponentFixture<ButtonPlayground>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Layout],
+      imports: [ButtonPlayground],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Layout);
+    fixture = TestBed.createComponent(ButtonPlayground);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
