@@ -12,6 +12,13 @@
 
     --header-background-color: #1b1d2a;
     --header-color: white;
+
+    --header-logo-color: #4d9dff;
+
+    --header-nav-link-color: #ccc;
+    --header-nav-link-active-color: #fff;
+    --header-nav-link-border-active-color: #4d9dff;
+    --header-nav-link-hover-color: #fff;
 }
 
 html, body {

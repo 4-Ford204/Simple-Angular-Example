@@ -1,0 +1,21 @@
+<header class="header-container">
+  <div class="logo">SAE</div>
+
+  <nav class="nav-links">
+    @for (navLink of navLinks; track navLink.path) {
+      <a
+        [routerLink]="navLink.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ navLink.label }}</a
+      >
+    }
+  </nav>
+
+  <div class="search-box"></div>
+
+  <div class="options">
+    <button class="">button</button>
+    <div class="avatar"></div>
+  </div>
+</header>
