@@ -13,7 +13,12 @@ import { MenuItem } from './sidebar.model';
 })
 export class Sidebar {
   menu: MenuItem[] = [
-    { label: 'Button', icon: 'radio_button_checked', route: '/button-playground' },
+    { label: 'Button', icon: 'radio_button_checked', route: 'button-playground' },
+    {
+      label: 'Drop-down List',
+      icon: 'arrow_drop_down_circle',
+      route: 'dropdown-list-playground',
+    },
     { label: 'Card', icon: 'credit_card', route: '/card-playground' },
   ];
 }

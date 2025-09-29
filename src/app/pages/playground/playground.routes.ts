@@ -12,6 +12,13 @@ export const playgroundRoutes: Routes = [
         loadComponent: () =>
           import('./button-playground/button-playground').then((m) => m.ButtonPlayground),
       },
+      {
+        path: 'dropdown-list-playground',
+        loadComponent: () =>
+          import('./dropdown-list-playground/dropdown-list-playground').then(
+            (m) => m.DropdownListPlayground,
+          ),
+      },
     ],
   },
 ];
