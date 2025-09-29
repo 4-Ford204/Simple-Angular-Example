@@ -1,4 +1,27 @@
-<button mat-raised-button color="primary">Click me</button>
+<button mat-raised-button color="primary" (click)="onClick()">
+  @if (icon) {
+    <mat-icon>{{ icon }}</mat-icon>
+  }
+  <span>{{ label }}</span>
+</button>
 
-<button mat-flat-button color="accent">Flat Button</button>
-<button mat-stroked-button color="warn">Stroked Button</button>
+<button mat-flat-button color="" (click)="onClick()">
+  @if (icon) {
+    <mat-icon>{{ icon }}</mat-icon>
+  }
+  <span>{{ label }}</span>
+</button>
+
+<button mat-stroked-button (click)="onClick()">
+  @if (icon) {
+    <mat-icon>{{ icon }}</mat-icon>
+  }
+  <span>{{ label }}</span>
+</button>
+
+<button mat-icon-button (click)="onClick()">
+  @if (icon) {
+    <mat-icon>{{ icon }}</mat-icon>
+  }
+  <span>{{ label }}</span>
+</button>
