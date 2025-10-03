@@ -1,21 +1,34 @@
-<header class="header-container">
-  <div class="logo">SAE</div>
+<p-menubar [model]="items">
+  <ng-template #start>
+    <span>SAE</span>
+  </ng-template>
 
-  <nav class="nav-links">
-    @for (navLink of navLinks; track navLink.path) {
-      <a
-        [routerLink]="navLink.path"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >{{ navLink.label }}</a
-      >
-    }
-  </nav>
+  <ng-template #item let-item let-root="root">
+    <a pRipple [routerLink]="item.routerLink" class="flex items-center p-menubar-item-link">
+      <span>{{ item.label }}</span>
 
-  <div class="search-box"></div>
+      @if (item.badge) {
+        <p-badge [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge" />
+      }
 
-  <div class="options">
-    <button class="">button</button>
-    <div class="avatar"></div>
-  </div>
-</header>
+      @if (item.shortcut) {
+        <span
+          class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1"
+        >
+          {{ item.shortcut }}
+        </span>
+      }
+
+      @if (item.items) {
+        <i [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
+      }
+    </a>
+  </ng-template>
+
+  <ng-template #end>
+    <div class="flex items-center gap-2">
+      <input type="text" pInputText placeholder="Search" class="w-36" />
+      <p-avatar image="" shape="circle"></p-avatar>
+    </div>
+  </ng-template>
+</p-menubar>

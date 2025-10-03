@@ -1,33 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeicons/primeicons.css';
+
+/* @import "tailwindcss";
+@plugin "tailwindcss-primeui"; */
 
 @font-face {
-    font-family: 'ZhCnFont';
-    src: url('./assets/fonts/zhcn.ttf') format('truetype');
+    font-family: 'SF-Compact';
+    src: url('./assets/fonts/SF-Compact.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
-    --app-font-family: 'ZhCnFont';
-
-    --header-background-color: #1b1d2a;
-    --header-color: white;
-
-    --header-logo-color: #4d9dff;
-
-    --header-nav-link-color: #ccc;
-    --header-nav-link-active-color: #fff;
-    --header-nav-link-border-active-color: #4d9dff;
-    --header-nav-link-hover-color: #fff;
+    --font-family-app: 'SF-Compact';
 }
 
 html, body {
     height: 100%;
     margin: 0;
-    font-family: var(--app-font-family);
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: var(--font-family-app) !important;
 }

@@ -1,33 +1,3 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened class="sidenav">
-    <mat-nav-list>
-      @for (item of menu; track item.label) {
-        @if (!item.children) {
-          <a mat-list-item [routerLink]="item.route" routerLinkActive="active-link">
-            <mat-icon>{{ item.icon }}</mat-icon>
-            <span>{{ item.label }}</span>
-          </a>
-        } @else {
-          <div class="submenu-group">
-            <div class="submenu-parent">
-              <mat-icon>{{ item.icon }}</mat-icon>
-              <span>{{ item.label }}</span>
-            </div>
-            <mat-nav-list dense>
-              @for (child of item.children; track child.label) {
-                <a mat-list-item [routerLink]="child.route" routerLinkActive="active-link">
-                  <mat-icon>{{ child.icon }}</mat-icon>
-                  <span>{{ child.label }}</span>
-                </a>
-              }
-            </mat-nav-list>
-          </div>
-        }
-      }
-    </mat-nav-list>
-  </mat-sidenav>
-
-  <mat-sidenav-content class="sidenav-content">
-    <ng-content></ng-content>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="sidebar">
+  <p-panelMenu [model]="menu"></p-panelMenu>
+</div>

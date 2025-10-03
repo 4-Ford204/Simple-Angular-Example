@@ -1,0 +1,12 @@
+.sandbox-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sandbox-sidebar {
+    width: 250px;
+}
+
+.sandbox-content {
+    flex: 1;
+}

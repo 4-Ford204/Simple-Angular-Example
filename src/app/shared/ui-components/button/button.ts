@@ -1,19 +1,33 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-button',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [ButtonModule],
   templateUrl: './button.html',
   styleUrl: './button.css',
 })
 export class Button {
-  @Input() label?: string;
-  @Input() icon?: string;
-  @Output() buttonClick = new EventEmitter();
+  @Input() label: string = '';
+  @Input() icon: string = '';
+  @Input() severity:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'info'
+    | 'warn'
+    | 'help'
+    | 'danger'
+    | null = null;
+  @Input() outlined: boolean = false;
+  @Input() text: boolean = false;
+  @Input() raised: boolean = false;
+  @Input() rounded: boolean = false;
+  @Input() size: 'small' | 'large' | undefined = undefined;
 
-  onClick() {
-    this.buttonClick.emit();
+  @Output() pressed = new EventEmitter();
+
+  onPress() {
+    this.pressed.emit();
   }
 }
