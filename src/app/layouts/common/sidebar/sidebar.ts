@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { DrawerModule } from 'primeng/drawer';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterModule, DrawerModule, PanelMenuModule],
+  imports: [RouterModule, PanelMenuModule, ScrollPanelModule],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })

@@ -1,0 +1,12 @@
+.main-layout-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--app-header-height);
+    z-index: 1000;
+}
+
+.main-layout-body {
+    margin-top: var(--app-header-height);
+}
