@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 export class Button {
   @Input() label: string = '';
   @Input() icon: string = '';
+  @Input() iconPos: 'left' | 'right' | 'top' | 'bottom' = 'left';
   @Input() severity:
     | 'primary'
     | 'secondary'
@@ -18,11 +19,12 @@ export class Button {
     | 'warn'
     | 'help'
     | 'danger'
-    | null = null;
-  @Input() outlined: boolean = false;
-  @Input() text: boolean = false;
+    | 'contrast' = 'primary';
+  @Input() disabled: boolean = false;
   @Input() raised: boolean = false;
   @Input() rounded: boolean = false;
+  @Input() variant: 'text' | 'outlined' | undefined = undefined;
+  @Input() badge: string | undefined = undefined;
   @Input() size: 'small' | 'large' | undefined = undefined;
 
   @Output() pressed = new EventEmitter();

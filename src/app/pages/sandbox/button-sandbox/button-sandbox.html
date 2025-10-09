@@ -1,1 +1,26 @@
-<app-button label="Accept" (pressed)="onPressed()"></app-button>
+<div class="flex flex-col gap-5">
+  <div class="grid grid-cols-12 gap-1">
+    <app-button label="Home" icon="pi pi-home" size="large"></app-button>
+    <app-button label="Home" icon="pi pi-home" iconPos="right" severity="info"></app-button>
+    <app-button
+      label="Home"
+      icon="pi pi-home"
+      iconPos="top"
+      severity="danger"
+      size="small"
+    ></app-button>
+  </div>
+
+  <div class="grid grid-cols-12 gap-1">
+    <app-button label="Submit" severity="contrast" [disabled]="true" [rounded]="true"></app-button>
+  </div>
+
+  <div class="grid grid-cols-12 gap-1">
+    <app-button label="Update" icon="pi pi-refresh" [raised]="true" variant="text"></app-button>
+    <app-button label="Update" icon="pi pi-refresh" variant="outlined"></app-button>
+  </div>
+
+  <div class="grid grid-cols-12 gap-1">
+    <app-button label="Emails" badge="4"></app-button>
+  </div>
+</div>
