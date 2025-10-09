@@ -12,6 +12,7 @@
 
 :root {
     --app-header-height: 60px;
+    --app-sidebar-height: calc(100vh - var(--app-header-height));
     --app-font-family: 'SF-Compact';
 }
 

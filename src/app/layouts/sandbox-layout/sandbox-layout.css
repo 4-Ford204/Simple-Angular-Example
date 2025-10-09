@@ -1,0 +1,11 @@
+.sandbox-container {
+    height: var(--app-sidebar-height);
+}
+
+.sandbox-sidebar {
+    height: calc(var(--app-sidebar-height) - 0.5rem);
+}
+
+.sandbox-content {
+    height: calc(var(--app-sidebar-height) - 0.5rem);
+}

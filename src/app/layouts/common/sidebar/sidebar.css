@@ -1,3 +1,4 @@
 .sidebar-container {
-    height: calc(100vh - var(--app-header-height));
+    height: 100%;
+    overflow: hidden;
 }
