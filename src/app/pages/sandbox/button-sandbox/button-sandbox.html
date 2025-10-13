@@ -1,26 +1,249 @@
-<div class="flex flex-col gap-5">
-  <div class="grid grid-cols-12 gap-1">
-    <app-button label="Home" icon="pi pi-home" size="large"></app-button>
-    <app-button label="Home" icon="pi pi-home" iconPos="right" severity="info"></app-button>
-    <app-button
-      label="Home"
-      icon="pi pi-home"
-      iconPos="top"
-      severity="danger"
-      size="small"
-    ></app-button>
+<div class="flex flex-col gap-15">
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Basic</span>
+
+    <div class="col-span-4 flex justify-center">
+      <app-button label="Submit" />
+    </div>
   </div>
 
-  <div class="grid grid-cols-12 gap-1">
-    <app-button label="Submit" severity="contrast" [disabled]="true" [rounded]="true"></app-button>
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Icons</span>
+
+    <div class="col-span-4 flex flex-col gap-4">
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-home" aria-label="Save" />
+        <app-button icon="pi pi-user" label="Profile" />
+        <app-button icon="pi pi-check" iconPos="right" label="Save" />
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-search" iconPos="top" label="Search" />
+        <app-button icon="pi pi-refresh" iconPos="bottom" label="Update" />
+      </div>
+    </div>
   </div>
 
-  <div class="grid grid-cols-12 gap-1">
-    <app-button label="Update" icon="pi pi-refresh" [raised]="true" variant="text"></app-button>
-    <app-button label="Update" icon="pi pi-refresh" variant="outlined"></app-button>
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Loading</span>
+
+    <div class="col-span-4 flex justify-center">
+      <app-button icon="pi pi-check" label="Search" [loading]="loading" (pressed)="onLoading()" />
+    </div>
   </div>
 
-  <div class="grid grid-cols-12 gap-1">
-    <app-button label="Emails" badge="4"></app-button>
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Severity</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" />
+      <app-button label="Secondary" severity="secondary" />
+      <app-button label="Success" severity="success" />
+      <app-button label="Info" severity="info" />
+      <app-button label="Warn" severity="warn" />
+      <app-button label="Help" severity="help" />
+      <app-button label="Danger" severity="danger" />
+      <app-button label="Contrast" severity="contrast" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Disabled</span>
+
+    <div class="col-span-4 flex justify-center">
+      <app-button label="Submit" [disabled]="true"></app-button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Raised</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" [raised]="true" />
+      <app-button label="Secondary" [raised]="true" severity="secondary" />
+      <app-button label="Success" [raised]="true" severity="success" />
+      <app-button label="Info" [raised]="true" severity="info" />
+      <app-button label="Warn" [raised]="true" severity="warn" />
+      <app-button label="Help" [raised]="true" severity="help" />
+      <app-button label="Danger" [raised]="true" severity="danger" />
+      <app-button label="Contrast" [raised]="true" severity="contrast" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Rounded</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" [rounded]="true" />
+      <app-button label="Secondary" [rounded]="true" severity="secondary" />
+      <app-button label="Success" [rounded]="true" severity="success" />
+      <app-button label="Info" [rounded]="true" severity="info" />
+      <app-button label="Warn" [rounded]="true" severity="warn" />
+      <app-button label="Help" [rounded]="true" severity="help" />
+      <app-button label="Danger" [rounded]="true" severity="danger" />
+      <app-button label="Contrast" [rounded]="true" severity="contrast" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Text</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" variant="text" />
+      <app-button label="Secondary" severity="secondary" variant="text" />
+      <app-button label="Success" severity="success" variant="text" />
+      <app-button label="Info" severity="info" variant="text" />
+      <app-button label="Warn" severity="warn" variant="text" />
+      <app-button label="Help" severity="help" variant="text" />
+      <app-button label="Danger" severity="danger" variant="text" />
+      <app-button label="Plain" severity="contrast" variant="text" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Raised Text</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" [raised]="true" variant="text" />
+      <app-button label="Secondary" [raised]="true" severity="secondary" variant="text" />
+      <app-button label="Success" [raised]="true" severity="success" variant="text" />
+      <app-button label="Info" [raised]="true" severity="info" variant="text" />
+      <app-button label="Warn" [raised]="true" severity="warn" variant="text" />
+      <app-button label="Help" [raised]="true" severity="help" variant="text" />
+      <app-button label="Danger" [raised]="true" severity="danger" variant="text" />
+      <app-button label="Plain" [raised]="true" severity="contrast" variant="text" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Outlined</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button label="Primary" variant="outlined" />
+      <app-button label="Secondary" severity="secondary" variant="outlined" />
+      <app-button label="Success" severity="success" variant="outlined" />
+      <app-button label="Info" severity="info" variant="outlined" />
+      <app-button label="Warn" severity="warn" variant="outlined" />
+      <app-button label="Help" severity="help" variant="outlined" />
+      <app-button label="Danger" severity="danger" variant="outlined" />
+      <app-button label="Contrast" severity="contrast" variant="outlined" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Icon Only</span>
+
+    <div class="col-span-4 flex flex-col gap-4">
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-check" />
+        <app-button icon="pi pi-bookmark" severity="secondary" />
+        <app-button icon="pi pi-search" severity="success" />
+        <app-button icon="pi pi-user" severity="info" />
+        <app-button icon="pi pi-bell" severity="warn" />
+        <app-button icon="pi pi-heart" severity="help" />
+        <app-button icon="pi pi-times" severity="danger" />
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-check" [rounded]="true" />
+        <app-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+        <app-button icon="pi pi-search" [rounded]="true" severity="success" />
+        <app-button icon="pi pi-user" [rounded]="true" severity="info" />
+        <app-button icon="pi pi-bell" [rounded]="true" severity="warn" />
+        <app-button icon="pi pi-heart" [rounded]="true" severity="help" />
+        <app-button icon="pi pi-times" [rounded]="true" severity="danger" />
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-check" [rounded]="true" [outlined]="true" />
+        <app-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" [outlined]="true" />
+        <app-button icon="pi pi-search" [rounded]="true" severity="success" [outlined]="true" />
+        <app-button icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true" />
+        <app-button icon="pi pi-bell" [rounded]="true" severity="warn" [outlined]="true" />
+        <app-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
+        <app-button icon="pi pi-times" [rounded]="true" severity="danger" [outlined]="true" />
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-check" [raised]="true" [rounded]="true" [text]="true" />
+        <app-button
+          icon="pi pi-bookmark"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="secondary"
+        />
+        <app-button
+          icon="pi pi-search"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="success"
+        />
+        <app-button
+          icon="pi pi-user"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="info"
+        />
+        <app-button
+          icon="pi pi-bell"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="warn"
+        />
+        <app-button
+          icon="pi pi-heart"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="help"
+        />
+        <app-button
+          icon="pi pi-times"
+          [raised]="true"
+          [rounded]="true"
+          [text]="true"
+          severity="danger"
+        />
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <app-button icon="pi pi-check" [rounded]="true" [text]="true" />
+        <app-button icon="pi pi-bookmark" [rounded]="true" [text]="true" severity="secondary" />
+        <app-button icon="pi pi-search" [rounded]="true" [text]="true" severity="success" />
+        <app-button icon="pi pi-user" [rounded]="true" [text]="true" severity="info" />
+        <app-button icon="pi pi-bell" [rounded]="true" [text]="true" severity="warn" />
+        <app-button icon="pi pi-heart" [rounded]="true" [text]="true" severity="help" />
+        <app-button icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Badge</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+      <app-button badge="2" label="Emails" styleClass="m-0" />
+      <app-button
+        icon="pi pi-users"
+        badge="2"
+        label="Messages"
+        [outlined]="true"
+        styleClass="m-0"
+      />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+    <span>Sizes</span>
+
+    <div class="col-span-4 flex flex-wrap gap-4 justify-center items-center">
+      <app-button icon="pi pi-check" label="Small" size="small" />
+      <app-button icon="pi pi-check" label="Normal" />
+      <app-button icon="pi pi-check" label="Large" size="large" />
+    </div>
   </div>
 </div>

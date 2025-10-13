@@ -8,6 +8,16 @@ import { Button } from '../../../shared/ui-components/button/button';
   styleUrl: './button-sandbox.css',
 })
 export class ButtonSandbox {
+  loading: boolean = false;
+
+  onLoading() {
+    this.loading = true;
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 5000);
+  }
+
   onPressed() {
     console.log('Button pressed');
   }
