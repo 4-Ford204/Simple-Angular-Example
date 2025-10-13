@@ -1,16 +1,16 @@
 <div class="flex flex-col gap-15">
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Basic</span>
 
-    <div class="col-span-4 flex justify-center">
+    <div class="col-span-7 flex justify-center">
       <app-button label="Submit" />
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Icons</span>
 
-    <div class="col-span-4 flex flex-col gap-4">
+    <div class="col-span-7 flex flex-col gap-4">
       <div class="flex flex-wrap gap-4 justify-center">
         <app-button icon="pi pi-home" aria-label="Save" />
         <app-button icon="pi pi-user" label="Profile" />
@@ -24,18 +24,18 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Loading</span>
 
-    <div class="col-span-4 flex justify-center">
+    <div class="col-span-7 flex justify-center">
       <app-button icon="pi pi-check" label="Search" [loading]="loading" (pressed)="onLoading()" />
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Severity</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" />
       <app-button label="Secondary" severity="secondary" />
       <app-button label="Success" severity="success" />
@@ -47,18 +47,18 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Disabled</span>
 
-    <div class="col-span-4 flex justify-center">
+    <div class="col-span-7 flex justify-center">
       <app-button label="Submit" [disabled]="true"></app-button>
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Raised</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" [raised]="true" />
       <app-button label="Secondary" [raised]="true" severity="secondary" />
       <app-button label="Success" [raised]="true" severity="success" />
@@ -70,10 +70,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Rounded</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" [rounded]="true" />
       <app-button label="Secondary" [rounded]="true" severity="secondary" />
       <app-button label="Success" [rounded]="true" severity="success" />
@@ -85,10 +85,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Text</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" variant="text" />
       <app-button label="Secondary" severity="secondary" variant="text" />
       <app-button label="Success" severity="success" variant="text" />
@@ -100,10 +100,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Raised Text</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" [raised]="true" variant="text" />
       <app-button label="Secondary" [raised]="true" severity="secondary" variant="text" />
       <app-button label="Success" [raised]="true" severity="success" variant="text" />
@@ -115,10 +115,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Outlined</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button label="Primary" variant="outlined" />
       <app-button label="Secondary" severity="secondary" variant="outlined" />
       <app-button label="Success" severity="success" variant="outlined" />
@@ -130,10 +130,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Icon Only</span>
 
-    <div class="col-span-4 flex flex-col gap-4">
+    <div class="col-span-7 flex flex-col gap-4">
       <div class="flex flex-wrap gap-4 justify-center">
         <app-button icon="pi pi-check" />
         <app-button icon="pi pi-bookmark" severity="secondary" />
@@ -222,10 +222,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Badge</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
       <app-button badge="2" label="Emails" styleClass="m-0" />
       <app-button
         icon="pi pi-users"
@@ -237,10 +237,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
     <span>Sizes</span>
 
-    <div class="col-span-4 flex flex-wrap gap-4 justify-center items-center">
+    <div class="col-span-7 flex flex-wrap gap-4 justify-center items-center">
       <app-button icon="pi pi-check" label="Small" size="small" />
       <app-button icon="pi pi-check" label="Normal" />
       <app-button icon="pi pi-check" label="Large" size="large" />
