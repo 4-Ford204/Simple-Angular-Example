@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { BadgeModule } from 'primeng/badge';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { ScrollPanelModule } from 'primeng/scrollpanel';
-import { PanelMenu } from '../../../shared/ui-components/panel-menu/panel-menu';
+import { Ripple } from 'primeng/ripple';
 
 @Component({
-  selector: 'app-sidebar',
-  imports: [RouterModule, PanelMenuModule, ScrollPanelModule, PanelMenu],
-  templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css',
+  selector: 'app-panel-menu',
+  imports: [BadgeModule, PanelMenuModule, Ripple],
+  templateUrl: './panel-menu.html',
+  styleUrl: './panel-menu.css',
 })
-export class Sidebar {
-  visible: boolean = true;
-  menu: MenuItem[] = [
+export class PanelMenu {
+  items: MenuItem[] = [
     { label: 'Button', icon: 'pi pi-circle', routerLink: ['button-sandbox'] },
     { label: 'Checkbox', icon: 'pi pi-check-square', routerLink: ['checkbox-sandbox'] },
     {
