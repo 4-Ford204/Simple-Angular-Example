@@ -1,9 +1,9 @@
+import { ButtonComponent } from '../../../shared/ui-components/button-component/button-component';
 import { Component } from '@angular/core';
-import { Button } from '../../../shared/ui-components/button/button';
 
 @Component({
   selector: 'app-button-sandbox',
-  imports: [Button],
+  imports: [ButtonComponent],
   templateUrl: './button-sandbox.html',
   styleUrl: './button-sandbox.css',
 })

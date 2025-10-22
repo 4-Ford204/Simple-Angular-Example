@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-button-component',
   imports: [ButtonModule],
-  templateUrl: './button.html',
-  styleUrl: './button.css',
+  templateUrl: './button-component.html',
+  styleUrl: './button-component.css',
 })
-export class Button {
+export class ButtonComponent {
   // Position of the icon.
   @Input() iconPos: 'left' | 'right' | 'top' | 'bottom' = 'left';
   // Name of the icon.

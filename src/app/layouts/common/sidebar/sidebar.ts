@@ -1,21 +1,31 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { PanelMenuModule } from 'primeng/panelmenu';
+import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
+import { Router } from '@angular/router';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
-import { PanelMenu } from '../../../shared/ui-components/panel-menu/panel-menu';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterModule, PanelMenuModule, ScrollPanelModule, PanelMenu],
+  imports: [PanelMenuComponent, ScrollPanelModule],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
-  visible: boolean = true;
-  menu: MenuItem[] = [
-    { label: 'Button', icon: 'pi pi-circle', routerLink: ['button-sandbox'] },
-    { label: 'Checkbox', icon: 'pi pi-check-square', routerLink: ['checkbox-sandbox'] },
+  items: MenuItem[] = [
+    {
+      label: 'Button',
+      icon: 'pi pi-circle',
+      command: () => {
+        this.router.navigate(['/sandbox/button-sandbox']);
+      },
+    },
+    {
+      label: 'Checkbox',
+      icon: 'pi pi-check-square',
+      command: () => {
+        this.router.navigate(['/sandbox/checkbox-sandbox']);
+      },
+    },
     {
       label: 'Card',
       icon: 'pi pi-id-card',
@@ -30,4 +40,6 @@ export class Sidebar {
       ],
     },
   ];
+
+  constructor(private readonly router: Router) {}
 }
