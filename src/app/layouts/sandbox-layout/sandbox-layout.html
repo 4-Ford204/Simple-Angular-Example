@@ -1,7 +1,7 @@
-<div class="sandbox-container grid grid-cols-8 gap-1 py-1">
-  <app-sidebar class="sandbox-sidebar mx-1"></app-sidebar>
+<div class="sandbox-container flex gap-1 py-1">
+  <app-sidebar class="sandbox-sidebar w-[75px] sm:w-[250px] mx-1 duration-500"></app-sidebar>
 
-  <div class="sandbox-content col-start-2 col-end-7">
+  <div class="sandbox-content flex-1">
     <p-panel class="h-full overflow-y-auto">
       <router-outlet></router-outlet>
     </p-panel>
