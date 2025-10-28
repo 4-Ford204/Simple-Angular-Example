@@ -1,294 +1,291 @@
 <div class="flex flex-col gap-15">
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Basic</span>
+  <ng-template #basic>
+    <app-button-component label="Submit" />
+  </ng-template>
 
-    <div class="col-span-7 flex justify-center">
-      <app-button-component label="Submit" />
+  <ng-template #icons>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-home" aria-label="Save" />
+      <app-button-component icon="pi pi-user" label="Profile" />
+      <app-button-component icon="pi pi-check" iconPos="right" label="Save" />
     </div>
-  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Icons</span>
-
-    <div class="col-span-7 flex flex-col gap-4">
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-home" aria-label="Save" />
-        <app-button-component icon="pi pi-user" label="Profile" />
-        <app-button-component icon="pi pi-check" iconPos="right" label="Save" />
-      </div>
-
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-search" iconPos="top" label="Search" />
-        <app-button-component icon="pi pi-refresh" iconPos="bottom" label="Update" />
-      </div>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-search" iconPos="top" label="Search" />
+      <app-button-component icon="pi pi-refresh" iconPos="bottom" label="Update" />
     </div>
-  </div>
+  </ng-template>
 
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Loading</span>
+  <ng-template #loadingButton>
+    <app-button-component
+      icon="pi pi-check"
+      label="Search"
+      [loading]="loading"
+      (pressed)="onLoading()"
+    />
+  </ng-template>
 
-    <div class="col-span-7 flex justify-center">
+  <ng-template #severity>
+    <app-button-component label="Primary" />
+    <app-button-component label="Secondary" severity="secondary" />
+    <app-button-component label="Success" severity="success" />
+    <app-button-component label="Info" severity="info" />
+    <app-button-component label="Warn" severity="warn" />
+    <app-button-component label="Help" severity="help" />
+    <app-button-component label="Danger" severity="danger" />
+    <app-button-component label="Contrast" severity="contrast" />
+  </ng-template>
+
+  <ng-template #disabled>
+    <app-button-component label="Submit" [disabled]="true" />
+  </ng-template>
+
+  <ng-template #raised>
+    <app-button-component label="Primary" [raised]="true" />
+    <app-button-component label="Secondary" [raised]="true" severity="secondary" />
+    <app-button-component label="Success" [raised]="true" severity="success" />
+    <app-button-component label="Info" [raised]="true" severity="info" />
+    <app-button-component label="Warn" [raised]="true" severity="warn" />
+    <app-button-component label="Help" [raised]="true" severity="help" />
+    <app-button-component label="Danger" [raised]="true" severity="danger" />
+    <app-button-component label="Contrast" [raised]="true" severity="contrast" />
+  </ng-template>
+
+  <ng-template #rounded>
+    <app-button-component label="Primary" [rounded]="true" />
+    <app-button-component label="Secondary" [rounded]="true" severity="secondary" />
+    <app-button-component label="Success" [rounded]="true" severity="success" />
+    <app-button-component label="Info" [rounded]="true" severity="info" />
+    <app-button-component label="Warn" [rounded]="true" severity="warn" />
+    <app-button-component label="Help" [rounded]="true" severity="help" />
+    <app-button-component label="Danger" [rounded]="true" severity="danger" />
+    <app-button-component label="Contrast" [rounded]="true" severity="contrast" />
+  </ng-template>
+
+  <ng-template #text>
+    <app-button-component label="Primary" variant="text" />
+    <app-button-component label="Secondary" severity="secondary" variant="text" />
+    <app-button-component label="Success" severity="success" variant="text" />
+    <app-button-component label="Info" severity="info" variant="text" />
+    <app-button-component label="Warn" severity="warn" variant="text" />
+    <app-button-component label="Help" severity="help" variant="text" />
+    <app-button-component label="Danger" severity="danger" variant="text" />
+    <app-button-component label="Plain" severity="contrast" variant="text" />
+  </ng-template>
+
+  <ng-template #raisedText>
+    <app-button-component label="Primary" [raised]="true" variant="text" />
+    <app-button-component label="Secondary" [raised]="true" severity="secondary" variant="text" />
+    <app-button-component label="Success" [raised]="true" severity="success" variant="text" />
+    <app-button-component label="Info" [raised]="true" severity="info" variant="text" />
+    <app-button-component label="Warn" [raised]="true" severity="warn" variant="text" />
+    <app-button-component label="Help" [raised]="true" severity="help" variant="text" />
+    <app-button-component label="Danger" [raised]="true" severity="danger" variant="text" />
+    <app-button-component label="Plain" [raised]="true" severity="contrast" variant="text" />
+  </ng-template>
+
+  <ng-template #outlined
+    ><app-button-component label="Primary" variant="outlined" />
+    <app-button-component label="Secondary" severity="secondary" variant="outlined" />
+    <app-button-component label="Success" severity="success" variant="outlined" />
+    <app-button-component label="Info" severity="info" variant="outlined" />
+    <app-button-component label="Warn" severity="warn" variant="outlined" />
+    <app-button-component label="Help" severity="help" variant="outlined" />
+    <app-button-component label="Danger" severity="danger" variant="outlined" />
+    <app-button-component label="Contrast" severity="contrast" variant="outlined" />
+  </ng-template>
+
+  <ng-template #iconOnly>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-check" />
+      <app-button-component icon="pi pi-bookmark" severity="secondary" />
+      <app-button-component icon="pi pi-search" severity="success" />
+      <app-button-component icon="pi pi-user" severity="info" />
+      <app-button-component icon="pi pi-bell" severity="warn" />
+      <app-button-component icon="pi pi-heart" severity="help" />
+      <app-button-component icon="pi pi-times" severity="danger" />
+    </div>
+
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-check" [rounded]="true" />
+      <app-button-component icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+      <app-button-component icon="pi pi-search" [rounded]="true" severity="success" />
+      <app-button-component icon="pi pi-user" [rounded]="true" severity="info" />
+      <app-button-component icon="pi pi-bell" [rounded]="true" severity="warn" />
+      <app-button-component icon="pi pi-heart" [rounded]="true" severity="help" />
+      <app-button-component icon="pi pi-times" [rounded]="true" severity="danger" />
+    </div>
+
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-check" [rounded]="true" [outlined]="true" />
       <app-button-component
-        icon="pi pi-check"
-        label="Search"
-        [loading]="loading"
-        (pressed)="onLoading()"
-      />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Severity</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" />
-      <app-button-component label="Secondary" severity="secondary" />
-      <app-button-component label="Success" severity="success" />
-      <app-button-component label="Info" severity="info" />
-      <app-button-component label="Warn" severity="warn" />
-      <app-button-component label="Help" severity="help" />
-      <app-button-component label="Danger" severity="danger" />
-      <app-button-component label="Contrast" severity="contrast" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Disabled</span>
-
-    <div class="col-span-7 flex justify-center">
-      <app-button-component label="Submit" [disabled]="true"></app-button-component>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Raised</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" [raised]="true" />
-      <app-button-component label="Secondary" [raised]="true" severity="secondary" />
-      <app-button-component label="Success" [raised]="true" severity="success" />
-      <app-button-component label="Info" [raised]="true" severity="info" />
-      <app-button-component label="Warn" [raised]="true" severity="warn" />
-      <app-button-component label="Help" [raised]="true" severity="help" />
-      <app-button-component label="Danger" [raised]="true" severity="danger" />
-      <app-button-component label="Contrast" [raised]="true" severity="contrast" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Rounded</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" [rounded]="true" />
-      <app-button-component label="Secondary" [rounded]="true" severity="secondary" />
-      <app-button-component label="Success" [rounded]="true" severity="success" />
-      <app-button-component label="Info" [rounded]="true" severity="info" />
-      <app-button-component label="Warn" [rounded]="true" severity="warn" />
-      <app-button-component label="Help" [rounded]="true" severity="help" />
-      <app-button-component label="Danger" [rounded]="true" severity="danger" />
-      <app-button-component label="Contrast" [rounded]="true" severity="contrast" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Text</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" variant="text" />
-      <app-button-component label="Secondary" severity="secondary" variant="text" />
-      <app-button-component label="Success" severity="success" variant="text" />
-      <app-button-component label="Info" severity="info" variant="text" />
-      <app-button-component label="Warn" severity="warn" variant="text" />
-      <app-button-component label="Help" severity="help" variant="text" />
-      <app-button-component label="Danger" severity="danger" variant="text" />
-      <app-button-component label="Plain" severity="contrast" variant="text" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Raised Text</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" [raised]="true" variant="text" />
-      <app-button-component label="Secondary" [raised]="true" severity="secondary" variant="text" />
-      <app-button-component label="Success" [raised]="true" severity="success" variant="text" />
-      <app-button-component label="Info" [raised]="true" severity="info" variant="text" />
-      <app-button-component label="Warn" [raised]="true" severity="warn" variant="text" />
-      <app-button-component label="Help" [raised]="true" severity="help" variant="text" />
-      <app-button-component label="Danger" [raised]="true" severity="danger" variant="text" />
-      <app-button-component label="Plain" [raised]="true" severity="contrast" variant="text" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Outlined</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component label="Primary" variant="outlined" />
-      <app-button-component label="Secondary" severity="secondary" variant="outlined" />
-      <app-button-component label="Success" severity="success" variant="outlined" />
-      <app-button-component label="Info" severity="info" variant="outlined" />
-      <app-button-component label="Warn" severity="warn" variant="outlined" />
-      <app-button-component label="Help" severity="help" variant="outlined" />
-      <app-button-component label="Danger" severity="danger" variant="outlined" />
-      <app-button-component label="Contrast" severity="contrast" variant="outlined" />
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Icon Only</span>
-
-    <div class="col-span-7 flex flex-col gap-4">
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-check" />
-        <app-button-component icon="pi pi-bookmark" severity="secondary" />
-        <app-button-component icon="pi pi-search" severity="success" />
-        <app-button-component icon="pi pi-user" severity="info" />
-        <app-button-component icon="pi pi-bell" severity="warn" />
-        <app-button-component icon="pi pi-heart" severity="help" />
-        <app-button-component icon="pi pi-times" severity="danger" />
-      </div>
-
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-check" [rounded]="true" />
-        <app-button-component icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
-        <app-button-component icon="pi pi-search" [rounded]="true" severity="success" />
-        <app-button-component icon="pi pi-user" [rounded]="true" severity="info" />
-        <app-button-component icon="pi pi-bell" [rounded]="true" severity="warn" />
-        <app-button-component icon="pi pi-heart" [rounded]="true" severity="help" />
-        <app-button-component icon="pi pi-times" [rounded]="true" severity="danger" />
-      </div>
-
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-check" [rounded]="true" [outlined]="true" />
-        <app-button-component
-          icon="pi pi-bookmark"
-          [rounded]="true"
-          severity="secondary"
-          [outlined]="true"
-        />
-        <app-button-component
-          icon="pi pi-search"
-          [rounded]="true"
-          severity="success"
-          [outlined]="true"
-        />
-        <app-button-component
-          icon="pi pi-user"
-          [rounded]="true"
-          severity="info"
-          [outlined]="true"
-        />
-        <app-button-component
-          icon="pi pi-bell"
-          [rounded]="true"
-          severity="warn"
-          [outlined]="true"
-        />
-        <app-button-component
-          icon="pi pi-heart"
-          [rounded]="true"
-          severity="help"
-          [outlined]="true"
-        />
-        <app-button-component
-          icon="pi pi-times"
-          [rounded]="true"
-          severity="danger"
-          [outlined]="true"
-        />
-      </div>
-
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-check" [raised]="true" [rounded]="true" [text]="true" />
-        <app-button-component
-          icon="pi pi-bookmark"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="secondary"
-        />
-        <app-button-component
-          icon="pi pi-search"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="success"
-        />
-        <app-button-component
-          icon="pi pi-user"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="info"
-        />
-        <app-button-component
-          icon="pi pi-bell"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="warn"
-        />
-        <app-button-component
-          icon="pi pi-heart"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="help"
-        />
-        <app-button-component
-          icon="pi pi-times"
-          [raised]="true"
-          [rounded]="true"
-          [text]="true"
-          severity="danger"
-        />
-      </div>
-
-      <div class="flex flex-wrap gap-4 justify-center">
-        <app-button-component icon="pi pi-check" [rounded]="true" [text]="true" />
-        <app-button-component
-          icon="pi pi-bookmark"
-          [rounded]="true"
-          [text]="true"
-          severity="secondary"
-        />
-        <app-button-component
-          icon="pi pi-search"
-          [rounded]="true"
-          [text]="true"
-          severity="success"
-        />
-        <app-button-component icon="pi pi-user" [rounded]="true" [text]="true" severity="info" />
-        <app-button-component icon="pi pi-bell" [rounded]="true" [text]="true" severity="warn" />
-        <app-button-component icon="pi pi-heart" [rounded]="true" [text]="true" severity="help" />
-        <app-button-component icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" />
-      </div>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Badge</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-      <app-button-component badge="2" label="Emails" styleClass="m-0" />
-      <app-button-component
-        icon="pi pi-users"
-        badge="2"
-        label="Messages"
+        icon="pi pi-bookmark"
+        [rounded]="true"
+        severity="secondary"
         [outlined]="true"
-        styleClass="m-0"
+      />
+      <app-button-component
+        icon="pi pi-search"
+        [rounded]="true"
+        severity="success"
+        [outlined]="true"
+      />
+      <app-button-component icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true" />
+      <app-button-component icon="pi pi-bell" [rounded]="true" severity="warn" [outlined]="true" />
+      <app-button-component icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
+      <app-button-component
+        icon="pi pi-times"
+        [rounded]="true"
+        severity="danger"
+        [outlined]="true"
       />
     </div>
-  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>Sizes</span>
-
-    <div class="col-span-7 flex flex-wrap gap-4 justify-center items-center">
-      <app-button-component icon="pi pi-check" label="Small" size="small" />
-      <app-button-component icon="pi pi-check" label="Normal" />
-      <app-button-component icon="pi pi-check" label="Large" size="large" />
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-check" [raised]="true" [rounded]="true" [text]="true" />
+      <app-button-component
+        icon="pi pi-bookmark"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+      />
+      <app-button-component
+        icon="pi pi-search"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="success"
+      />
+      <app-button-component
+        icon="pi pi-user"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="info"
+      />
+      <app-button-component
+        icon="pi pi-bell"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="warn"
+      />
+      <app-button-component
+        icon="pi pi-heart"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="help"
+      />
+      <app-button-component
+        icon="pi pi-times"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+        severity="danger"
+      />
     </div>
-  </div>
+
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-button-component icon="pi pi-check" [rounded]="true" [text]="true" />
+      <app-button-component
+        icon="pi pi-bookmark"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+      />
+      <app-button-component icon="pi pi-search" [rounded]="true" [text]="true" severity="success" />
+      <app-button-component icon="pi pi-user" [rounded]="true" [text]="true" severity="info" />
+      <app-button-component icon="pi pi-bell" [rounded]="true" [text]="true" severity="warn" />
+      <app-button-component icon="pi pi-heart" [rounded]="true" [text]="true" severity="help" />
+      <app-button-component icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" />
+    </div>
+  </ng-template>
+
+  <ng-template #badge>
+    <app-button-component badge="2" label="Emails" styleClass="m-0" />
+    <app-button-component
+      icon="pi pi-users"
+      badge="2"
+      label="Messages"
+      [outlined]="true"
+      styleClass="m-0"
+    />
+  </ng-template>
+
+  <ng-template #sizes>
+    <app-button-component icon="pi pi-check" label="Small" size="small" />
+    <app-button-component icon="pi pi-check" label="Normal" />
+    <app-button-component icon="pi pi-check" label="Large" size="large" />
+  </ng-template>
+
+  @if (sandbox && sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Icons', content: icons, direction: 'column' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Loading', content: loadingButton }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Severity', content: severity }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Disabled', content: disabled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Raised', content: raised }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Rounded', content: rounded }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Text', content: text }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Raised Text', content: raisedText }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Outlined', content: outlined }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Icon Only', content: iconOnly }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Badge', content: badge }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes }"
+    ></ng-container>
+  }
 </div>
+
+<app-sandbox></app-sandbox>

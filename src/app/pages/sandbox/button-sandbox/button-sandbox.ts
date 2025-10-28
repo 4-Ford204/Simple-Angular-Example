@@ -1,14 +1,18 @@
+import { Component, ViewChild } from '@angular/core';
+
 import { ButtonComponent } from '../../../shared/ui-components/button-component/button-component';
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Sandbox } from '../sandbox';
 
 @Component({
   selector: 'app-button-sandbox',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, CommonModule, Sandbox],
   templateUrl: './button-sandbox.html',
   styleUrl: './button-sandbox.css',
 })
 export class ButtonSandbox {
   loading: boolean = false;
+  @ViewChild(Sandbox) sandbox!: Sandbox;
 
   onLoading() {
     this.loading = true;
