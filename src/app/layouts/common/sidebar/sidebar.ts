@@ -3,6 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
 import { Router } from '@angular/router';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { TooltipOptions } from '../../../shared/ui-components/overlay/tooltip/tooltip-options';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,6 +19,7 @@ export class Sidebar {
       command: () => {
         this.router.navigate(['/sandbox/button-sandbox']);
       },
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Button' }),
     },
     {
       label: 'Checkbox',
@@ -37,6 +39,7 @@ export class Sidebar {
           command: () => {
             this.router.navigate(['/sandbox/tooltip-sandbox']);
           },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Tooltip' }),
         },
         {
           label: 'Dialog',
@@ -44,6 +47,7 @@ export class Sidebar {
           routerLink: ['sandbox/dialog'],
         },
       ],
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Overlay' }),
     },
     {
       label: 'Card',
