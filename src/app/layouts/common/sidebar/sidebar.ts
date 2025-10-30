@@ -14,17 +14,36 @@ export class Sidebar {
   items: MenuItem[] = [
     {
       label: 'Button',
-      icon: 'pi pi-circle',
+      icon: 'pi pi-play-circle',
       command: () => {
         this.router.navigate(['/sandbox/button-sandbox']);
       },
     },
     {
       label: 'Checkbox',
-      icon: 'pi pi-check-square',
+      icon: 'pi pi-check-circle',
       command: () => {
         this.router.navigate(['/sandbox/checkbox-sandbox']);
       },
+    },
+    {
+      label: 'Overlay',
+      icon: 'pi pi-clone',
+      items: [
+        {
+          label: 'Tooltip',
+          icon: 'pi pi-info-circle',
+          routerLink: ['tooltip-sandbox'],
+          command: () => {
+            this.router.navigate(['/sandbox/tooltip-sandbox']);
+          },
+        },
+        {
+          label: 'Dialog',
+          icon: 'pi pi-window-maximize',
+          routerLink: ['sandbox/dialog'],
+        },
+      ],
     },
     {
       label: 'Card',

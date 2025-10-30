@@ -1,0 +1,87 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-10">
+  <ng-template #position>
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="rightPositionTooltipOptions"
+      placeholder="Right"
+    />
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="topPositionTooltipOptions"
+      placeholder="Top"
+    />
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="bottomPositionTooltipOptions"
+      placeholder="Bottom"
+    />
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="leftPositionTooltipOptions"
+      placeholder="Left"
+    />
+  </ng-template>
+
+  <ng-template #event>
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="eventTooltipOptions"
+      placeholder="Focus to display tooltip"
+    />
+  </ng-template>
+
+  <ng-template #autoHide>
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="falseAutoHideTooltipOptions"
+      placeholder="autoHide: false"
+    />
+    <input
+      type="text"
+      pInputText
+      pTooltip
+      [tooltipOptions]="trueAutoHideTooltipOptions"
+      placeholder="autoHide: true"
+    />
+  </ng-template>
+
+  <ng-template #delay>
+    <app-button-component label="Save" pTooltip [tooltipOptions]="delayTooltipOptions" />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Position', content: position, direction: 'column' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Event', content: event }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Auto Hide', content: autoHide, direction: 'column' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Delay', content: delay }"
+    ></ng-container>
+  }
+</div>

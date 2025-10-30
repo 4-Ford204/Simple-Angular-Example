@@ -1,4 +1,6 @@
-<div class="flex flex-col gap-15">
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-10">
   <ng-template #basic>
     <app-button-component label="Submit" />
   </ng-template>
@@ -220,7 +222,7 @@
     <app-button-component icon="pi pi-check" label="Large" size="large" />
   </ng-template>
 
-  @if (sandbox && sandbox.panelTemplate) {
+  @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
@@ -273,7 +275,7 @@
 
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
-      [ngTemplateOutletContext]="{ title: 'Icon Only', content: iconOnly }"
+      [ngTemplateOutletContext]="{ title: 'Icon Only', content: iconOnly, direction: 'column' }"
     ></ng-container>
 
     <ng-container
@@ -287,5 +289,3 @@
     ></ng-container>
   }
 </div>
-
-<app-sandbox></app-sandbox>

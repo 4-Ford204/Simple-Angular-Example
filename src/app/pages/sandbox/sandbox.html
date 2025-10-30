@@ -1,15 +1,12 @@
 <ng-template #panelTemplate let-title="title" let-content="content" let-direction="direction">
-  <div class="grid grid-cols-1 md:grid-cols-8 items-center p-5 rounded-md shadow-md">
-    <span>{{ title }}</span>
+  <div class="grid grid-cols-1 md:grid-cols-8 gap-4 items-center p-5 rounded-md shadow-md">
+    <span class="text-center">{{ title }}</span>
 
-    @if (direction === 'column') {
-      <div class="col-span-7 flex flex-col gap-4">
-        <ng-container [ngTemplateOutlet]="content"></ng-container>
-      </div>
-    } @else {
-      <div class="col-span-7 flex flex-wrap gap-4 justify-center">
-        <ng-container [ngTemplateOutlet]="content"></ng-container>
-      </div>
-    }
+    <div
+      class="md:col-span-7 flex flex-wrap gap-4 justify-center items-center"
+      [ngClass]="{ 'flex-col': direction === 'column' }"
+    >
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </div>
   </div>
 </ng-template>

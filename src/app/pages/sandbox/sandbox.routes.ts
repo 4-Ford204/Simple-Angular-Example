@@ -16,6 +16,11 @@ export const SandboxRoutes: Routes = [
         loadComponent: () =>
           import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
       },
+      {
+        path: 'tooltip-sandbox',
+        loadComponent: () =>
+          import('./tooltip-sandbox/tooltip-sandbox').then((m) => m.TooltipSandbox),
+      },
     ],
   },
 ];
