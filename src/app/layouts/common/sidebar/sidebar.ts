@@ -27,6 +27,7 @@ export class Sidebar {
       command: () => {
         this.router.navigate(['/sandbox/checkbox-sandbox']);
       },
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
     },
     {
       label: 'Overlay',

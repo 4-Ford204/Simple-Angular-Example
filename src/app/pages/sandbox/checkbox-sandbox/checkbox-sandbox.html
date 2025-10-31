@@ -1,1 +1,74 @@
-<p>checkbox-sandbox works!</p>
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-10">
+  <ng-template #basic>
+    <app-checkbox-component [binary]="true" [model]="false" />
+  </ng-template>
+
+  <ng-template #indeterminate>
+    <app-checkbox-component [binary]="true" [indeterminate]="true" [model]="false" />
+  </ng-template>
+
+  <ng-template #group>
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="pizza"
+        value="Cheese"
+        inputId="ingredient1"
+        [(model)]="pizza"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="ingredient1" class="ml-2">Cheese</label>
+    </div>
+
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="pizza"
+        value="Mushroom"
+        inputId="ingredient2"
+        [(model)]="pizza"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="ingredient2" class="ml-2">Mushroom</label>
+    </div>
+
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="pizza"
+        value="Pepper"
+        inputId="ingredient3"
+        [(model)]="pizza"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="ingredient3" class="ml-2">Pepper</label>
+    </div>
+
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="pizza"
+        value="Onion"
+        inputId="ingredient4"
+        [(model)]="pizza"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="ingredient4" class="ml-2">Onion</label>
+    </div>
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Indeterminate', content: indeterminate }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Group', content: group }"
+    ></ng-container>
+  }
+</div>

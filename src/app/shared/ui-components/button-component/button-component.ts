@@ -46,9 +46,9 @@ export class ButtonComponent {
   // Class of the element.
   @Input() styleClass: string | undefined = undefined;
 
-  @Output() pressed = new EventEmitter();
+  @Output() buttonPressed = new EventEmitter();
 
-  onPress() {
-    this.pressed.emit();
+  onButtonPressed(event: any) {
+    this.buttonPressed.emit();
   }
 }

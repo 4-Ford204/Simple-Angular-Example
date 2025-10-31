@@ -12,7 +12,7 @@ import { Sandbox } from '../sandbox';
 export class ButtonSandbox {
   loading: boolean = false;
 
-  onLoading() {
+  onButtonLoading() {
     this.loading = true;
 
     setTimeout(() => {
@@ -20,7 +20,7 @@ export class ButtonSandbox {
     }, 5000);
   }
 
-  onPressed() {
+  onButtonPressed() {
     console.log('Button pressed');
   }
 }
