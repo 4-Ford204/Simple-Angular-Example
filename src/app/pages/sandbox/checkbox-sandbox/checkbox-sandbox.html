@@ -55,6 +55,23 @@
     </div>
   </ng-template>
 
+  <ng-template #dynamic>
+    <div class="flex flex-col gap-4">
+      @for (category of categories; track $index) {
+        <div class="flex items-center">
+          <app-checkbox-component
+            name="group"
+            [value]="category"
+            [inputId]="category.key"
+            [(model)]="selectedCategories"
+            (valueChanged)="onValueChanged($event)"
+          />
+          <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+        </div>
+      }
+    </div>
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -69,6 +86,11 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Group', content: group }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Dynamic', content: dynamic }"
     ></ng-container>
   }
 </div>
