@@ -20,6 +20,10 @@ export class CheckboxComponent {
   @Input() inputId: string | undefined = undefined;
   // When present, it specifies input state as indeterminate.
   @Input() indeterminate: boolean = false;
+  // Specifies the input variant of the component.
+  @Input() variant: 'filled' | 'outlined' | undefined = undefined;
+  // Specifies the size of the component.
+  @Input() size: 'small' | 'large' | undefined = undefined;
   @Input() model: any;
 
   @Output() modelChange = new EventEmitter<any>();

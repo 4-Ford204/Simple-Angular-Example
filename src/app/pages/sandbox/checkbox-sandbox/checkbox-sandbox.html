@@ -72,6 +72,47 @@
     </div>
   </ng-template>
 
+  <ng-template #filled>
+    <app-checkbox-component [binary]="true" [model]="false" variant="filled" />
+  </ng-template>
+
+  <ng-template #size>
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="size"
+        value="Small"
+        inputId="size_small"
+        size="small"
+        [(model)]="this.size"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="size_small" class="ml-2 text-sm">Small</label>
+    </div>
+
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="size"
+        value="Normal"
+        inputId="size_normal"
+        [(model)]="this.size"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="size_normal" class="ml-2">Normal</label>
+    </div>
+
+    <div class="flex items-center">
+      <app-checkbox-component
+        name="size"
+        value="Large"
+        inputId="size_large"
+        size="large"
+        [(model)]="this.size"
+        (valueChanged)="onValueChanged($event)"
+      />
+      <label for="size_large" class="ml-2 text-lg">Large</label>
+    </div>
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -91,6 +132,16 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Dynamic', content: dynamic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Filled', content: filled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Size', content: size }"
     ></ng-container>
   }
 </div>

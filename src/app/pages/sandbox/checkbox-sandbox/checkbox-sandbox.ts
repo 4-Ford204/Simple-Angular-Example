@@ -20,6 +20,7 @@ export class CheckboxSandbox implements OnInit {
     { name: 'Research', key: 'R' },
   ];
   selectedCategories: any[] = [];
+  size: any[] = [];
 
   ngOnInit(): void {
     this.selectedCategories = [this.categories[1]];
@@ -28,5 +29,6 @@ export class CheckboxSandbox implements OnInit {
   onValueChanged(event: any) {
     console.log('Pizza changed:', this.pizza);
     console.log('Categories changed:', this.selectedCategories);
+    console.log('Size changed:', this.size);
   }
 }
