@@ -113,6 +113,15 @@
     </div>
   </ng-template>
 
+  <ng-template #disabled>
+    <app-checkbox-component [disabled]="true" [binary]="true" [model]="false" />
+    <app-checkbox-component [disabled]="true" [binary]="true" [model]="true" />
+  </ng-template>
+
+  <ng-template #invalid>
+    <app-checkbox-component [invalid]="!checked" [binary]="true" [(model)]="checked" />
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -142,6 +151,16 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Size', content: size }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Disabled', content: disabled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Invalid', content: invalid }"
     ></ng-container>
   }
 </div>

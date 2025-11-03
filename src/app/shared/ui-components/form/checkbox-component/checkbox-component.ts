@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './checkbox-component.css',
 })
 export class CheckboxComponent {
+  // When present, it specifies that the component should have invalid state style.
+  @Input() invalid: boolean = false;
+  // When present, it specifies that the component should have disabled state style.
+  @Input() disabled: boolean = false;
   // When present, it specifies the name of the input element.
   @Input() name: string = '';
   // Value of the checkbox.
