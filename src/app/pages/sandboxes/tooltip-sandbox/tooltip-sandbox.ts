@@ -2,7 +2,7 @@ import { ButtonComponent } from '../../../shared/ui-components/button-component/
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { InputText } from 'primeng/inputtext';
-import { Sandbox } from '../sandbox';
+import { Sandbox } from '../sandboxes';
 import { TooltipModule } from 'primeng/tooltip';
 import { TooltipOptions } from '../../../shared/ui-components/overlay/tooltip/tooltip-options';
 

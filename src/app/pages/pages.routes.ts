@@ -11,8 +11,12 @@ export const PagesRoutes: Routes = [
       { path: 'home', component: Home },
       {
         path: 'sandbox',
-        loadChildren: () => import('./sandbox/sandbox.routes').then((m) => m.SandboxRoutes),
+        loadChildren: () => import('./sandboxes/sandboxes.routes').then((m) => m.SandboxRoutes),
       },
     ],
+  },
+  {
+    path: 'samples',
+    loadChildren: () => import('./samples/samples.routes').then((m) => m.SampleRoutes),
   },
 ];

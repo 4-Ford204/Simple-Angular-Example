@@ -1,7 +1,7 @@
 import { ButtonComponent } from '../../../shared/ui-components/button-component/button-component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Sandbox } from '../sandbox';
+import { Sandbox } from '../sandboxes';
 
 @Component({
   selector: 'app-button-sandbox',

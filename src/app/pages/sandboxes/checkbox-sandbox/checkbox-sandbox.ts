@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CheckboxComponent } from '../../../shared/ui-components/form/checkbox-component/checkbox-component';
 import { CommonModule } from '@angular/common';
-import { Sandbox } from '../sandbox';
+import { Sandbox } from '../sandboxes';
 
 @Component({
   selector: 'app-checkbox-sandbox',

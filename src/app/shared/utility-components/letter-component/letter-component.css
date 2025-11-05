@@ -1,0 +1,73 @@
+.letter-scene {
+    perspective: 1000px;
+    margin-top: 3rem;
+}
+
+.envelope {
+    position: relative;
+    width: 240px;
+    height: 150px;
+    background: #f8e5c2;
+    border: 2px solid #d9b38c;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+/* Phần nắp thư */
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #f0c0a0;
+    top: 0;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: transform 1s ease;
+    border-bottom: 2px solid #d9b38c;
+}
+
+/* Phần thân thư */
+.pocket {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f8e5c2;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Tờ giấy */
+.paper {
+    position: absolute;
+    bottom: -100%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 0;
+    transition: bottom 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper .text {
+    font-size: 1rem;
+    text-align: center;
+    color: #444;
+}
+
+/* Khi mở thư */
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .paper {
+    bottom: 10%;
+}

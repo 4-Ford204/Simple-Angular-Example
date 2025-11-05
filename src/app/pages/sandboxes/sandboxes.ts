@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-sandbox',
   imports: [CommonModule],
-  templateUrl: './sandbox.html',
+  templateUrl: './sandboxes.html',
 })
 export class Sandbox {
   @ViewChild('panelTemplate', { static: true }) panelTemplate!: TemplateRef<any>;
