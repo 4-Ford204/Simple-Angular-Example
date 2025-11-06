@@ -4,6 +4,6 @@ export const SampleRoutes: Routes = [
   { path: '', redirectTo: 'letter-sample', pathMatch: 'full' },
   {
     path: 'letter-sample',
-    loadComponent: () => import('./letter-sample/letter-sample').then((m) => m.LetterSample),
+    loadComponent: () => import('./envelope-sample/envelope-sample').then((m) => m.EnvelopeSample),
   },
 ];

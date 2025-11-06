@@ -1,0 +1,23 @@
+<div class="envelope-container">
+  <button id="envelope" [ngClass]="{ open: opened, close: !opened }" (click)="onEnvelopeToggled()">
+    <div class="front flap"></div>
+    <div class="front pocket"></div>
+
+    <div class="letter">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="hearts">
+      @for (heart of hearts; track $index) {
+        <div
+          class="heart"
+          [ngStyle]="{
+            left: heart.position + '%',
+            transform: 'scale(' + heart.size + ')',
+            'animation-duration': heart.duration + 's',
+          }"
+        ></div>
+      }
+    </div>
+  </button>
+</div>
