@@ -1,10 +1,14 @@
-<div class="flex items-center justify-center min-h-screen bg-sky-100">
+<div class="flex items-center justify-center h-full">
   <app-envelope-component>
-    <div class="letter">
-      <div class="words line1">Dear friend,</div>
-      <div class="words line2">This envelope still has hearts ❤️</div>
-      <div class="words line3">It's all clean and responsive now!</div>
-      <div class="words line4">Love, Angular 💌</div>
+    <div class="content">
+      <ng-container *ngTemplateOutlet="present"></ng-container>
     </div>
   </app-envelope-component>
 </div>
+
+<ng-template #present>
+  <div class="block w-1/2 my-1.5 bg-gray-300 rounded-sm">Dear friend,</div>
+  <div class="block my-1.5 bg-gray-300 rounded-sm">This envelope still has hearts ❤️</div>
+  <div class="block my-1.5 bg-gray-300 rounded-sm">It's all clean and responsive now!</div>
+  <div class="block my-1.5 bg-gray-300 rounded-sm">Love, Angular 💌</div>
+</ng-template>

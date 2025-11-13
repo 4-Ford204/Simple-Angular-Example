@@ -1,23 +1,26 @@
-<div class="envelope-container">
-  <button id="envelope" [ngClass]="{ open: opened, close: !opened }" (click)="onEnvelopeToggled()">
-    <div class="front flap"></div>
-    <div class="front pocket"></div>
+<button
+  class="envelope-container"
+  [ngClass]="{ opened: opened, sealed: !opened }"
+  (click)="onEnvelopeToggled()"
+>
+  <div class="flap top-flap"></div>
+  <div class="flap side-flaps"></div>
+  <div class="flap bottom-flap"></div>
 
-    <div class="letter">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="envelope-content">
+    <ng-content></ng-content>
+  </div>
 
-    <div class="hearts">
-      @for (heart of hearts; track $index) {
-        <div
-          class="heart"
-          [ngStyle]="{
-            left: heart.position + '%',
-            transform: 'scale(' + heart.size + ')',
-            'animation-duration': heart.duration + 's',
-          }"
-        ></div>
-      }
-    </div>
-  </button>
-</div>
+  <div class="hearts">
+    @for (heart of hearts; track $index) {
+      <div
+        class="pi pi-heart-fill heart"
+        [ngStyle]="{
+          left: heart.position + '%',
+          fontSize: heart.size + 'px',
+          'animation-duration': heart.duration + 's',
+        }"
+      ></div>
+    }
+  </div>
+</button>

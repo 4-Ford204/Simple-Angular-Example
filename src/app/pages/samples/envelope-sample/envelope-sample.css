@@ -1,29 +1,10 @@
-/* .letter-content {
-    position: relative;
+.content {
     width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 6px;
-    padding: 16px;
-    box-sizing: border-box;
+    max-width: 350px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 4%;
+    box-shadow: 0 1.5px 25px rgba(0, 0, 0, .15);
 }
-
-.words {
-    display: block;
-    background-color: #eeeff0;
-    border-radius: 4px;
-    margin: 8px 0;
-    height: 10%;
-}
-
-.line1 {
-    width: 40%;
-    height: 7%;
-}
-
-.line2,
-.line3,
-.line4 {
-    width: 80%;
-    height: 10%;
-} */
