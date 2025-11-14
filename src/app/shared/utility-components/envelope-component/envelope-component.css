@@ -1,8 +1,8 @@
 .envelope-container {
-    --envelope-background-color: #00334c;
-    --envelope-top-flat-color: #00334c;
-    --envelope-side-flats-color: #0077b2;
-    --envelope-bottom-flat-color: #006da3;
+    --envelope-background-color: #db7093;
+    --envelope-top-flat-color: #db7093;
+    --envelope-side-flats-color: #ffb6c1;
+    --envelope-bottom-flat-color: #ffc0cb;
     --envelope-heart-color: #d00000;
 
     position: relative;
@@ -43,8 +43,7 @@
 
 .envelope-content {
     position: relative;
-    width: 85%;
-    margin: auto;
+    padding: 10px;
 }
 
 .hearts {
@@ -69,13 +68,13 @@
 .opened {
     .top-flap {
         transform: rotateX(180deg);
-        transition: transform 0.5s ease, z-index 0.5s;
+        transition: transform 0.5s ease, z-index 0.25s;
         z-index: 1;
     }
 
     .envelope-content {
         transform: translateY(-100%);
-        transition: transform 0.75s ease-in-out, z-index 0.5s;
+        transition: transform 0.5s 0.25s ease-in-out, z-index 0.5s;
         z-index: 2;
     }
 }
@@ -83,14 +82,14 @@
 .sealed {
     .top-flap {
         transform: rotateX(0deg);
-        transition: transform 0.75s 0.25s ease, z-index 1.25s;
+        transition: transform 0.5s 0.25s ease, z-index 0.75s;
         z-index: 5;
     }
 
     .envelope-content {
         transform: translateY(0px);
-        transition: transform 0.5s ease, z-index 1s;
-        z-index: 1;
+        transition: transform 0.5s ease, z-index 0.25s;
+        z-index: 2;
     }
 
     .heart {
