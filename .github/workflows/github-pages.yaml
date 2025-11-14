@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular Application
-        run: ng build --configuration production --base-href "/Simple-Angular-Example/"
+        run: npx ng build --configuration production --base-href "/Simple-Angular-Example/"
 
       - name: Deploy To Github Pages
         uses: peaceiris/actions-gh-pages@v4.0.0
