@@ -12,14 +12,16 @@ export const SandboxRoutes: Routes = [
         loadComponent: () => import('./button-sandbox/button-sandbox').then((m) => m.ButtonSandbox),
       },
       {
-        path: 'checkbox-sandbox',
-        loadComponent: () =>
-          import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
+        path: 'form',
+        loadChildren: () => import('./form/form.routes').then((m) => m.FormRoutes),
       },
       {
-        path: 'tooltip-sandbox',
-        loadComponent: () =>
-          import('./tooltip-sandbox/tooltip-sandbox').then((m) => m.TooltipSandbox),
+        path: 'overlay',
+        loadChildren: () => import('./overlay/overlay.routes').then((m) => m.OverlayRoutes),
+      },
+      {
+        path: 'Media',
+        loadChildren: () => import('./media/media.routes').then((m) => m.MediaRoutes),
       },
     ],
   },

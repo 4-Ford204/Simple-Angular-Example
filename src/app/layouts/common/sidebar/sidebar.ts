@@ -22,12 +22,34 @@ export class Sidebar {
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Button' }),
     },
     {
-      label: 'Checkbox',
-      icon: 'pi pi-check-circle',
-      command: () => {
-        this.router.navigate(['/sandbox/checkbox-sandbox']);
-      },
-      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
+      label: 'Form',
+      icon: 'pi pi-book',
+      items: [
+        {
+          label: 'Checkbox',
+          icon: 'pi pi-check-circle',
+          command: () => {
+            this.router.navigate(['/sandbox/form/checkbox-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
+        },
+      ],
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Form' }),
+    },
+    {
+      label: 'Media',
+      icon: 'pi pi-images',
+      items: [
+        {
+          label: 'Image',
+          icon: 'pi pi-image',
+          command: () => {
+            this.router.navigate(['/sandbox/media/image-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Image' }),
+        },
+      ],
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Media' }),
     },
     {
       label: 'Overlay',
@@ -36,9 +58,8 @@ export class Sidebar {
         {
           label: 'Tooltip',
           icon: 'pi pi-info-circle',
-          routerLink: ['tooltip-sandbox'],
           command: () => {
-            this.router.navigate(['/sandbox/tooltip-sandbox']);
+            this.router.navigate(['/sandbox/overlay/tooltip-sandbox']);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Tooltip' }),
         },
