@@ -37,21 +37,6 @@ export class Sidebar {
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Form' }),
     },
     {
-      label: 'Media',
-      icon: 'pi pi-images',
-      items: [
-        {
-          label: 'Image',
-          icon: 'pi pi-image',
-          command: () => {
-            this.router.navigate(['/sandbox/media/image-sandbox']);
-          },
-          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Image' }),
-        },
-      ],
-      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Media' }),
-    },
-    {
       label: 'Overlay',
       icon: 'pi pi-clone',
       items: [
