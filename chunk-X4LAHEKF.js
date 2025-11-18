@@ -1,1 +1,0 @@
-import"./chunk-4CLCTAJ7.js";var t=[{path:"",redirectTo:"letter-sample",pathMatch:"full"},{path:"letter-sample",loadComponent:()=>import("./chunk-3UIP6WT3.js").then(e=>e.EnvelopeSample)}];export{t as SampleRoutes};
