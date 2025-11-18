@@ -1,0 +1,19 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-10">
+  <ng-template #template>
+    <app-image-component
+      src="https://primefaces.org/cdn/primeng/images/galleria/galleria11.jpg"
+      alt="Image"
+      width="250"
+      [preview]="true"
+    ></app-image-component>
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Template', content: template }"
+    ></ng-container>
+  }
+</div>

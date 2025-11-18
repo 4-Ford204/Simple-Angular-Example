@@ -1,1 +1,15 @@
-<p>image-component works!</p>
+<p-image [preview]="preview">
+  <ng-template #image>
+    <img [src]="src" [alt]="alt" [width]="width" />
+  </ng-template>
+
+  @if (preview) {
+    <ng-template #indicator>
+      <i class="pi pi-search"></i>
+    </ng-template>
+
+    <ng-template #preview let-style="style" let-previewCallback="previewCallback">
+      <img [src]="src" alt="alt" [style]="style" (click)="previewCallback()" onkeypress="" />
+    </ng-template>
+  }
+</p-image>
