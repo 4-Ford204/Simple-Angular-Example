@@ -8,10 +8,11 @@
     <ng-template let-product #item>
       <div class="border border-surface rounded-border m-2 p-4">
         <div class="mb-4">
-          <div class="relative mx-auto">
+          <div class="relative mx-auto w-full">
             <app-image-component
               [src]="product.images"
               [alt]="product.name"
+              width="250"
               class="w-full rounded-border"
             />
           </div>
