@@ -10,6 +10,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SF-Compact';
+    src: url('./assets/fonts/SF-Compact-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF-Compact';
+    src: url('./assets/fonts/SF-Compact-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root {
     --app-header-height: 60px;
     --app-sidebar-height: calc(100vh - var(--app-header-height));
