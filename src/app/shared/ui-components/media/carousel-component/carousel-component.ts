@@ -15,8 +15,26 @@ export class CarouselComponent {
   @Input() numVisible: number = 1;
   // Number of items to scroll.
   @Input() numScroll: number = 1;
-  // An array of objects to display.
-  @Input() value: any[] = [];
   // Defines if scrolling would be infinite.
   @Input() circular: boolean = false;
+
+  // An array of objects to display.
+  private _products: any[] = [];
+  productImages: Record<string, number> = {};
+
+  @Input() set products(currentProducts: any[]) {
+    this._products = currentProducts;
+    this.productImages = {};
+
+    for (const product of currentProducts) {
+      this.productImages[product.id] = 0;
+    }
+  }
+  get value() {
+    return this._products;
+  }
+
+  onImageChanged(id: string, index: number) {
+    this.productImages[id] = index;
+  }
 }

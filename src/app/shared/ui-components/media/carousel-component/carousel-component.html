@@ -1,26 +1,60 @@
 <p-carousel [numVisible]="numVisible" [numScroll]="numScroll" [value]="value" [circular]="circular">
   <ng-template let-product #item>
-    <div class="border border-surface rounded-border m-2 p-4 flex flex-col">
-      <div class="mb-4 w-full flex justify-center">
-        <app-image-component
-          [src]="product.images"
-          [alt]="product.name"
-          width="50px"
-          [preview]="true"
-        />
-      </div>
+    <div class="flex justify-center w-full">
+      <div class="flex flex-col flex-wrap gap-1 mx-2 p-2 border rounded-md max-w-[250px]">
+        <div class="flex flex-col gap-1 max-w-full">
+          <div
+            class="flex h-[250px] items-center justify-center border border-gray-200 overflow-hidden"
+          >
+            <app-image-component
+              [src]="product.images[productImages[product.id]]"
+              [alt]="product.name"
+              class="object-contain rounded-md"
+            />
+          </div>
 
-      <div class="mb-4 font-medium">{{ product.name }}</div>
-
-      <div class="flex justify-between items-center">
-        <div class="mt-0 font-semibold text-xl">
-          {{ product.price }}
+          <div class="relative h-17">
+            <div class="flex gap-1 overflow-x-auto">
+              @for (image of product.images; track $index) {
+                <app-image-component
+                  [src]="image"
+                  [alt]="product.id"
+                  (click)="onImageChanged(product.id, $index)"
+                  class="w-15 h-15 object-contain cursor-pointer flex items-center justify-center overflow-hidden shrink-0"
+                  [class.border-2]="productImages[product.id] === $index"
+                  onkeypress=""
+                />
+              }
+            </div>
+          </div>
         </div>
 
-        <span>
-          <app-button-component icon="pi pi-heart" severity="secondary" [outlined]="true" />
-          <app-button-component icon="pi pi-shopping-cart" styleClass="ml-2" />
-        </span>
+        <div class="flex flex-col shrink-0">
+          <div class="mt-1 mb-1 font-semibold text-lg">
+            {{ product.name }}
+          </div>
+
+          <div class="flex gap-3 mb-3">
+            <span class="text-sm font-medium text-gray-500">
+              {{ product.studio }}
+            </span>
+
+            <span class="text-sm font-medium text-gray-500">
+              {{ product.type }}
+            </span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="font-bold">
+              {{ product.price }}
+            </div>
+
+            <div>
+              <app-button-component icon="pi pi-heart" severity="secondary" [outlined]="true" />
+              <app-button-component icon="pi pi-shopping-cart" styleClass="ml-2" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </ng-template>

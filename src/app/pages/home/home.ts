@@ -1,4 +1,4 @@
-import { Component, afterNextRender, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { CarouselComponent } from '../../shared/ui-components/media/carousel-component/carousel-component';
 import { CommonModule } from '@angular/common';
@@ -20,16 +20,15 @@ export class Home {
     { field: 'studio', header: 'Studio' },
     { field: 'price', header: 'Price' },
   ];
-  products = signal<any[]>([]);
+  products: any[] = [];
 
   constructor() {
-    afterNextRender(() => {
-      this.fetchHomePage();
-    });
+    this.fetchHomePage();
   }
 
-  async fetchHomePage() {
-    const response = await this.productService.getProducts();
-    this.products.set(response.data);
+  private fetchHomePage() {
+    this.productService.getProducts().then((response: any) => {
+      this.products = response.data;
+    });
   }
 }

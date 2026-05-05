@@ -3,7 +3,7 @@ import { PRODUCTS } from './db';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  getProducts = (params?: any): Promise<any> => {
+  getProducts = (): Promise<any> => {
     return new Promise((resolve, reject) => {
       try {
         resolve({ data: PRODUCTS });
