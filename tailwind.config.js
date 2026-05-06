@@ -1,7 +1,8 @@
 export default {
-  darkModeL: ['selector', '[class="p-dark"]'],
+  darkMode: ['selector', '[class="p-dark"]'],
   content: ['./src/**/*.{html,ts}'],
   theme: {
     extend: {},
   },
+  plugins: [],
 };
