@@ -15,7 +15,7 @@ export class Home {
   private readonly productService = inject(ProductService);
 
   columns = [
-    { field: 'images', width: '5rem' },
+    { field: 'images' },
     { field: 'name', header: 'Name' },
     { field: 'studio', header: 'Studio' },
     { field: 'price', header: 'Price' },

@@ -1,6 +1,6 @@
-<p-image [preview]="preview">
+<p-image class="h-full w-full" [preview]="preview">
   <ng-template #image>
-    <img [src]="src" [alt]="alt" [attr.width]="width" />
+    <img [src]="src" [alt]="alt" [attr.width]="width" [class]="imageClass" />
   </ng-template>
 
   @if (preview) {

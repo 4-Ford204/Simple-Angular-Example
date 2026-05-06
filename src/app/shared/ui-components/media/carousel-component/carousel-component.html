@@ -46,7 +46,7 @@
 
           <div class="flex items-center justify-between">
             <div class="font-bold">
-              {{ product.price }}
+              {{ product.price | currency: 'VND' : 'symbol' : '1.0-0' }}
             </div>
 
             <div>

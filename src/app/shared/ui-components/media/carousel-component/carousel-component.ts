@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 
 import { ButtonComponent } from '../../button-component/button-component';
 import { CarouselModule } from 'primeng/carousel';
+import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../image-component/image-component';
 
 @Component({
   selector: 'app-carousel-component',
-  imports: [ButtonComponent, CarouselModule, ImageComponent],
+  imports: [ButtonComponent, CarouselModule, CommonModule, ImageComponent],
   templateUrl: './carousel-component.html',
   styleUrl: './carousel-component.css',
 })

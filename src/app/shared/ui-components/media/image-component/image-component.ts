@@ -9,6 +9,8 @@ import { Image } from 'primeng/image';
   styleUrl: './image-component.css',
 })
 export class ImageComponent {
+  // Style class of the image element.
+  @Input() imageClass: string | undefined = undefined;
   // The source path for the main image.
   @Input() src: string | undefined = undefined;
   // Attribute of the preview image element.

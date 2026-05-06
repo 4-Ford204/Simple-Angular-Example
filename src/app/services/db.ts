@@ -1,18 +1,5 @@
 export const PRODUCTS = [
   {
-    id: 'bbf_chopper',
-    name: 'Tony Tony Chopper',
-    studio: 'BBF Studio',
-    type: 'One Piece',
-    price: 1_050_000,
-    images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_ja8dvr.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_sjyh1d.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_yvm9gd.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_vc2meo.jpg',
-    ],
-  },
-  {
     id: 'bff_luffy',
     name: 'Monkey D. Luffy',
     studio: 'BBF Studio',
@@ -24,26 +11,15 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 'bff_robin',
-    name: 'Nico Robin',
+    id: 'bff_zoro',
+    name: 'Roronoa Zoro',
     studio: 'BBF Studio',
     type: 'One Piece',
     price: 1_050_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_exbr2v.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_fpcvnt.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_j4grxh.jpg',
-    ],
-  },
-  {
-    id: 'bff_sanji',
-    name: 'Vinsmoke Sanji',
-    studio: 'BBF Studio',
-    type: 'One Piece',
-    price: 1_050_000,
-    images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ztbipr.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ekzyst.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_bpsamd.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_gzejja.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_slczmx.jpg',
     ],
   },
   {
@@ -58,15 +34,39 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 'bff_zoro',
-    name: 'Roronoa Zoro',
+    id: 'bff_sanji',
+    name: 'Vinsmoke Sanji',
     studio: 'BBF Studio',
     type: 'One Piece',
     price: 1_050_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_bpsamd.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_gzejja.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_slczmx.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ztbipr.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ekzyst.webp',
+    ],
+  },
+  {
+    id: 'bbf_chopper',
+    name: 'Tony Tony Chopper',
+    studio: 'BBF Studio',
+    type: 'One Piece',
+    price: 1_050_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_ja8dvr.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_sjyh1d.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_yvm9gd.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_vc2meo.jpg',
+    ],
+  },
+  {
+    id: 'bff_robin',
+    name: 'Nico Robin',
+    studio: 'BBF Studio',
+    type: 'One Piece',
+    price: 1_050_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_exbr2v.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_fpcvnt.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/robin_j4grxh.jpg',
     ],
   },
 ];

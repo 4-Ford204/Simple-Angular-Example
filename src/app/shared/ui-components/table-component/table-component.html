@@ -14,12 +14,15 @@
       <tr>
         @for (column of columns; track $index) {
           @if (column.field == 'images') {
-            <td [headers]="$index" class="flex items-center justify-center p-0">
-              <img
-                [src]="item[column.field][0]"
-                [alt]="item.name"
-                class="h-10 w-10 rounded-full object-cover"
-              />
+            <td [headers]="$index" class="flex items-center justify-center px-0!">
+              <div class="h-[1.5em] w-[1.5em]">
+                <app-image-component
+                  imageClass="w-full h-full object-cover rounded-full"
+                  [src]="item[column.field][0]"
+                  [alt]="item.name"
+                  [preview]="true"
+                />
+              </div>
             </td>
           } @else if (column.field == 'price') {
             <td [headers]="$index">
