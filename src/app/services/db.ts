@@ -1,5 +1,16 @@
 export const PRODUCTS = [
   {
+    id: 'g5_luffy',
+    name: 'Monkey D. Luffy',
+    studio: 'G5 Studio',
+    type: 'One Piece',
+    price: 1_000_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_wql9ir.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_pjqluo.webp',
+    ],
+  },
+  {
     id: 'bff_luffy',
     name: 'Monkey D. Luffy',
     studio: 'BBF Studio',
@@ -67,6 +78,17 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/robin_exbr2v.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/robin_fpcvnt.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/robin_j4grxh.jpg',
+    ],
+  },
+  {
+    id: 'bbf_jinbe',
+    name: 'Jinbe',
+    studio: 'BBF Studio',
+    type: 'One Piece',
+    price: 1_050_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/jinbei_uyzae5.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/jinbei_mdx6ad.jpg',
     ],
   },
 ];
