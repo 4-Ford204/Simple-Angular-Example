@@ -2,9 +2,10 @@ export const PRODUCTS = [
   {
     id: 'g5_luffy',
     name: 'Monkey D. Luffy',
+    material: 'Resin',
     studio: 'G5 Studio',
     type: 'One Piece',
-    price: 1_000_000,
+    price: 3_500_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_wql9ir.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_pjqluo.webp',
@@ -13,9 +14,10 @@ export const PRODUCTS = [
   {
     id: 'bff_luffy',
     name: 'Monkey D. Luffy',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_500_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_v7z5tq.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/luffy_yr4btz.jpg',
@@ -24,9 +26,10 @@ export const PRODUCTS = [
   {
     id: 'bff_zoro',
     name: 'Roronoa Zoro',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_250_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_bpsamd.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/zoro_gzejja.jpg',
@@ -36,9 +39,10 @@ export const PRODUCTS = [
   {
     id: 'bbf_usopp',
     name: 'Usopp',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_250_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/usopp_mtyoid.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/usopp_zsdatg.jpg',
@@ -47,9 +51,10 @@ export const PRODUCTS = [
   {
     id: 'bff_sanji',
     name: 'Vinsmoke Sanji',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_250_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ztbipr.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/sanji_ekzyst.webp',
@@ -58,9 +63,10 @@ export const PRODUCTS = [
   {
     id: 'bbf_chopper',
     name: 'Tony Tony Chopper',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_000_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_ja8dvr.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/chopper_sjyh1d.jpg',
@@ -71,9 +77,10 @@ export const PRODUCTS = [
   {
     id: 'bff_robin',
     name: 'Nico Robin',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_350_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/robin_exbr2v.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/robin_fpcvnt.jpg',
@@ -83,9 +90,10 @@ export const PRODUCTS = [
   {
     id: 'bbf_jinbe',
     name: 'Jinbe',
+    material: 'Resin',
     studio: 'BBF Studio',
     type: 'One Piece',
-    price: 1_050_000,
+    price: 1_700_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/jinbei_uyzae5.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/jinbei_mdx6ad.jpg',

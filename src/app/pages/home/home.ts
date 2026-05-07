@@ -15,10 +15,10 @@ export class Home {
   private readonly productService = inject(ProductService);
 
   columns = [
-    { field: 'images' },
     { field: 'name', header: 'Name' },
+    { field: 'material', header: 'Material' },
     { field: 'studio', header: 'Studio' },
-    { field: 'price', header: 'Price' },
+    { field: 'price', header: 'Price', sortable: true },
   ];
   products: any[] = [];
 
