@@ -16,8 +16,9 @@ export class Home {
 
   columns = [
     { field: 'name', header: 'Name' },
-    { field: 'material', header: 'Material' },
+    { field: 'series', header: 'Series' },
     { field: 'studio', header: 'Studio' },
+    { field: 'material', header: 'Material' },
     { field: 'price', header: 'Price', sortable: true },
   ];
   products: any[] = [];
