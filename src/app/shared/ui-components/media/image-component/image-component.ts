@@ -19,6 +19,9 @@ export class ImageComponent {
   @Input() width: string | undefined = undefined;
   // Attribute of the image element.
   @Input() height: string | undefined = undefined;
+  // Attribute of the image element.
+  @Input() loading: 'eager' | 'lazy' | undefined = undefined;
   // Controls the preview functionality.
   @Input() preview: boolean = false;
+  @Input() decoding: 'async' | 'sync' | 'auto' = 'auto';
 }

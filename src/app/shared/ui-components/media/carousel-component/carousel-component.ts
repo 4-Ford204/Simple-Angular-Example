@@ -18,6 +18,8 @@ export class CarouselComponent {
   @Input() numScroll: number = 1;
   // Defines if scrolling would be infinite.
   @Input() circular: boolean = false;
+  // Time in milliseconds to scroll items automatically.
+  @Input() autoplayInterval: number = 0;
 
   // An array of objects to display.
   private _products: any[] = [];

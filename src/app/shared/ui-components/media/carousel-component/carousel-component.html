@@ -1,55 +1,67 @@
-<p-carousel [numVisible]="numVisible" [numScroll]="numScroll" [value]="value" [circular]="circular">
+<p-carousel
+  [numVisible]="numVisible"
+  [numScroll]="numScroll"
+  [value]="value"
+  [circular]="circular"
+  [autoplayInterval]="autoplayInterval"
+>
   <ng-template let-product #item>
-    <div class="flex w-full justify-center">
-      <div class="mx-2 flex max-w-[250px] flex-col flex-wrap gap-1 rounded-md border p-2">
-        <div class="flex max-w-full flex-col gap-1">
+    <div class="flex h-full w-full justify-center">
+      <div
+        class="mx-2 flex h-full max-w-[300px] flex-col flex-wrap gap-1 rounded-lg border p-2 shadow-xl"
+      >
+        <div class="flex max-w-full flex-col gap-2">
           <div
-            class="flex h-[250px] items-center justify-center overflow-hidden border border-gray-200"
+            class="flex aspect-square items-center justify-center overflow-hidden border border-gray-200"
           >
             <app-image-component
-              imageClass="rounded-md object-cover"
+              imageClass="object-cover"
               [src]="product.images[productImages[product.id]]"
               [alt]="product.name"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
-          <div class="relative h-17">
-            <div class="flex gap-1 overflow-x-auto">
-              @for (image of product.images; track $index) {
-                <app-image-component
-                  imageClass="flex h-15 w-15 shrink-0 cursor-pointer items-center justify-center overflow-hidden object-cover"
-                  [src]="image"
-                  [alt]="product.id"
-                  (click)="onImageChanged(product.id, $index)"
-                  [class.border-2]="productImages[product.id] === $index"
-                  onkeypress=""
-                />
-              }
-            </div>
+          <div class="flex items-center gap-1 overflow-x-auto">
+            @for (image of product.images; track image) {
+              <app-image-component
+                imageClass="flex h-15 w-15 shrink-0 cursor-pointer items-center justify-center overflow-hidden object-cover"
+                [src]="image"
+                [alt]="product.id"
+                loading="lazy"
+                decoding="async"
+                (click)="onImageChanged(product.id, $index)"
+                [class.border-2]="productImages[product.id] === $index"
+                onkeypress=""
+              />
+            }
           </div>
         </div>
 
-        <div class="flex shrink-0 flex-col">
-          <div class="mt-1 mb-1 text-lg font-semibold">
-            <span>{{ product.name }}</span>
+        <div class="flex flex-1 shrink-0 flex-col justify-between">
+          <div>
+            <div class="mt-1 mb-1 text-lg font-semibold">
+              <span>{{ product.name }}</span>
 
-            @if (product.series) {
-              <span> - {{ product.series }}</span>
-            }
-          </div>
+              @if (product.series) {
+                <span> - {{ product.series }}</span>
+              }
+            </div>
 
-          <div class="mb-3 flex gap-3">
-            <span class="text-sm font-medium text-gray-500">
-              {{ product.studio }}
-            </span>
+            <div class="mb-3 flex gap-3">
+              <span class="text-sm font-medium text-gray-500">
+                {{ product.studio }}
+              </span>
 
-            <span class="text-sm font-medium text-gray-500">
-              {{ product.material }}
-            </span>
+              <span class="text-sm font-medium text-gray-500">
+                {{ product.material }}
+              </span>
 
-            <span class="text-sm font-medium text-gray-500">
-              {{ product.type }}
-            </span>
+              <span class="text-sm font-medium text-gray-500">
+                {{ product.type }}
+              </span>
+            </div>
           </div>
 
           <div class="flex items-center justify-between">

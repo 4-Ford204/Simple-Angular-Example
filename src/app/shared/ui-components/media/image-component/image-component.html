@@ -1,6 +1,13 @@
 <p-image class="h-full w-full" [preview]="preview">
   <ng-template #image>
-    <img [src]="src" [alt]="alt" [attr.width]="width" [class]="imageClass" />
+    <img
+      [src]="src"
+      [alt]="alt"
+      [loading]="loading"
+      [decoding]="decoding"
+      [attr.width]="width"
+      [class]="imageClass"
+    />
   </ng-template>
 
   @if (preview) {
@@ -9,7 +16,16 @@
     </ng-template>
 
     <ng-template #preview let-style="style" let-previewCallback="previewCallback">
-      <img [src]="src" alt="alt" [style]="style" (click)="previewCallback()" onkeypress="" />
+      <img
+        [src]="src"
+        [alt]="alt"
+        [loading]="loading"
+        [decoding]="decoding"
+        [style]="style"
+        class="max-h-screen max-w-screen object-contain"
+        (click)="previewCallback()"
+        onkeypress=""
+      />
     </ng-template>
   }
 </p-image>
