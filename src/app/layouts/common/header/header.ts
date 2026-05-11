@@ -2,6 +2,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ImageComponent } from '../../../shared/ui-components/media/image-component/image-component';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
@@ -11,13 +12,14 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-header',
   imports: [
-    CommonModule,
-    RouterLink,
     AvatarModule,
     BadgeModule,
+    CommonModule,
+    ImageComponent,
     InputTextModule,
     MenubarModule,
     Ripple,
+    RouterLink,
   ],
   templateUrl: './header.html',
   styleUrls: ['./header.css'],

@@ -1,6 +1,8 @@
 <p-menubar [model]="items" class="rounded-none">
   <ng-template #start>
-    <span>SAE</span>
+    <div class="flex w-24 items-center">
+      <app-image-component src="../../../../assets/images/logo.svg" />
+    </div>
   </ng-template>
 
   <ng-template #item let-item let-root="root">
