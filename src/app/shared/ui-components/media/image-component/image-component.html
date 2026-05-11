@@ -1,4 +1,4 @@
-<p-image class="h-full w-full" [preview]="preview">
+<p-image class="h-full w-full" [preview]="preview" [appendTo]="appendTo">
   <ng-template #image>
     <img
       [src]="src"
@@ -6,6 +6,7 @@
       [loading]="loading"
       [decoding]="decoding"
       [attr.width]="width"
+      [attr.height]="height"
       [class]="imageClass"
     />
   </ng-template>

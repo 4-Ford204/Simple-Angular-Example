@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { ButtonComponent } from '../../button-component/button-component';
 import { CarouselModule } from 'primeng/carousel';
@@ -10,6 +10,7 @@ import { ImageComponent } from '../image-component/image-component';
   imports: [ButtonComponent, CarouselModule, CommonModule, ImageComponent],
   templateUrl: './carousel-component.html',
   styleUrl: './carousel-component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselComponent {
   // Number of items per page.
@@ -22,19 +23,16 @@ export class CarouselComponent {
   @Input() autoplayInterval: number = 0;
 
   // An array of objects to display.
-  private _products: any[] = [];
+  value: any[] = [];
   productImages: Record<string, number> = {};
 
   @Input() set products(currentProducts: any[]) {
-    this._products = currentProducts;
+    this.value = currentProducts;
     this.productImages = {};
 
     for (const product of currentProducts) {
       this.productImages[product.id] = 0;
     }
-  }
-  get value() {
-    return this._products;
   }
 
   onImageChanged(id: string, index: number) {

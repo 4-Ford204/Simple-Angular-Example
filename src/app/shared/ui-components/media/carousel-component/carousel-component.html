@@ -6,28 +6,28 @@
   [autoplayInterval]="autoplayInterval"
 >
   <ng-template let-product #item>
-    <div class="flex h-full w-full justify-center">
-      <div
-        class="mx-2 flex h-full max-w-[300px] flex-col flex-wrap gap-1 rounded-lg border p-2 shadow-xl"
-      >
+    <div class="flex w-full justify-center">
+      <div class="mx-2 flex max-w-[300px] flex-col flex-wrap gap-1 rounded-lg border p-2 shadow-md">
         <div class="flex max-w-full flex-col gap-2">
           <div
             class="flex aspect-square items-center justify-center overflow-hidden border border-gray-200"
           >
             <app-image-component
               imageClass="object-cover"
-              [src]="product.images[productImages[product.id]]"
+              [src]="product.images[productImages[product.id]] + '?width=600'"
               [alt]="product.name"
               loading="lazy"
               decoding="async"
+              appendTo="body"
+              [preview]="true"
             />
           </div>
 
-          <div class="flex items-center gap-1 overflow-x-auto">
+          <div class="flex items-center gap-1 overflow-hidden">
             @for (image of product.images; track image) {
               <app-image-component
                 imageClass="flex h-15 w-15 shrink-0 cursor-pointer items-center justify-center overflow-hidden object-cover"
-                [src]="image"
+                [src]="image + '?width=120'"
                 [alt]="product.id"
                 loading="lazy"
                 decoding="async"
@@ -35,6 +35,8 @@
                 [class.border-2]="productImages[product.id] === $index"
                 onkeypress=""
               />
+
+              <img [src]="image + '?width=120'" [alt]="product.id" class="hidden" />
             }
           </div>
         </div>

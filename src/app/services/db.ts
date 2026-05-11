@@ -15,6 +15,22 @@ export const PRODUCTS = [
     ],
   },
   {
+    id: 'G5STUDIOONEPIECETHEROADTOBEKING',
+    name: 'Monkey D. Luffy',
+    series: 'The Road To Be King',
+    studio: 'G5 Studio',
+    material: 'Resin',
+    type: 'One Piece',
+    price: 28_650_000,
+    images: [
+      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_10.jpg',
+      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_9.jpg',
+      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_8.jpg',
+      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_6.jpg',
+      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_2.png',
+    ],
+  },
+  {
     id: 'G5STUDIOONEPIECEENMAFORMRORONOAZORO',
     name: 'Roronoa Zoro',
     series: 'Enma Form',
