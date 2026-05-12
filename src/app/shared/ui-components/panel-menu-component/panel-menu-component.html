@@ -2,7 +2,7 @@
   <p-panelmenu [model]="items" class="w-full">
     <ng-template #item let-item>
       <div pRipple class="group flex h-10 w-full cursor-pointer items-center justify-between px-3">
-        <i [class]="item.icon + ' text-primary flex-shrink-0 group-hover:text-inherit'"></i>
+        <i [class]="item.icon + ' text-primary shrink-0 group-hover:text-inherit'"></i>
 
         <div class="ml-2 hidden min-w-0 flex-1 items-center sm:flex">
           <span class="truncate">{{ item.label }}</span>
@@ -22,7 +22,7 @@
 
         @if (item.items) {
           <i
-            class="pi pi-angle-left text-primary flex-shrink-0 duration-300 group-hover:text-inherit"
+            class="pi pi-angle-left text-primary shrink-0 duration-300 group-hover:text-inherit"
             [ngClass]="{ '-rotate-90': item.expanded }"
           ></i>
         }

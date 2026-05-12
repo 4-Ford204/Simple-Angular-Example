@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
@@ -15,4 +15,12 @@ export class ToggleSwitchComponent {
   // When present, it specifies that the component should have disabled state style.
   @Input() disabled: boolean = false;
   @Input() model: boolean = false;
+
+  @Output() modelChange = new EventEmitter<boolean>();
+  @Output() valueChanged = new EventEmitter<boolean>();
+
+  onValueChanged($event: any) {
+    this.modelChange.emit(this.model);
+    this.valueChanged.emit(this.model);
+  }
 }

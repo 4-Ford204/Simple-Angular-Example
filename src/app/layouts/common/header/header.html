@@ -31,6 +31,8 @@
     <div class="flex items-center gap-2">
       <input type="text" pInputText placeholder="Search" class="w-36" />
 
+      <app-toggle-switch-component [(model)]="checked" (valueChanged)="onDarkModeChanged()" />
+
       <p-avatar
         image="https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m3vzr2sm65rp4f.webp"
         shape="circle"

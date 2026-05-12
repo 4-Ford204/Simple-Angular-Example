@@ -1,1 +1,6 @@
-<p-toggleswitch [invalid]="invalid" [disabled]="disabled" [(ngModel)]="model"></p-toggleswitch>
+<p-toggleswitch
+  [invalid]="invalid"
+  [disabled]="disabled"
+  [(ngModel)]="model"
+  (onChange)="onValueChanged($event)"
+></p-toggleswitch>
