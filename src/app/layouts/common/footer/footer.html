@@ -1,13 +1,27 @@
 <div>
-  <div class="flex flex-col gap-1">
-    <span class="">Supported Payment Methods</span>
+  <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-1">
+      <span>Supported Payment Methods</span>
 
-    <div class="flex flex-wrap items-center gap-2">
-      @for (item of paymentMethods; track $index) {
-        <div class="flex items-center justify-center rounded-md border p-1">
-          <app-image-component [src]="item.icon" [alt]="item.name" imageClass="h-6 w-10" />
-        </div>
-      }
+      <div class="flex flex-wrap items-center gap-1">
+        @for (item of paymentMethods; track $index) {
+          <div class="flex items-center justify-center rounded-md border p-1">
+            <app-image-component [src]="item.icon" [alt]="item.name" imageClass="h-6 w-10" />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <span>Contact Us</span>
+
+      <div class="flex flex-wrap items-center gap-1">
+        @for (item of contactMethods; track $index) {
+          <div class="m-1">
+            <app-image-component [src]="item.icon" [alt]="item.name" imageClass="h-6" />
+          </div>
+        }
+      </div>
     </div>
   </div>
 </div>

@@ -14,4 +14,10 @@ export class Footer {
     { name: 'MasterCard', icon: 'https://cdn.simpleicons.org/mastercard' },
     { name: 'PayPal', icon: 'https://cdn.simpleicons.org/paypal' },
   ];
+  contactMethods = [
+    { name: 'Gmail', icon: 'https://cdn.simpleicons.org/gmail' },
+    { name: 'Facebook', icon: 'https://cdn.simpleicons.org/facebook' },
+    { name: 'Instagram', icon: 'https://cdn.simpleicons.org/instagram' },
+    { name: 'Youtube', icon: 'https://cdn.simpleicons.org/youtube' },
+  ];
 }
