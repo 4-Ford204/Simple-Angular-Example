@@ -33,6 +33,14 @@ export class Sidebar {
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
         },
+        {
+          label: 'Toggle Switch',
+          icon: 'pi pi-twitch',
+          command: () => {
+            this.router.navigate(['/sandbox/form/toggle-switch-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Toggle Switch' }),
+        },
       ],
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Form' }),
     },

@@ -1,0 +1,32 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-10">
+  <ng-template #basic>
+    <app-toggle-switch-component [model]="false" />
+  </ng-template>
+
+  <ng-template #disabled>
+    <app-toggle-switch-component [disabled]="true" [model]="false" />
+  </ng-template>
+
+  <ng-template #invalid>
+    <app-toggle-switch-component [invalid]="true" [model]="false" />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Disabled', content: disabled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Invalid', content: invalid }"
+    ></ng-container>
+  }
+</div>

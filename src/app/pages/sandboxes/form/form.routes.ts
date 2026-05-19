@@ -6,4 +6,9 @@ export const FormRoutes: Routes = [
     loadComponent: () =>
       import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
   },
+  {
+    path: 'toggle-switch-sandbox',
+    loadComponent: () =>
+      import('./toggle-switch-sandbox/toggle-switch-sandbox').then((m) => m.ToggleSwitchSandbox),
+  },
 ];
