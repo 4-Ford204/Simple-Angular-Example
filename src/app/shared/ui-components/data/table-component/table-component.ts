@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { ImageComponent } from '../media/image-component/image-component';
+import { ImageComponent } from '../../media/image-component/image-component';
 import { TableModule } from 'primeng/table';
 
 @Component({
