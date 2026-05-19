@@ -22,6 +22,21 @@ export class Sidebar {
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Button' }),
     },
     {
+      label: 'Data',
+      icon: 'pi pi-database',
+      items: [
+        {
+          label: 'Timeline',
+          icon: 'pi pi-chart-line',
+          command: () => {
+            this.router.navigate(['/sandbox/data/timeline-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Timeline' }),
+        },
+      ],
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Data' }),
+    },
+    {
       label: 'Form',
       icon: 'pi pi-book',
       items: [

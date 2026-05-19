@@ -1,0 +1,18 @@
+<p-timeline [value]="value" [align]="align" [layout]="layout">
+  <ng-template #marker let-event>
+    <span
+      class="flex h-8 w-8 items-center justify-center rounded-full"
+      [style]="{ 'background-color': event.color }"
+    >
+      <i [class]="event.icon ?? 'pi pi-circle'"></i>
+    </span>
+  </ng-template>
+
+  <ng-template #opposite let-event>
+    <small>{{ event.date }}</small>
+  </ng-template>
+
+  <ng-template #content let-event>
+    <span>{{ event.status }}</span>
+  </ng-template>
+</p-timeline>
