@@ -60,6 +60,29 @@ export class Sidebar {
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Form' }),
     },
     {
+      label: 'Messages',
+      icon: 'pi pi-comments',
+      items: [
+        {
+          label: 'Message',
+          icon: 'pi pi-comment',
+          command: () => {
+            this.router.navigate(['/sandbox/messages/message-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Message' }),
+        },
+        {
+          label: 'Toast',
+          icon: 'pi pi-cloud',
+          command: () => {
+            this.router.navigate(['/sandbox/messages/toast-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Toast' }),
+        },
+      ],
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Messages' }),
+    },
+    {
       label: 'Overlay',
       icon: 'pi pi-clone',
       items: [

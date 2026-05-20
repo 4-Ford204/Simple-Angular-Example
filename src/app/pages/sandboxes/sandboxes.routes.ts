@@ -20,6 +20,10 @@ export const SandboxRoutes: Routes = [
         loadChildren: () => import('./form/form.routes').then((m) => m.FormRoutes),
       },
       {
+        path: 'messages',
+        loadChildren: () => import('./messages/messages.routes').then((m) => m.MessagesRoutes),
+      },
+      {
         path: 'overlay',
         loadChildren: () => import('./overlay/overlay.routes').then((m) => m.OverlayRoutes),
       },
