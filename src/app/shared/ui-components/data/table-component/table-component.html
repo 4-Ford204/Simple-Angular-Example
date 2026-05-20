@@ -1,4 +1,4 @@
-<div>
+<div class="w-full overflow-x-auto">
   <p-table
     [paginator]="true"
     [rowsPerPageOptions]="rowsPerPageOptions"
@@ -17,12 +17,13 @@
             [style.width]="column.width"
             [pSortableColumn]="column.field"
             [pSortableColumnDisabled]="!column.sortable"
+            class="align-middle"
           >
-            <div class="flex w-full items-center justify-between">
+            <div class="flex w-full items-center justify-between gap-1">
               <span>{{ column.header }}</span>
 
               @if (column.sortable) {
-                <span>
+                <span class="shrink-0">
                   <p-sortIcon [field]="column.field"></p-sortIcon>
                 </span>
               }
@@ -35,37 +36,30 @@
     <ng-template #body let-item let-columns="columns">
       <tr>
         @for (column of columns; track $index) {
-          @if (column.field == 'images') {
-            <td [headers]="$index" class="flex items-center justify-center px-0!">
-              <div class="h-[1.5em] w-[1.5em]">
-                <app-image-component
-                  imageClass="w-full h-full object-cover rounded-full"
-                  [src]="item[column.field][0]"
-                  [alt]="item.name"
-                  [preview]="true"
-                />
+          @if (column.field == 'name') {
+            <td [headers]="$index" class="align-middle">
+              <div class="flex items-center gap-1.5">
+                <span class="size-8 shrink-0">
+                  <app-image-component
+                    imageClass="w-full h-full object-cover rounded-full"
+                    [src]="item['images'][0]"
+                    [alt]="item.name"
+                    [preview]="true"
+                  />
+                </span>
+
+                <span>{{ item[column.field] }}</span>
               </div>
             </td>
-          } @else if (column.field == 'name') {
-            <td [headers]="$index" class="flex items-center gap-1.5">
-              <span class="h-[1.5em] w-[1.5em]">
-                <app-image-component
-                  imageClass="w-full h-full object-cover rounded-full"
-                  [src]="item['images'][0]"
-                  [alt]="item.name"
-                  [preview]="true"
-                />
-              </span>
-
-              <span> {{ item[column.field] }}</span>
-            </td>
           } @else if (column.field == 'price') {
-            <td [headers]="$index">
-              {{ item[column.field] | currency: 'VND' : 'symbol' : '1.0-0' }}
+            <td [headers]="$index" class="align-middle">
+              <span class="whitespace-nowrap">
+                {{ item[column.field] | currency: 'VND' : 'symbol' : '1.0-0' }}
+              </span>
             </td>
           } @else {
-            <td [headers]="$index">
-              {{ item[column.field] }}
+            <td [headers]="$index" class="align-middle">
+              <span>{{ item[column.field] }}</span>
             </td>
           }
         }
