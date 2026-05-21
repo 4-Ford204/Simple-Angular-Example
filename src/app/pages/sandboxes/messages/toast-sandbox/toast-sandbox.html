@@ -1,0 +1,133 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<app-toast-component />
+<app-toast-component key="top-left" position="top-left" />
+<app-toast-component key="bottom-left" position="bottom-left" />
+<app-toast-component key="bottom-right" position="bottom-right" />
+<app-toast-component
+  key="breakpoints"
+  [breakpoints]="{ '920px': { width: '100%', right: '0', left: '0' } }"
+/>
+<app-toast-component
+  key="animation"
+  showTransformOptions="translateX(100%)"
+  hideTransformOptions="translateX(100%)"
+  showTransitionOptions="250ms"
+  hideTransitionOptions="150ms"
+/>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-button-component label="Show" (buttonPressed)="onBasicButtonPressed()" />
+  </ng-template>
+
+  <ng-template #severity>
+    <app-button-component
+      label="Success"
+      severity="success"
+      (buttonPressed)="onSeverityButtonPressed('success', 'Success')"
+    />
+    <app-button-component
+      label="Info"
+      severity="info"
+      (buttonPressed)="onSeverityButtonPressed('info', 'Info')"
+    />
+    <app-button-component
+      label="Warn"
+      severity="warn"
+      (buttonPressed)="onSeverityButtonPressed('warn', 'Warn')"
+    />
+    <app-button-component
+      label="Error"
+      severity="danger"
+      (buttonPressed)="onSeverityButtonPressed('error', 'Error')"
+    />
+    <app-button-component
+      label="Secondary"
+      severity="secondary"
+      (buttonPressed)="onSeverityButtonPressed('secondary', 'Secondary')"
+    />
+    <app-button-component
+      label="Contrast"
+      severity="contrast"
+      (buttonPressed)="onSeverityButtonPressed('contrast', 'Contrast')"
+    />
+  </ng-template>
+
+  <ng-template #position>
+    <app-button-component
+      label="Top Left"
+      (buttonPressed)="onPositionButtonPressed('info', 'Info Message', 'top-left')"
+    />
+    <app-button-component
+      label="Bottom Left"
+      (buttonPressed)="onPositionButtonPressed('warn', 'Warn Message', 'bottom-left')"
+    />
+    <app-button-component
+      label="Bottom Right"
+      (buttonPressed)="onPositionButtonPressed('success', 'Success Message', 'bottom-right')"
+    />
+  </ng-template>
+
+  <ng-template #multiple>
+    <app-button-component
+      label="Multiple"
+      severity="warn"
+      (buttonPressed)="onMultipleButtonPressed()"
+    />
+  </ng-template>
+
+  <ng-template #sticky>
+    <app-button-component label="Sticky" (buttonPressed)="onStickyButtonPressed()" />
+    <app-button-component
+      label="Clear"
+      severity="secondary"
+      (buttonPressed)="onClearButtonPressed()"
+    />
+  </ng-template>
+
+  <ng-template #responsive>
+    <app-button-component label="Show" (buttonPressed)="onResponsiveButtonPressed()" />
+  </ng-template>
+
+  <ng-template #animation>
+    <app-button-component label="Show" (buttonPressed)="onAnimationButtonPressed()" />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Severity', content: severity }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Position', content: position }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Multiple', content: multiple }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Sticky', content: sticky }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Responsive', content: responsive }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Animation', content: animation }"
+    ></ng-container>
+  }
+</div>

@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { ButtonModule } from 'primeng/button';
+import { Ripple } from 'primeng/ripple';
 
 @Component({
   selector: 'app-button-component',
-  imports: [ButtonModule],
+  imports: [ButtonModule, Ripple],
   templateUrl: './button-component.html',
   styleUrl: './button-component.css',
 })
