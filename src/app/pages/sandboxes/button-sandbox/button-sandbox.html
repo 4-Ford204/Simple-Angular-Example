@@ -1,6 +1,6 @@
 <app-sandbox #sandbox></app-sandbox>
 
-<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-5">
   <ng-template #basic>
     <app-button-component label="Submit" (buttonPressed)="onButtonPressed()" />
   </ng-template>
@@ -86,8 +86,8 @@
     <app-button-component label="Plain" [raised]="true" severity="contrast" variant="text" />
   </ng-template>
 
-  <ng-template #outlined
-    ><app-button-component label="Primary" variant="outlined" />
+  <ng-template #outlined>
+    <app-button-component label="Primary" variant="outlined" />
     <app-button-component label="Secondary" severity="secondary" variant="outlined" />
     <app-button-component label="Success" severity="success" variant="outlined" />
     <app-button-component label="Info" severity="info" variant="outlined" />

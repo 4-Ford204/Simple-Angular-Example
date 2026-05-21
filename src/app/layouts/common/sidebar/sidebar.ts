@@ -73,7 +73,7 @@ export class Sidebar {
         },
         {
           label: 'Toast',
-          icon: 'pi pi-cloud',
+          icon: 'pi pi-whatsapp',
           command: () => {
             this.router.navigate(['/sandbox/messages/toast-sandbox']);
           },

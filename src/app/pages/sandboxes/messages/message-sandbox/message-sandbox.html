@@ -1,82 +1,76 @@
 <app-sandbox #sandbox></app-sandbox>
 
-<ng-template #basic>
-  <app-message-component text="Message Content" />
-</ng-template>
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-message-component text="Message Content" />
+  </ng-template>
 
-<ng-template #severity>
-  <div class="flex flex-wrap justify-center gap-4">
+  <ng-template #severity>
     <app-message-component severity="success" text="Success Message" />
     <app-message-component severity="info" text="Info Message" />
     <app-message-component severity="warn" text="Warn Message" />
     <app-message-component severity="error" text="Error Message" />
     <app-message-component severity="secondary" text="Secondary Message" />
     <app-message-component severity="contrast" text="Contrast Message" />
-  </div>
-</ng-template>
+  </ng-template>
 
-<ng-template #icon>
-  <app-message-component severity="info" icon="pi pi-send" text="Info Message" />
-</ng-template>
+  <ng-template #icon>
+    <app-message-component severity="info" icon="pi pi-send" text="Info Message" />
+  </ng-template>
 
-<ng-template #outlined>
-  <div class="flex flex-wrap justify-center gap-4">
+  <ng-template #outlined>
     <app-message-component severity="success" variant="outlined" text="Success Message" />
     <app-message-component severity="info" variant="outlined" text="Info Message" />
     <app-message-component severity="warn" variant="outlined" text="Warn Message" />
     <app-message-component severity="error" variant="outlined" text="Error Message" />
     <app-message-component severity="secondary" variant="outlined" text="Secondary Message" />
     <app-message-component severity="contrast" variant="outlined" text="Contrast Message" />
-  </div>
-</ng-template>
+  </ng-template>
 
-<ng-template #simple>
-  <div class="flex flex-wrap justify-center gap-4">
+  <ng-template #simple>
     <app-message-component severity="success" variant="simple" text="Success Message" />
     <app-message-component severity="info" variant="simple" text="Info Message" />
     <app-message-component severity="warn" variant="simple" text="Warn Message" />
     <app-message-component severity="error" variant="simple" text="Error Message" />
     <app-message-component severity="secondary" variant="simple" text="Secondary Message" />
     <app-message-component severity="contrast" variant="simple" text="Contrast Message" />
-  </div>
-</ng-template>
+  </ng-template>
 
-<ng-template #sizes>
-  <div class="flex flex-col items-center gap-4">
+  <ng-template #sizes>
     <app-message-component icon="pi pi-send" size="small" text="Small Message" />
     <app-message-component icon="pi pi-user" text="Normal Message" />
     <app-message-component icon="pi pi-check" size="large" text="Large Message" />
-  </div>
-</ng-template>
+  </ng-template>
 
-@if (sandbox.panelTemplate) {
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
-  ></ng-container>
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
 
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Severity', content: severity }"
-  ></ng-container>
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Severity', content: severity }"
+    ></ng-container>
 
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Icon', content: icon }"
-  ></ng-container>
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Icon', content: icon }"
+    ></ng-container>
 
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Outlined', content: outlined }"
-  ></ng-container>
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Outlined', content: outlined }"
+    ></ng-container>
 
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Simple', content: simple }"
-  ></ng-container>
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Simple', content: simple }"
+    ></ng-container>
 
-  <ng-container
-    [ngTemplateOutlet]="sandbox.panelTemplate"
-    [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes }"
-  ></ng-container>
-}
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes, direction: 'column' }"
+    ></ng-container>
+  }
+</div>
