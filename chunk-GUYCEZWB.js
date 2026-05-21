@@ -1,0 +1,1 @@
+import"./chunk-4CLCTAJ7.js";var t=[{path:"checkbox-sandbox",loadComponent:()=>import("./chunk-3JMODVPA.js").then(o=>o.CheckboxSandbox)},{path:"toggle-switch-sandbox",loadComponent:()=>import("./chunk-H7QIBNQL.js").then(o=>o.ToggleSwitchSandbox)}];export{t as FormRoutes};
