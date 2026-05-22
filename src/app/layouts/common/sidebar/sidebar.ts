@@ -49,6 +49,14 @@ export class Sidebar {
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
         },
         {
+          label: 'Multi Select',
+          icon: 'pi pi-check-square',
+          command: () => {
+            this.router.navigate(['/sandbox/form/multi-select-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Multi Select' }),
+        },
+        {
           label: 'Toggle Switch',
           icon: 'pi pi-twitch',
           command: () => {

@@ -1,0 +1,174 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      (valueChanged)="onValueChanged($event)"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #chips>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      display="chip"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #filter>
+    <app-multi-select-component
+      [filter]="false"
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #loading>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      [loading]="true"
+      placeholder="Loading..."
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #clearIcon>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      [showClear]="true"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #sizes>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Small"
+      [options]="cities"
+      size="small"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Normal"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Large"
+      [options]="cities"
+      size="large"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #filled>
+    <app-multi-select-component
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Select Cities"
+      [options]="cities"
+      variant="filled"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #disabled>
+    <app-multi-select-component
+      [disabled]="true"
+      optionLabel="name"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  <ng-template #invalid>
+    <app-multi-select-component
+      [invalid]="true"
+      [maxSelectedLabels]="3"
+      optionLabel="name"
+      placeholder="Select Cities"
+      [options]="cities"
+      [(model)]="selectedCities"
+      class="w-full md:w-80"
+    />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Chips', content: chips }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Filter', content: filter }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Loading', content: loading }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Clear Icon', content: clearIcon }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes, direction: 'column' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Filled', content: filled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Disabled', content: disabled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Invalid', content: invalid }"
+    ></ng-container>
+  }
+</div>
