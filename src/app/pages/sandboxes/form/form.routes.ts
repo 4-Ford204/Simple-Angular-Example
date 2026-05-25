@@ -7,6 +7,11 @@ export const FormRoutes: Routes = [
       import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
   },
   {
+    path: 'float-label-sandbox',
+    loadComponent: () =>
+      import('./float-label-sandbox/float-label-sandbox').then((m) => m.FloatLabelSandbox),
+  },
+  {
     path: 'multi-select-sandbox',
     loadComponent: () =>
       import('./multi-select-sandbox/multi-select-sandbox').then((m) => m.MultiSelectSandbox),

@@ -49,6 +49,13 @@ export class Sidebar {
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
         },
         {
+          label: 'Float Label',
+          command: () => {
+            this.router.navigate(['/sandbox/form/float-label-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Float Label' }),
+        },
+        {
           label: 'Multi Select',
           icon: 'pi pi-check-square',
           command: () => {

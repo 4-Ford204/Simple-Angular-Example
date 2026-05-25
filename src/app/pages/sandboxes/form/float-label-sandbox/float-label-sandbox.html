@@ -1,0 +1,62 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-float-label-component
+      id="username"
+      label="Username"
+      [(model)]="username"
+      (valueChanged)="onTextChanged($event)"
+    />
+  </ng-template>
+
+  <ng-template #variants>
+    <div class="flex flex-wrap items-end justify-center gap-4">
+      <app-float-label-component variant="in" id="in_label" label="In Label" [(model)]="username" />
+      <app-float-label-component variant="on" id="on_label" label="On Label" [(model)]="username" />
+    </div>
+  </ng-template>
+
+  <ng-template #invalid>
+    <div class="flex flex-wrap items-end justify-center gap-4">
+      <app-float-label-component
+        variant="over"
+        [invalid]="!username"
+        id="value1"
+        label="Username"
+        [(model)]="username"
+      />
+      <app-float-label-component
+        variant="in"
+        [invalid]="!username"
+        id="value2"
+        label="Username"
+        [(model)]="username"
+      />
+      <app-float-label-component
+        variant="on"
+        [invalid]="!username"
+        id="value3"
+        label="Username"
+        [(model)]="username"
+      />
+    </div>
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Variants', content: variants }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Invalid', content: invalid }"
+    ></ng-container>
+  }
+</div>

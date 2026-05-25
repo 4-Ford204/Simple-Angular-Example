@@ -1,0 +1,10 @@
+<p-floatLabel [variant]="variant">
+  <input
+    [invalid]="invalid"
+    [id]="id"
+    [(ngModel)]="model"
+    pInputText
+    (ngModelChange)="onValueChanged($event)"
+  />
+  <label [for]="id">{{ label }}</label>
+</p-floatLabel>
