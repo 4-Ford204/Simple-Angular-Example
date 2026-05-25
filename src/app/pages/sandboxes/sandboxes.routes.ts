@@ -6,10 +6,14 @@ export const SandboxRoutes: Routes = [
     path: '',
     component: SandboxLayout,
     children: [
-      { path: '', redirectTo: 'button-sandbox', pathMatch: 'full' },
+      { path: '', redirectTo: 'chart-sandbox', pathMatch: 'full' },
       {
         path: 'button-sandbox',
         loadComponent: () => import('./button-sandbox/button-sandbox').then((m) => m.ButtonSandbox),
+      },
+      {
+        path: 'chart-sandbox',
+        loadComponent: () => import('./chart-sandbox/chart-sandbox').then((m) => m.ChartSandbox),
       },
       {
         path: 'data',

@@ -1,0 +1,23 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-chart-component type="bar" [data]="barChartData" [options]="barChartOptions" />
+  </ng-template>
+
+  <ng-template #pie>
+    <app-chart-component type="pie" [data]="pieChartData" [options]="pieChartOptions" />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Pie', content: pie }"
+    ></ng-container>
+  }
+</div>

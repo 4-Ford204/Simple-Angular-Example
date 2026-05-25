@@ -22,6 +22,14 @@ export class Sidebar {
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Button' }),
     },
     {
+      label: 'Chart',
+      icon: 'pi pi-chart-bar',
+      command: () => {
+        this.router.navigate(['/sandbox/chart-sandbox']);
+      },
+      tooltipOptions: new TooltipOptions({ tooltipLabel: 'Chart' }),
+    },
+    {
       label: 'Data',
       icon: 'pi pi-database',
       items: [
