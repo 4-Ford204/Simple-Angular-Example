@@ -2,24 +2,27 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 
 import { BarChartComponent } from '../../../shared/ui-components/chart/bar-chart-component/bar-chart-component';
+import { DoughnutChartComponent } from '../../../shared/ui-components/chart/doughnut-chart-component/doughnut-chart-component';
 import { PieChartComponent } from '../../../shared/ui-components/chart/pie-chart-component/pie-chart-component';
 import { Sandbox } from '../sandboxes';
 
 @Component({
   selector: 'app-chart-sandbox',
-  imports: [CommonModule, BarChartComponent, PieChartComponent, Sandbox],
+  imports: [CommonModule, BarChartComponent, DoughnutChartComponent, PieChartComponent, Sandbox],
   templateUrl: './chart-sandbox.html',
   styleUrl: './chart-sandbox.css',
 })
 export class ChartSandbox implements OnInit {
   barChartData: any;
   pieChartData: any;
+  doughnutChartData: any;
 
   private readonly platformId = inject(PLATFORM_ID);
 
   ngOnInit() {
     this.initBarChart();
     this.initPieChart();
+    this.initDoughnutChart();
   }
 
   initBarChart() {
@@ -57,6 +60,30 @@ export class ChartSandbox implements OnInit {
         datasets: [
           {
             data: [540, 325, 702],
+            backgroundColor: [
+              documentStyle.getPropertyValue('--p-cyan-500'),
+              documentStyle.getPropertyValue('--p-orange-500'),
+              documentStyle.getPropertyValue('--p-gray-500'),
+            ],
+            hoverBackgroundColor: [
+              documentStyle.getPropertyValue('--p-cyan-400'),
+              documentStyle.getPropertyValue('--p-orange-400'),
+              documentStyle.getPropertyValue('--p-gray-400'),
+            ],
+          },
+        ],
+      };
+    }
+  }
+
+  initDoughnutChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      const documentStyle = getComputedStyle(document.documentElement);
+      this.doughnutChartData = {
+        labels: ['A', 'B', 'C'],
+        datasets: [
+          {
+            data: [300, 50, 100],
             backgroundColor: [
               documentStyle.getPropertyValue('--p-cyan-500'),
               documentStyle.getPropertyValue('--p-orange-500'),

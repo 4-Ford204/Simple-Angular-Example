@@ -6,7 +6,11 @@
   </ng-template>
 
   <ng-template #pie>
-    <app-pie-chart-component type="pie" [data]="pieChartData" class="h-80" />
+    <app-pie-chart-component [data]="pieChartData" class="h-80" />
+  </ng-template>
+
+  <ng-template #doughnut>
+    <app-doughnut-chart-component [data]="doughnutChartData" class="h-80" />
   </ng-template>
 
   @if (sandbox.panelTemplate) {
@@ -18,6 +22,11 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Pie', content: pie }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Doughnut', content: doughnut }"
     ></ng-container>
   }
 </div>
