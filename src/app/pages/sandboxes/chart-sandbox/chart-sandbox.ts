@@ -1,25 +1,21 @@
-import { ChangeDetectorRef, Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 
-import { ChartComponent } from '../../../shared/ui-components/chart-component/chart-component';
+import { BarChartComponent } from '../../../shared/ui-components/chart/bar-chart-component/bar-chart-component';
+import { PieChartComponent } from '../../../shared/ui-components/chart/pie-chart-component/pie-chart-component';
 import { Sandbox } from '../sandboxes';
 
 @Component({
   selector: 'app-chart-sandbox',
-  imports: [ChartComponent, CommonModule, Sandbox],
+  imports: [CommonModule, BarChartComponent, PieChartComponent, Sandbox],
   templateUrl: './chart-sandbox.html',
   styleUrl: './chart-sandbox.css',
 })
 export class ChartSandbox implements OnInit {
   barChartData: any;
-  barChartOptions: any;
-
   pieChartData: any;
-  pieChartOptions: any;
 
-  platformId = inject(PLATFORM_ID);
-
-  constructor(private readonly cd: ChangeDetectorRef) {}
+  private readonly platformId = inject(PLATFORM_ID);
 
   ngOnInit() {
     this.initBarChart();
@@ -28,11 +24,6 @@ export class ChartSandbox implements OnInit {
 
   initBarChart() {
     if (isPlatformBrowser(this.platformId)) {
-      const documentStyle = getComputedStyle(document.documentElement);
-      const textColor = documentStyle.getPropertyValue('--p-text-color');
-      const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
-      const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color');
-
       this.barChartData = {
         labels: ['Q1', 'Q2', 'Q3', 'Q4'],
         datasets: [
@@ -55,46 +46,12 @@ export class ChartSandbox implements OnInit {
           },
         ],
       };
-
-      this.barChartOptions = {
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            labels: {
-              color: textColor,
-            },
-          },
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: textColorSecondary,
-            },
-            grid: {
-              color: surfaceBorder,
-            },
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: textColorSecondary,
-            },
-            grid: {
-              color: surfaceBorder,
-            },
-          },
-        },
-      };
-
-      this.cd.markForCheck();
     }
   }
 
   initPieChart() {
     if (isPlatformBrowser(this.platformId)) {
       const documentStyle = getComputedStyle(document.documentElement);
-      const textColor = documentStyle.getPropertyValue('--text-color');
-
       this.pieChartData = {
         labels: ['A', 'B', 'C'],
         datasets: [
@@ -113,19 +70,6 @@ export class ChartSandbox implements OnInit {
           },
         ],
       };
-
-      this.pieChartOptions = {
-        plugins: {
-          legend: {
-            labels: {
-              usePointStyle: true,
-              color: textColor,
-            },
-          },
-        },
-      };
-
-      this.cd.markForCheck();
     }
   }
 }
