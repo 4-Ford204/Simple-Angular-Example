@@ -6,7 +6,7 @@
       type="bar"
       [data]="barChartData"
       [options]="barChartOption"
-      class="flex h-80 justify-center"
+      class="h-80 w-full"
     />
   </ng-template>
 
@@ -28,7 +28,16 @@
       type="bar"
       [data]="verticalBarChartData"
       [options]="verticalBarChartOption"
-      class="flex h-80 justify-center"
+      class="h-80 w-full"
+    />
+  </ng-template>
+
+  <ng-template #horizontalBar>
+    <app-chart-component
+      type="bar"
+      [data]="horizontalBarChartData"
+      [options]="horizontalBarChartOption"
+      class="h-80 w-full"
     />
   </ng-template>
 
@@ -51,6 +60,11 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Vertical Bar', content: verticalBar }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Horizontal Bar', content: horizontalBar }"
     ></ng-container>
   }
 </div>

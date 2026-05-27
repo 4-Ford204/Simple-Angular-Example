@@ -30,6 +30,9 @@ export class ChartSandbox implements OnInit, OnDestroy {
   verticalBarChartData: any;
   verticalBarChartOption: any;
 
+  horizontalBarChartData: any;
+  horizontalBarChartOption: any;
+
   private readonly platformId = inject(PLATFORM_ID);
   private readonly cd = inject(ChangeDetectorRef);
   private observer!: MutationObserver;
@@ -69,6 +72,7 @@ export class ChartSandbox implements OnInit, OnDestroy {
     this.initPieChart();
     this.initDoughnutChart();
     this.initVerticalBarChart();
+    this.initHorizontalBarChart();
   }
 
   initTheme() {
@@ -196,6 +200,56 @@ export class ChartSandbox implements OnInit, OnDestroy {
       };
 
       this.verticalBarChartOption = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.8,
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: this.theme.TextMuted,
+              font: { weight: 500 },
+            },
+            grid: {
+              color: this.theme.ContentBorder,
+              drawBorder: false,
+            },
+          },
+          y: {
+            ticks: { color: this.theme.TextMuted },
+            grid: {
+              color: this.theme.ContentBorder,
+              drawBorder: false,
+            },
+          },
+        },
+      };
+    }
+  }
+
+  initHorizontalBarChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.horizontalBarChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'My First dataset',
+            backgroundColor: this.theme.Cyan500,
+            borderColor: this.theme.Cyan500,
+            data: [65, 59, 80, 81, 56, 55, 40],
+          },
+          {
+            label: 'My Second dataset',
+            backgroundColor: this.theme.Gray500,
+            borderColor: this.theme.Gray500,
+            data: [28, 48, 40, 19, 86, 27, 90],
+          },
+        ],
+      };
+
+      this.horizontalBarChartOption = {
+        indexAxis: 'y',
         maintainAspectRatio: false,
         aspectRatio: 0.8,
         plugins: {
