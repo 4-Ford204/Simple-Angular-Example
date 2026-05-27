@@ -61,6 +61,36 @@
     />
   </ng-template>
 
+  <ng-template #line>
+    <app-chart-component
+      type="line"
+      [data]="lineChartData"
+      [options]="lineChartOption"
+      (dataChosen)="onDataChosen('Line', $event)"
+      class="h-80 w-4/5"
+    />
+  </ng-template>
+
+  <ng-template #multiAxis>
+    <app-chart-component
+      type="line"
+      [data]="multiAxisChartData"
+      [options]="multiAxisChartOption"
+      (dataChosen)="onDataChosen('Multi Axis', $event)"
+      class="h-80 w-4/5"
+    />
+  </ng-template>
+
+  <ng-template #lineStyles>
+    <app-chart-component
+      type="line"
+      [data]="lineStylesChartData"
+      [options]="lineStylesChartOption"
+      (dataChosen)="onDataChosen('Line Styles', $event)"
+      class="h-80 w-4/5"
+    />
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -90,6 +120,21 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Stacked Bar', content: stackedBar }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Line', content: line }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Multi Axis', content: multiAxis }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Line Styles', content: lineStyles }"
     ></ng-container>
   }
 </div>

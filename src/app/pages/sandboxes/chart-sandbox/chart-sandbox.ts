@@ -36,6 +36,15 @@ export class ChartSandbox implements OnInit, OnDestroy {
   stackedBarChartData: any;
   stackedBarChartOption: any;
 
+  lineChartData: any;
+  lineChartOption: any;
+
+  multiAxisChartData: any;
+  multiAxisChartOption: any;
+
+  lineStylesChartData: any;
+  lineStylesChartOption: any;
+
   private readonly platformId = inject(PLATFORM_ID);
   private readonly cd = inject(ChangeDetectorRef);
   private observer!: MutationObserver;
@@ -77,6 +86,9 @@ export class ChartSandbox implements OnInit, OnDestroy {
     this.initVerticalBarChart();
     this.initHorizontalBarChart();
     this.initStackedBarChart();
+    this.initLineChart();
+    this.initMultiAxisChart();
+    this.initLineStylesChart();
   }
 
   initTheme() {
@@ -307,6 +319,154 @@ export class ChartSandbox implements OnInit, OnDestroy {
             stacked: true,
             ticks: { color: this.theme.TextMuted },
             grid: { color: this.theme.ContentBorder, drawBorder: false },
+          },
+        },
+      };
+    }
+  }
+
+  initLineChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.lineChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            borderColor: this.theme.Cyan500,
+            tension: 0.4,
+          },
+          {
+            label: 'Second Dataset',
+            data: [28, 48, 40, 19, 86, 27, 90],
+            fill: false,
+            borderColor: this.theme.Gray500,
+            tension: 0.4,
+          },
+        ],
+      };
+
+      this.lineChartOption = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.6,
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: {
+          x: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
+          },
+          y: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
+          },
+        },
+      };
+    }
+  }
+
+  initMultiAxisChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.multiAxisChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'Dataset 1',
+            fill: false,
+            borderColor: this.theme.Cyan500,
+            yAxisID: 'y',
+            tension: 0.4,
+            data: [65, 59, 80, 81, 56, 55, 10],
+          },
+          {
+            label: 'Dataset 2',
+            fill: false,
+            borderColor: this.theme.Gray500,
+            yAxisID: 'y1',
+            tension: 0.4,
+            data: [28, 48, 40, 19, 86, 27, 90],
+          },
+        ],
+      };
+
+      this.multiAxisChartOption = {
+        stacked: false,
+        maintainAspectRatio: false,
+        aspectRatio: 0.6,
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: {
+          x: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
+          },
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
+          },
+          y1: {
+            type: 'linear',
+            display: true,
+            position: 'right',
+            ticks: { color: this.theme.TextMuted },
+            grid: { drawOnChartArea: false, color: this.theme.ContentBorder },
+          },
+        },
+      };
+    }
+  }
+
+  initLineStylesChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.lineStylesChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            tension: 0.4,
+            borderColor: this.theme.Cyan500,
+          },
+          {
+            label: 'Second Dataset',
+            data: [28, 48, 40, 19, 86, 27, 90],
+            fill: false,
+            borderDash: [5, 5],
+            tension: 0.4,
+            borderColor: this.theme.Orange500,
+          },
+          {
+            label: 'Third Dataset',
+            data: [12, 51, 62, 33, 21, 62, 45],
+            fill: true,
+            borderColor: this.theme.Gray500,
+            tension: 0.4,
+            backgroundColor: 'rgba(107, 114, 128, 0.2)',
+          },
+        ],
+      };
+
+      this.lineStylesChartOption = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.6,
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: {
+          x: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
+          },
+          y: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
           },
         },
       };
