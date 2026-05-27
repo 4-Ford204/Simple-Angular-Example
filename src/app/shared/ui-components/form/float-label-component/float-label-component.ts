@@ -25,7 +25,7 @@ export class FloatLabelComponent implements OnInit {
 
   private readonly valueChangedSubject = new Subject<any>();
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.valueChangedSubject.pipe(debounceTime(500), distinctUntilChanged()).subscribe((value) => {
       this.valueChanged.emit(value);
     });

@@ -45,7 +45,7 @@ export class Header implements OnInit {
     },
   ];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.onDarkModeChanged();
   }
 
