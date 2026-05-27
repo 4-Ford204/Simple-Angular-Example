@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { ChartModule } from 'primeng/chart';
 
@@ -30,4 +30,10 @@ export class ChartComponent {
   @Input() data: any;
   // Options to customize the chart.
   @Input() options: any;
+
+  @Output() dataChosen = new EventEmitter();
+
+  onDataChosen(event: any) {
+    this.dataChosen.emit(event);
+  }
 }

@@ -33,6 +33,9 @@ export class ChartSandbox implements OnInit, OnDestroy {
   horizontalBarChartData: any;
   horizontalBarChartOption: any;
 
+  stackedBarChartData: any;
+  stackedBarChartOption: any;
+
   private readonly platformId = inject(PLATFORM_ID);
   private readonly cd = inject(ChangeDetectorRef);
   private observer!: MutationObserver;
@@ -73,6 +76,7 @@ export class ChartSandbox implements OnInit, OnDestroy {
     this.initDoughnutChart();
     this.initVerticalBarChart();
     this.initHorizontalBarChart();
+    this.initStackedBarChart();
   }
 
   initTheme() {
@@ -207,21 +211,12 @@ export class ChartSandbox implements OnInit, OnDestroy {
         },
         scales: {
           x: {
-            ticks: {
-              color: this.theme.TextMuted,
-              font: { weight: 500 },
-            },
-            grid: {
-              color: this.theme.ContentBorder,
-              drawBorder: false,
-            },
+            ticks: { color: this.theme.TextMuted, font: { weight: 500 } },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
           },
           y: {
             ticks: { color: this.theme.TextMuted },
-            grid: {
-              color: this.theme.ContentBorder,
-              drawBorder: false,
-            },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
           },
         },
       };
@@ -257,24 +252,68 @@ export class ChartSandbox implements OnInit, OnDestroy {
         },
         scales: {
           x: {
-            ticks: {
-              color: this.theme.TextMuted,
-              font: { weight: 500 },
-            },
-            grid: {
-              color: this.theme.ContentBorder,
-              drawBorder: false,
-            },
+            ticks: { color: this.theme.TextMuted, font: { weight: 500 } },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
           },
           y: {
             ticks: { color: this.theme.TextMuted },
-            grid: {
-              color: this.theme.ContentBorder,
-              drawBorder: false,
-            },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
           },
         },
       };
     }
+  }
+
+  initStackedBarChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.stackedBarChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            type: 'bar',
+            label: 'Dataset 1',
+            backgroundColor: this.theme.Cyan500,
+            data: [50, 25, 12, 48, 90, 76, 42],
+          },
+          {
+            type: 'bar',
+            label: 'Dataset 2',
+            backgroundColor: this.theme.Gray500,
+            data: [21, 84, 24, 75, 37, 65, 34],
+          },
+          {
+            type: 'bar',
+            label: 'Dataset 3',
+            backgroundColor: this.theme.Orange500,
+            data: [41, 52, 24, 74, 23, 21, 32],
+          },
+        ],
+      };
+
+      this.stackedBarChartOption = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.8,
+        plugins: {
+          tooltip: { mode: 'index', intersect: false },
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: {
+          x: {
+            stacked: true,
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
+          },
+          y: {
+            stacked: true,
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder, drawBorder: false },
+          },
+        },
+      };
+    }
+  }
+
+  onDataChosen(name: string, event: any) {
+    console.log(`${name} Chart: `, event);
   }
 }

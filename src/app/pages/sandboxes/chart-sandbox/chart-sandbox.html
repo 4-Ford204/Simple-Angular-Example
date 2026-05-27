@@ -6,12 +6,19 @@
       type="bar"
       [data]="barChartData"
       [options]="barChartOption"
-      class="h-80 w-full"
+      (dataChosen)="onDataChosen('Basic', $event)"
+      class="h-80 w-4/5"
     />
   </ng-template>
 
   <ng-template #pie>
-    <app-chart-component type="pie" [data]="pieChartData" [options]="pieChartOption" class="h-80" />
+    <app-chart-component
+      type="pie"
+      [data]="pieChartData"
+      [options]="pieChartOption"
+      (dataChosen)="onDataChosen('Pie', $event)"
+      class="h-80"
+    />
   </ng-template>
 
   <ng-template #doughnut>
@@ -19,6 +26,7 @@
       type="doughnut"
       [data]="doughnutChartData"
       [options]="doughnutChartOption"
+      (dataChosen)="onDataChosen('Doughnut', $event)"
       class="h-80"
     />
   </ng-template>
@@ -28,7 +36,8 @@
       type="bar"
       [data]="verticalBarChartData"
       [options]="verticalBarChartOption"
-      class="h-80 w-full"
+      (dataChosen)="onDataChosen('Vertical Bar', $event)"
+      class="h-80 w-4/5"
     />
   </ng-template>
 
@@ -37,7 +46,18 @@
       type="bar"
       [data]="horizontalBarChartData"
       [options]="horizontalBarChartOption"
-      class="h-80 w-full"
+      (dataChosen)="onDataChosen('Horizontal Bar', $event)"
+      class="h-80 w-4/5"
+    />
+  </ng-template>
+
+  <ng-template #stackedBar>
+    <app-chart-component
+      type="bar"
+      [data]="stackedBarChartData"
+      [options]="stackedBarChartOption"
+      (dataChosen)="onDataChosen('Stacked Bar', $event)"
+      class="h-80 w-4/5"
     />
   </ng-template>
 
@@ -65,6 +85,11 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Horizontal Bar', content: horizontalBar }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Stacked Bar', content: stackedBar }"
     ></ng-container>
   }
 </div>
