@@ -1,5 +1,5 @@
 <div class="flex w-full flex-col gap-5">
-  <div class="my-2 flex w-full flex-wrap items-center justify-center">
+  <div class="my-1 flex w-full flex-wrap items-center justify-center p-1">
     <div class="w-full md:w-3/5">
       <app-table-component
         [paginator]="true"
@@ -14,14 +14,9 @@
     </div>
 
     <div class="w-full md:w-2/5">
-      <span>
-        Just Arrived
-        <i class="fa-light fa-plane-arrival"></i>
-      </span>
-
       <app-carousel-component
         [numVisible]="1"
-        [products]="products.slice(0, 10)"
+        [products]="carouselProducts"
         [circular]="true"
         [autoplayInterval]="10000"
       />

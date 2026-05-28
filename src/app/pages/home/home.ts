@@ -21,6 +21,7 @@ export class Home implements OnInit {
     { field: 'price', header: 'Price', sortable: true },
   ];
   products: any[] = [];
+  carouselProducts: any[] = [];
 
   private readonly productService = inject(ProductService);
 
@@ -31,6 +32,7 @@ export class Home implements OnInit {
   private fetchHomePage() {
     this.productService.getProducts().then((response: any) => {
       this.products = response.data;
+      this.carouselProducts = this.products.slice(-10);
     });
   }
 }
