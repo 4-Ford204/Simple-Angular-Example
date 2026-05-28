@@ -45,6 +45,15 @@ export class ChartSandbox implements OnInit, OnDestroy {
   lineStylesChartData: any;
   lineStylesChartOption: any;
 
+  polarAreaChartData: any;
+  polarAreaChartOption: any;
+
+  radarChartData: any;
+  radarChartOption: any;
+
+  comboChartData: any;
+  comboChartOption: any;
+
   private readonly platformId = inject(PLATFORM_ID);
   private readonly cd = inject(ChangeDetectorRef);
   private observer!: MutationObserver;
@@ -58,6 +67,8 @@ export class ChartSandbox implements OnInit, OnDestroy {
     Cyan400: '',
     Orange400: '',
     Gray400: '',
+    Pink500: '',
+    Purple500: '',
   };
 
   ngOnInit(): void {
@@ -89,6 +100,9 @@ export class ChartSandbox implements OnInit, OnDestroy {
     this.initLineChart();
     this.initMultiAxisChart();
     this.initLineStylesChart();
+    this.initPolarAreaChart();
+    this.initRadarChart();
+    this.initComboChart();
   }
 
   initTheme() {
@@ -102,6 +116,8 @@ export class ChartSandbox implements OnInit, OnDestroy {
     this.theme.Cyan400 = style.getPropertyValue('--p-cyan-400');
     this.theme.Orange400 = style.getPropertyValue('--p-orange-400');
     this.theme.Gray400 = style.getPropertyValue('--p-gray-400');
+    this.theme.Pink500 = style.getPropertyValue('--p-pink-500');
+    this.theme.Purple500 = style.getPropertyValue('--p-purple-500');
   }
 
   initBarChart() {
@@ -459,6 +475,118 @@ export class ChartSandbox implements OnInit, OnDestroy {
         plugins: {
           legend: { labels: { color: this.theme.Text } },
         },
+        scales: {
+          x: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
+          },
+          y: {
+            ticks: { color: this.theme.TextMuted },
+            grid: { color: this.theme.ContentBorder },
+          },
+        },
+      };
+    }
+  }
+
+  initPolarAreaChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.polarAreaChartData = {
+        datasets: [
+          {
+            data: [11, 16, 7, 3, 14],
+            backgroundColor: [
+              this.theme.Pink500,
+              this.theme.Gray500,
+              this.theme.Orange500,
+              this.theme.Purple500,
+              this.theme.Cyan500,
+            ],
+            label: 'My dataset',
+          },
+        ],
+        labels: ['Pink', 'Gray', 'Orange', 'Purple', 'Cyan'],
+      };
+
+      this.polarAreaChartOption = {
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: { r: { grid: { color: this.theme.ContentBorder } } },
+      };
+    }
+  }
+
+  initRadarChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.radarChartData = {
+        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+        datasets: [
+          {
+            label: 'My First dataset',
+            borderColor: this.theme.Gray400,
+            pointBackgroundColor: this.theme.Gray400,
+            pointBorderColor: this.theme.Gray400,
+            pointHoverBackgroundColor: this.theme.Text,
+            pointHoverBorderColor: this.theme.Gray400,
+            data: [65, 59, 90, 81, 56, 55, 40],
+          },
+          {
+            label: 'My Second dataset',
+            borderColor: this.theme.Cyan400,
+            pointBackgroundColor: this.theme.Cyan400,
+            pointBorderColor: this.theme.Cyan400,
+            pointHoverBackgroundColor: this.theme.Text,
+            pointHoverBorderColor: this.theme.Cyan400,
+            data: [28, 48, 40, 19, 96, 27, 100],
+          },
+        ],
+      };
+
+      this.radarChartOption = {
+        plugins: {
+          legend: { labels: { color: this.theme.Text } },
+        },
+        scales: { r: { grid: { color: this.theme.ContentBorder } } },
+      };
+    }
+  }
+
+  initComboChart() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.comboChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            type: 'line',
+            label: 'Dataset 1',
+            borderColor: this.theme.Orange500,
+            borderWidth: 2,
+            fill: false,
+            tension: 0.4,
+            data: [50, 25, 12, 48, 56, 76, 42],
+          },
+          {
+            type: 'bar',
+            label: 'Dataset 2',
+            backgroundColor: this.theme.Gray500,
+            data: [21, 84, 24, 75, 37, 65, 34],
+            borderColor: 'white',
+            borderWidth: 2,
+          },
+          {
+            type: 'bar',
+            label: 'Dataset 3',
+            backgroundColor: this.theme.Cyan500,
+            data: [41, 52, 24, 74, 23, 21, 32],
+          },
+        ],
+      };
+
+      this.comboChartOption = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.6,
+        plugins: { legend: { labels: { color: this.theme.Text } } },
         scales: {
           x: {
             ticks: { color: this.theme.TextMuted },

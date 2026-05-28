@@ -17,7 +17,7 @@
       [data]="pieChartData"
       [options]="pieChartOption"
       (dataChosen)="onDataChosen('Pie', $event)"
-      class="h-80"
+      class="h-80 w-80"
     />
   </ng-template>
 
@@ -27,7 +27,7 @@
       [data]="doughnutChartData"
       [options]="doughnutChartOption"
       (dataChosen)="onDataChosen('Doughnut', $event)"
-      class="h-80"
+      class="h-80 w-80"
     />
   </ng-template>
 
@@ -91,6 +91,36 @@
     />
   </ng-template>
 
+  <ng-template #polarArea>
+    <app-chart-component
+      type="polarArea"
+      [data]="polarAreaChartData"
+      [options]="polarAreaChartOption"
+      (dataChosen)="onDataChosen('Polar Area', $event)"
+      class="h-80 w-80"
+    />
+  </ng-template>
+
+  <ng-template #radar>
+    <app-chart-component
+      type="radar"
+      [data]="radarChartData"
+      [options]="radarChartOption"
+      (dataChosen)="onDataChosen('Radar', $event)"
+      class="h-80 w-80"
+    />
+  </ng-template>
+
+  <ng-template #combo>
+    <app-chart-component
+      type="line"
+      [data]="comboChartData"
+      [options]="comboChartOption"
+      (dataChosen)="onDataChosen('Combo', $event)"
+      class="h-80 w-4/5"
+    />
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -135,6 +165,21 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Line Styles', content: lineStyles }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Polar Area', content: polarArea }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Radar', content: radar }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Combo', content: combo }"
     ></ng-container>
   }
 </div>
