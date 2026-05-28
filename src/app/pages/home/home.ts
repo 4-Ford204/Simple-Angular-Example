@@ -1,19 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { CarouselComponent } from '../../shared/ui-components/media/carousel-component/carousel-component';
+import { ChartComponent } from '../../shared/ui-components/chart-component/chart-component';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { TableComponent } from '../../shared/ui-components/data/table-component/table-component';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselComponent, CommonModule, TableComponent],
+  imports: [CarouselComponent, ChartComponent, CommonModule, TableComponent],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
-  private readonly productService = inject(ProductService);
-
+export class Home implements OnInit {
   columns = [
     { field: 'name', header: 'Name' },
     { field: 'series', header: 'Series' },
@@ -23,7 +22,9 @@ export class Home {
   ];
   products: any[] = [];
 
-  constructor() {
+  private readonly productService = inject(ProductService);
+
+  ngOnInit(): void {
     this.fetchHomePage();
   }
 

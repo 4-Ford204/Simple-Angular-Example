@@ -1,5 +1,18 @@
 export const PRODUCTS = [
   {
+    id: 'STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK',
+    name: 'Hokage Rock',
+    series: 'Hokage Series',
+    studio: 'Stone Custom Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 6_100_000,
+    images: [
+      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_2.jpg',
+      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_1.jpg',
+    ],
+  },
+  {
     id: 'G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY',
     name: 'Monkey D. Luffy',
     series: 'Four Emperors Series',
