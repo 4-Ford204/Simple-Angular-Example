@@ -8,10 +8,10 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_000_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_7.png',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_6.png',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_8.png',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_5.png',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_7_jfergr.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_6_mhh8ob.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_8_zfxxvy.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_5_jykp1n.webp',
     ],
   },
   {
@@ -23,11 +23,11 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 28_650_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_10.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_9.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_8.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_6.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOONEPIECETHEROADTOBEKING_2.png',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_10_wdq6my.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_9_qs0kmp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_8_faltis.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_6_ttkudp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_2_zdcxcx.webp',
     ],
   },
   {
@@ -39,8 +39,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_300_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/files/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_5.png',
-      'https://www.ffcollectibles.com.au/cdn/shop/files/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_4.png',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_5_y3jy9u.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_4_agwrkz.webp',
     ],
   },
   {
@@ -52,8 +52,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 6_300_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESLUFFY_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESLUFFY_2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_1_gyyxbk.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_2_foyzua.webp',
     ],
   },
   {
@@ -65,8 +65,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_700_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESZORO_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESZORO_2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_1_sfbppo.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_2_jcsc3h.webp',
     ],
   },
   {
@@ -78,8 +78,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 2_900_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESSERIESNAMI_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESSERIESNAMI_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_1_a0o0l8.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_4_zsscpc.webp',
     ],
   },
   {
@@ -91,8 +91,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_700_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_1_zdfmeg.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_4_wwzssy.webp',
     ],
   },
   {
@@ -104,8 +104,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_700_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESSANJI_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESSANJI_2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESSANJI_1_bwouuo.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESSANJI_2_s2yeya.webp',
     ],
   },
   {
@@ -117,8 +117,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 2_900_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_1_ss1ydb.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_2_nrtsby.webp',
     ],
   },
   {
@@ -130,8 +130,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 6_300_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESROBIN_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESROBIN_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESROBIN_1_kisc1x.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESROBIN_4_yw59uy.webp',
     ],
   },
   {
@@ -143,8 +143,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 6_100_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESFRANKY_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESFRANKY_2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESFRANKY_1_ncnmtz.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESFRANKY_2_bq46jp.webp',
     ],
   },
   {
@@ -156,8 +156,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 5_700_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESBROOK_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESBROOK_5.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESBROOK_1_tz5gyd.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESBROOK_5_ce3n3p.webp',
     ],
   },
   {
@@ -169,8 +169,8 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 2_900_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESJINBE_1.png',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOSTRAWHATPIRATESERIESJINBE_3.png',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESJINBE_1_d8ixa3.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESJINBE_3_ahmdwc.webp',
     ],
   },
   {
@@ -182,9 +182,75 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 2_900_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOYAMATO_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/G5STUDIOYAMATO_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOYAMATO_1_xbejip.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOYAMATO_4_lvphta.webp',
     ],
+  },
+  {
+    id: 'SURGESTUDIO_ITACHI',
+    name: 'Uchiha Itachi',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_ITACHI_1_rlritg.jpg'],
+  },
+  {
+    id: 'SURGESTUDIO_MADARA',
+    name: 'Uchiha Madara',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_MADARA_1_txrcsq.jpg'],
+  },
+  {
+    id: 'SURGESTUDIO_SASUKE',
+    name: 'Uchiha Sasuke',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_SASUKE_1_k6ivfs.jpg'],
+  },
+  {
+    id: 'SURGESTUDIO_KAKASHI',
+    name: 'Hakate Kakashi',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_KAKASHI_1_ifneav.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_KAKASHI_2_q4e5fi.jpg',
+    ],
+  },
+  {
+    id: 'SURGESTUDIO_OBITO',
+    name: 'Uchiha Obito',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_OBITO_1_m08ywr.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_OBITO_2_iwwu4l.jpg',
+    ],
+  },
+  {
+    id: 'SURGESTUDIO_SHISUI',
+    name: 'Uchiha Shisui',
+    series: 'Uchiha Clan Susanoo Series',
+    studio: 'Surge Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 3_800_000,
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/SURGESTUDIO_SHISUI_1_fffcy9.jpg'],
   },
   {
     id: 'STONECUSTOMSTUDIO_NARUTOHOKAGESERIES1.HASHIRAMASENJU',
@@ -195,8 +261,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_500_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOHOKAGESERIES1.HASHIRAMASENJU_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOHOKAGESERIES1.HASHIRAMASENJU_5.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOHOKAGESERIES1.HASHIRAMASENJU_5_uy2xfw.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOHOKAGESERIES1.HASHIRAMASENJU_1_ducidy.webp',
     ],
   },
   {
@@ -208,8 +274,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_500_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES2.TOBIRAMASENJU_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES2.TOBIRAMASENJU_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES2.TOBIRAMASENJU_4_wyka26.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES2.TOBIRAMASENJU_1_vmrare.webp',
     ],
   },
   {
@@ -221,8 +287,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_900_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOSARUTOBI_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOSARUTOBI_3.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOSARUTOBI_1_kxxv5g.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOSARUTOBI_3_ktn9uo.webp',
     ],
   },
   {
@@ -234,8 +300,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_900_000,
     images: [
-      'http://ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOWCFHOKAGESERIES4.MINATONAMIKAZE_1.jpg',
-      'http://ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOWCFHOKAGESERIES4.MINATONAMIKAZE_3.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOWCFHOKAGESERIES4.MINATONAMIKAZE_3_kxk2tg.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOWCFHOKAGESERIES4.MINATONAMIKAZE_1_ufsq0m.webp',
     ],
   },
   {
@@ -247,9 +313,9 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_700_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_2.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_4.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_4_btt0mp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_1_wos5ax.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES5.TSUNADE_2_hpf9kx.webp',
     ],
   },
   {
@@ -261,9 +327,9 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 2_100_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_4.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_3.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_3_smp1vj.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_1_kfdykg.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOHOKAGESERIESWCFKAKASHI_4_unbb1t.webp',
     ],
   },
   {
@@ -275,8 +341,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 5_100_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES7.NARUTO_1.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES7.NARUTO_8.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES7.NARUTO_8_tjh8w3.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES7.NARUTO_1_c6gxmd.webp',
     ],
   },
   {
@@ -288,8 +354,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 6_100_000,
     images: [
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_2.jpg',
-      'https://www.ffcollectibles.com.au/cdn/shop/products/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_1.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_2_qtzwp9.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIO_NARUTOWCFHOKAGESERIES_HOKAGEROCK_1_vhycvg.webp',
     ],
   },
 ];

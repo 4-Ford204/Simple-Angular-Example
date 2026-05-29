@@ -13,13 +13,14 @@
             class="flex aspect-square items-center justify-center overflow-hidden border border-gray-200"
           >
             <app-image-component
-              imageClass="object-cover"
+              imageClass="h-full w-full object-cover"
               [src]="product.images[productImages[product.id]] + '?width=600'"
               [alt]="product.name"
               loading="lazy"
               decoding="async"
               appendTo="body"
               [preview]="true"
+              class="h-full w-full"
             />
           </div>
 

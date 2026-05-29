@@ -22,17 +22,62 @@ export class Home implements OnInit {
   ];
   products: any[] = [];
   carouselProducts: any[] = [];
+  chartData: any;
+  chartOption: any;
 
   private readonly productService = inject(ProductService);
 
   ngOnInit(): void {
-    this.fetchHomePage();
+    this.fetchProducts();
   }
 
-  private fetchHomePage() {
+  fetchProducts() {
     this.productService.getProducts().then((response: any) => {
       this.products = response.data;
       this.carouselProducts = this.products.slice(-10);
+      this.initChart();
     });
+  }
+
+  initChart() {
+    const grouped = this.products.reduce(
+      (result, p) => {
+        result[p.studio] = [...(result[p.studio] ?? []), p];
+        return result;
+      },
+      {} as Record<string, typeof this.products>
+    );
+    const keys = Object.keys(grouped);
+
+    this.chartData = {
+      labels: keys,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Highest',
+          borderWidth: 1,
+          data: keys.map((studio) => Math.max(...grouped[studio].map((p: any) => p.price))),
+        },
+        {
+          type: 'bar',
+          label: 'Average',
+          borderWidth: 1,
+          data: keys.map((studio) => {
+            const group = grouped[studio];
+            return group.reduce((sum: any, p: any) => sum + p.price, 0) / group.length;
+          }),
+        },
+        {
+          type: 'bar',
+          label: 'Lowest',
+          borderWidth: 1,
+          data: keys.map((studio) => Math.min(...grouped[studio].map((p: any) => p.price))),
+        },
+      ],
+    };
+
+    this.chartOption = {
+      maintainAspectRatio: false,
+    };
   }
 }
