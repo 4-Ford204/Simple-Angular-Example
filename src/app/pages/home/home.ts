@@ -53,24 +53,27 @@ export class Home implements OnInit {
       labels: keys,
       datasets: [
         {
-          type: 'bar',
+          type: 'line',
           label: 'Highest',
           borderWidth: 1,
+          tension: 0.4,
           data: keys.map((studio) => Math.max(...grouped[studio].map((p: any) => p.price))),
         },
         {
-          type: 'bar',
+          type: 'line',
           label: 'Average',
           borderWidth: 1,
+          tension: 0.4,
           data: keys.map((studio) => {
             const group = grouped[studio];
             return group.reduce((sum: any, p: any) => sum + p.price, 0) / group.length;
           }),
         },
         {
-          type: 'bar',
+          type: 'line',
           label: 'Lowest',
           borderWidth: 1,
+          tension: 0.4,
           data: keys.map((studio) => Math.min(...grouped[studio].map((p: any) => p.price))),
         },
       ],

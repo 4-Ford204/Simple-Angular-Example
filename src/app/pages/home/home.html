@@ -1,15 +1,17 @@
 <div class="flex w-full flex-col gap-5">
-  <div class="my-1 flex w-full flex-wrap items-center justify-center p-1">
-    <div class="w-full md:w-3/5">
+  <div class="my-1 flex w-full flex-wrap items-center justify-center p-1 md:h-200">
+    <div class="w-full md:h-full md:w-3/5">
       <app-table-component
         [paginator]="true"
-        [rowsPerPageOptions]="[5, 10]"
+        [rowsPerPageOptions]="[15, 20, 25]"
         [showCurrentPageReport]="true"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
+        [scrollable]="true"
+        scrollHeight="flex"
         [value]="products"
         [columns]="columns"
         [first]="0"
-        [rows]="10"
+        [rows]="15"
       />
     </div>
 

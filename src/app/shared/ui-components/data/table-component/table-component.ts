@@ -19,6 +19,10 @@ export class TableComponent {
   @Input() currentPageReportTemplate: string = '{currentPage} of {totalPages}';
   // Whether to display current page report.
   @Input() showCurrentPageReport: boolean = false;
+  // Enables scrollable table
+  @Input() scrollable: boolean = false;
+  // Height of the scroll viewport in fixed pixels or the "flex" keyword for a dynamic size.
+  @Input() scrollHeight: string | undefined = undefined;
   // An array of objects to display.
   @Input() value: any[] = [];
   // An array of objects to represent dynamic columns.
