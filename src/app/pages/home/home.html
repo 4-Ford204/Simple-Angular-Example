@@ -16,6 +16,16 @@
     </div>
 
     <div class="w-full md:w-2/5">
+      <div class="my-1 flex justify-center">
+        <app-auto-complete-component
+          [dropdown]="true"
+          [suggestions]="suggestions"
+          [(model)]="studio"
+          (valueCompleted)="onStudioCompleted($event)"
+          (valueChanged)="onStudioChanged($event)"
+        />
+      </div>
+
       <app-carousel-component
         [numVisible]="1"
         [products]="carouselProducts"
