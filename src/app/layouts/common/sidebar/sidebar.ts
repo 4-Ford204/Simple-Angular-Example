@@ -49,6 +49,14 @@ export class Sidebar {
       icon: 'pi pi-book',
       items: [
         {
+          label: 'Auto Complete',
+          icon: 'pi pi-bolt',
+          command: () => {
+            this.router.navigate(['/sandbox/form/auto-complete-sandbox']);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Auto Complete' }),
+        },
+        {
           label: 'Checkbox',
           icon: 'pi pi-check-circle',
           command: () => {

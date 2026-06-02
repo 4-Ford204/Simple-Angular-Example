@@ -1,0 +1,32 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-auto-complete-component
+      [suggestions]="suggestions"
+      [(model)]="value"
+      (valueCompleted)="onValueCompleted($event)"
+    />
+  </ng-template>
+
+  <ng-template #dropdown>
+    <app-auto-complete-component
+      [dropdown]="true"
+      [suggestions]="suggestions"
+      [(model)]="value"
+      (valueCompleted)="onValueCompleted($event)"
+    />
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Dropdown', content: dropdown }"
+    ></ng-container>
+  }
+</div>

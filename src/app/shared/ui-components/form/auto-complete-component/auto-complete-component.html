@@ -1,0 +1,8 @@
+<p-autocomplete
+  [dropdown]="dropdown"
+  [suggestions]="suggestions"
+  [optionLabel]="optionLabel"
+  [(ngModel)]="model"
+  (completeMethod)="onValueCompleted($event)"
+  (onSelect)="onValueChanged($event)"
+></p-autocomplete>

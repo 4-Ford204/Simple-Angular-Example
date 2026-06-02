@@ -2,6 +2,11 @@ import { Routes } from '@angular/router';
 
 export const FormRoutes: Routes = [
   {
+    path: 'auto-complete-sandbox',
+    loadComponent: () =>
+      import('./auto-complete-sandbox/auto-complete-sandbox').then((m) => m.AutoCompleteSandbox),
+  },
+  {
     path: 'checkbox-sandbox',
     loadComponent: () =>
       import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
