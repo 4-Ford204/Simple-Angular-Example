@@ -40,7 +40,7 @@ export class Home implements OnInit {
   fetchProducts() {
     this.productService.getProducts().then((response: any) => {
       this.products = response.data;
-      this.carouselProducts = this.products.slice(0, 10);
+      this.carouselProducts = this.products.slice(20, 30);
       this.groupedProducts = this.products.reduce(
         (result, p) => {
           result[p.studio] = [...(result[p.studio] ?? []), p];
