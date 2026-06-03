@@ -41,14 +41,14 @@
           @if (column.field == 'name') {
             <td [headers]="$index" class="align-middle">
               <div class="flex items-center gap-1.5">
-                <span class="size-8 shrink-0">
+                <!-- <span class="size-8 shrink-0">
                   <app-image-component
                     imageClass="w-full h-full object-cover rounded-full"
                     [src]="item['images'][0]"
                     [alt]="item.name"
                     [preview]="true"
                   />
-                </span>
+                </span> -->
 
                 <span>{{ item[column.field] }}</span>
               </div>

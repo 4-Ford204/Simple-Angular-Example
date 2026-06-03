@@ -9,8 +9,11 @@ export const PRODUCTS = [
     price: 5_000_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_7_jfergr.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_1_vuomwr.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_6_mhh8ob.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_2_rltxbk.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_8_zfxxvy.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_3_nn5czs.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_5_jykp1n.webp',
     ],
   },
@@ -26,8 +29,12 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_10_wdq6my.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_9_qs0kmp.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_8_faltis.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_6_ttkudp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_3_u8pxxp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_7_l4u18g.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_2_zdcxcx.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_6_ttkudp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_5_sgw5xl.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOONEPIECETHEROADTOBEKING_4_sllk0r.webp',
     ],
   },
   {
@@ -40,7 +47,10 @@ export const PRODUCTS = [
     price: 5_300_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_5_y3jy9u.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_1_hbmuix.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_4_agwrkz.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_3_fikiqp.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_2_sgbhpy.webp',
     ],
   },
   {
@@ -53,7 +63,10 @@ export const PRODUCTS = [
     price: 6_300_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_1_gyyxbk.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_6_wrnwu1.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_3_ghtnt5.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_2_foyzua.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESLUFFY_4_g6tmbk.webp',
     ],
   },
   {
@@ -66,6 +79,9 @@ export const PRODUCTS = [
     price: 5_700_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_1_sfbppo.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_7_wwcc8g.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_3_bdzfs1.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_4_jokvrb.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESERIESZORO_2_jcsc3h.webp',
     ],
   },
@@ -79,7 +95,9 @@ export const PRODUCTS = [
     price: 2_900_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_1_a0o0l8.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_2_ljfwh0.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_4_zsscpc.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESNAMI_3_kzf910.webp',
     ],
   },
   {
@@ -92,6 +110,7 @@ export const PRODUCTS = [
     price: 5_700_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_1_zdfmeg.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_2_h4l7sy.webp',
       'https://res.cloudinary.com/dahbzn13g/image/upload/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_4_wwzssy.webp',
     ],
   },
