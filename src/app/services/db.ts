@@ -487,8 +487,12 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 4_600_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO1_m8sip9.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO2_bvenuj.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_1_fmqwlr.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_2_piub1k.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_3_cxh7ch.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_4_k2wks8.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_5_vehlim.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOKAIDO_6_mexuix.jpg',
     ],
   },
   {
@@ -500,8 +504,11 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 3_700_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD1_tvqfew.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD2_aj9ut8.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD_1_mb4wzc.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD_2_xlozun.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD_3_yi5odq.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD_4_vqsqok.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOWHITEBEARD_5_amoltl.jpg',
     ],
   },
   {
@@ -527,9 +534,9 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 3_800_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS3_darziq.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS2_uqnbqu.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS4_ptp1au.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS_1_sj3gh3.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS_2_szzkao.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOSHANKS_3_lewrsr.webp',
     ],
   },
   {
@@ -541,9 +548,11 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 4_700_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD5_kapzxh.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD6_zmk8dj.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD7_xj2ewm.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD_1_c7nwet.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD_2_z4owvo.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD_3_l4a5aw.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD_4_ki15hf.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBLACKBEARD_5_cpeyel.jpg',
     ],
   },
   {
@@ -555,7 +564,7 @@ export const PRODUCTS = [
     type: 'Katekyo Hitman Reborn',
     price: 1_300_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOSAWADATSUNAYOSHI_yffvph.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOSAWADATSUNAYOSHI_xbx2ds.jpg',
     ],
   },
   {
@@ -566,7 +575,10 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_250_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOGOKUDERA_u3bkld.jpg'],
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOGOKUDERA_1_hg7mub.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOGOKUDERA_2_hd5y8r.jpg',
+    ],
   },
   {
     id: 'TOYSTUDIOROKUDOUMUKURO',
@@ -576,7 +588,7 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_300_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOROKUDOUMUKURO_tc5hzf.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOROKUDOUMUKURO_i81gtn.jpg'],
   },
   {
     id: 'TOYSTUDIOHIBARIKYOYA',
@@ -586,7 +598,7 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_250_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOHIBARIKYOYA_r09idg.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOHIBARIKYOYA_iuiyjh.jpg'],
   },
   {
     id: 'TOYSTUDIORANBO1',
@@ -596,17 +608,17 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_250_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO1_y8d6hr.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO_1_nbpyxg.jpg'],
   },
   {
     id: 'TOYSTUDIOKUROMU',
-    name: 'Dokuro Kuromu',
+    name: 'Chrome Dokuro',
     series: 'Katekyo Hitman Reborn',
     studio: 'TOY Studio',
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_250_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOKUROMU_gzpiut.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOKUROMU_adalm7.jpg'],
   },
   {
     id: 'TOYSTUDIOYAMAMOTO',
@@ -616,7 +628,7 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_300_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOYAMAMOTO_l0cb20.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOYAMAMOTO_vyf0jo.jpg'],
   },
   {
     id: 'TOYSTUDIOSASAGAWA',
@@ -626,7 +638,7 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_700_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOSASAGAWA_isejih.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOSASAGAWA_hy6o7s.jpg'],
   },
   {
     id: 'TOYSTUDIORANBO2',
@@ -636,6 +648,6 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'Katekyo Hitman Reborn',
     price: 1_700_000,
-    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO2_r2ebne.jpg'],
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO_2_asy5ic.jpg'],
   },
 ];
