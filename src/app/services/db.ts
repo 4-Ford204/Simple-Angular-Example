@@ -442,9 +442,11 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 2_300_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_1_avp9vm.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_5_qjjaxl.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_2_ihu5tf.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_1_tfa8dm.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_2_ggj1fa.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_3_hdmqpk.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_4_rxtfw9.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOJIRAIYA_5_i7znza.jpg',
     ],
   },
   {
@@ -456,8 +458,8 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 4_100_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOTSUNADE_1_ata85f.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOTSUNADE_2_dyww5r.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOTSUNADE_1_sumata.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOMSTUDIOTSUNADE_2_fmz0xo.jpg',
     ],
   },
   {
@@ -469,10 +471,11 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 2_300_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_1_nlbwuc.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_2_dlcyop.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_4_ztepiy.webp',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_5_gsctpa.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_1_m2jxnu.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_2_xhegxc.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_3_o5kset.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_4_v3klgh.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/STONECUSTOM3SANNINOROCHIMARU_5_r6n89r.webp',
     ],
   },
   {
