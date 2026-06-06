@@ -26,13 +26,17 @@ export class CarouselComponent {
   value: any[] = [];
   productImages: Record<string, number> = {};
 
-  @Input() set products(currentProducts: any[]) {
-    this.value = currentProducts;
+  @Input() set products(currentProducts: any[] | null) {
+    this.value = currentProducts ?? [];
     this.productImages = {};
 
-    for (const product of currentProducts) {
+    for (const product of this.value) {
       this.productImages[product.id] = 0;
     }
+  }
+
+  getThumbnail(src: string): string {
+    return src.replace('/upload/', '/upload/w_100,h_100,c_fill,q_auto,f_auto/');
   }
 
   onImageChanged(id: string, index: number) {

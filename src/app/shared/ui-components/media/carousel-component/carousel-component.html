@@ -11,7 +11,7 @@
         <div class="relative aspect-square overflow-hidden">
           <app-image-component
             imageClass="h-full w-full object-cover"
-            [src]="product.images[productImages[product.id]] + '?width=600'"
+            [src]="product.images[productImages[product.id]]"
             [alt]="product.name"
             loading="lazy"
             decoding="async"
@@ -26,19 +26,17 @@
               class="size-14 shrink-0 cursor-pointer overflow-hidden rounded-md border"
               [class.border-2]="productImages[product.id] === $index"
               [class.opacity-50]="productImages[product.id] !== $index"
+              (click)="onImageChanged(product.id, $index)"
+              onkeypress=""
             >
-              <app-image-component
+              <img
                 imageClass="h-full w-full object-cover"
-                [src]="image + '?width=120'"
+                [src]="getThumbnail(image)"
                 [alt]="product.id"
                 loading="lazy"
                 decoding="async"
-                (click)="onImageChanged(product.id, $index)"
-                onkeypress=""
               />
             </div>
-
-            <img [src]="image + '?width=120'" [alt]="product.id" class="hidden" />
           }
         </div>
 
