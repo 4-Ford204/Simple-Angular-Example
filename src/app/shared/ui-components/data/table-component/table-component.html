@@ -1,16 +1,35 @@
 <div class="h-full w-full">
   <p-table
+    #table
     [paginator]="true"
     [rowsPerPageOptions]="rowsPerPageOptions"
     [currentPageReportTemplate]="currentPageReportTemplate"
     [showCurrentPageReport]="showCurrentPageReport"
+    [globalFilterFields]="globalFilterFields"
     [scrollable]="scrollable"
     [scrollHeight]="scrollHeight"
+    [loading]="loading"
     [value]="value"
     [columns]="columns"
     [first]="first"
     [rows]="rows"
   >
+    <ng-template #caption>
+      <div class="flex">
+        <p-iconField iconPosition="left" class="ml-auto">
+          <p-inputicon>
+            <i class="pi pi-search"></i>
+          </p-inputicon>
+
+          <input
+            pInputText
+            type="text"
+            (input)="table.filterGlobal($event.target.value, 'contains')"
+          />
+        </p-iconField>
+      </div>
+    </ng-template>
+
     <ng-template #header let-columns>
       <tr>
         @for (column of columns; track $index) {
@@ -41,14 +60,15 @@
           @if (column.field == 'name') {
             <td [headers]="$index" class="align-middle">
               <div class="flex items-center gap-1.5">
-                <!-- <span class="size-8 shrink-0">
+                <span class="size-8 shrink-0">
                   <app-image-component
-                    imageClass="w-full h-full object-cover rounded-full"
-                    [src]="item['images'][0]"
+                    imageClass="h-full w-full rounded-full object-cover"
+                    [src]="getAvatar(item['images'][0])"
                     [alt]="item.name"
-                    [preview]="true"
+                    loading="lazy"
+                    decode="async"
                   />
-                </span> -->
+                </span>
 
                 <span>{{ item[column.field] }}</span>
               </div>

@@ -724,9 +724,9 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 3_300_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM1_e5atfs.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM2_t0irg6.jpg',
-      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM3_ilbiu7.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM_1_e9hdxx.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM_2_gztlod.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/XSYANGSTUDIOBIGMOM_3_qksfmo.jpg',
     ],
   },
   {
