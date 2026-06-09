@@ -37,6 +37,10 @@ export class TableComponent {
   @Input() scrollHeight: string | undefined = undefined;
   // Displays a loader to indicate data load is in progress.
   @Input() loading: boolean = false;
+  // Whether to show grid lines between cells.
+  @Input() showGridlines: boolean = false;
+  // Whether to display rows with alternating colors.
+  @Input() stripedRows: boolean = false;
   // An array of objects to display.
   @Input() value: any[] = [];
   // An array of objects to represent dynamic columns.
