@@ -6,8 +6,19 @@
   </ng-template>
 
   <ng-template #item let-item let-root="root">
-    <a pRipple [routerLink]="item.routerLink" class="p-menubar-item-link flex items-center">
-      <span>{{ item.label }}</span>
+    <a
+      pRipple
+      [routerLink]="item.routerLink"
+      [target]="item.target"
+      class="p-menubar-item-link flex items-center"
+    >
+      <div class="flex items-end gap-1">
+        @if (item.icon) {
+          <span><i [class]="item.icon"></i></span>
+        }
+
+        <span>{{ item.label }}</span>
+      </div>
 
       @if (item.badge) {
         <p-badge [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge" />

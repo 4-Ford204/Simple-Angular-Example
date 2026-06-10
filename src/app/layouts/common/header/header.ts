@@ -30,17 +30,27 @@ import { ToggleSwitchComponent } from '../../../shared/ui-components/form/toggle
 export class Header implements OnInit {
   checked = true;
   items: MenuItem[] = [
-    { label: 'Home', icon: 'pi pi-home', routerLink: ['/'] },
+    { label: 'Home', routerLink: ['/'] },
     { label: 'Sandbox', routerLink: ['/sandbox'] },
     {
-      label: 'Projects',
-      icon: 'pi pi-search',
-      badge: '3',
+      label: 'Samples',
+      badge: '2',
       items: [
-        { label: 'Core', icon: 'pi pi-bolt', shortcut: '⌘+S' },
-        { label: 'Blocks', icon: 'pi pi-server', shortcut: '⌘+B' },
+        {
+          label: 'Resume',
+          icon: 'pi pi-book',
+          shortcut: '⌘+R',
+          routerLink: ['/samples/resume-sample'],
+          target: '_blank',
+        },
         { separator: true },
-        { label: 'UI Kit', icon: 'pi pi-pencil', shortcut: '⌘+U' },
+        {
+          label: 'Envelope',
+          icon: 'pi pi-envelope',
+          shortcut: '⌘+S',
+          routerLink: ['/samples/letter-sample'],
+          target: '_blank',
+        },
       ],
     },
   ];
