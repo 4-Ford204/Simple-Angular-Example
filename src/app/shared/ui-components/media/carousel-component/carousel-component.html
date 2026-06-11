@@ -45,12 +45,12 @@
             <div class="my-1 text-lg font-semibold">
               <span>{{ product.name }}</span>
 
-              @if (product.series) {
+              @if (product.series && product.series !== product.type) {
                 <span> - {{ product.series }}</span>
               }
             </div>
 
-            <div class="my-1 flex gap-3">
+            <div class="my-1 flex flex-wrap gap-x-3 gap-y-0">
               @if (product.studio) {
                 <span class="text-sm font-medium text-gray-500">
                   {{ product.studio }}
