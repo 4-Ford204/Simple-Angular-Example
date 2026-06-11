@@ -861,7 +861,7 @@ export const PRODUCTS = [
     studio: 'Kidult Workshop Studio',
     material: 'Resin',
     type: 'Hunter x Hunter',
-    price: 1_650_000,
+    price: 11_050_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_GONFREECSS_1_nnhomk.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_GONFREECSS_2_khcbxg.jpg',
@@ -878,7 +878,7 @@ export const PRODUCTS = [
     studio: 'Kidult Workshop Studio',
     material: 'Resin',
     type: 'Hunter x Hunter',
-    price: 2_000_000,
+    price: 13_400_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_KURAPIKA_1_pifsja.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_KURAPIKA_2_wv6yto.jpg',
@@ -895,7 +895,7 @@ export const PRODUCTS = [
     studio: 'Kidult Workshop Studio',
     material: 'Resin',
     type: 'Hunter x Hunter',
-    price: 1_900_000,
+    price: 12_900_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_CHROLLOLUCILFER_1_rzisxa.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_CHROLLOLUCILFER_2_n6f4jj.jpg',
@@ -910,7 +910,7 @@ export const PRODUCTS = [
     studio: 'Kidult Workshop Studio',
     material: 'Resin',
     type: 'Hunter x Hunter',
-    price: 2_300_000,
+    price: 15_500_000,
     images: [
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_KILLUAZOLDYCK_1_l1grjt.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/KIDULTWORKSHOPSTUDIO_KILLUAZOLDYCK_2_df6ia5.jpg',
