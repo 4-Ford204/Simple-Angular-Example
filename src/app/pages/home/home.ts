@@ -67,6 +67,10 @@ export class Home implements OnInit, AfterViewInit {
     });
   }
 
+  onActionButtonPressed(item: any) {
+    this.carouselProducts = [item];
+  }
+
   onStudioCompleted(event: any) {
     const query = event.query.toLowerCase();
     this.suggestions = Object.keys(this.groupedProducts).filter((s) =>
