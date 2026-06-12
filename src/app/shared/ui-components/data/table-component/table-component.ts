@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { Column } from './column';
 import { CommonModule } from '@angular/common';
 import { IconFieldModule } from 'primeng/iconfield';
 import { ImageComponent } from '../../media/image-component/image-component';

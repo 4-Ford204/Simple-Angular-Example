@@ -59,33 +59,36 @@
     <ng-template #body let-item let-columns="columns">
       <tr>
         @for (column of columns; track $index) {
-          @if (column.field == 'name') {
-            <td [headers]="$index" class="align-middle">
-              <div class="flex items-center gap-1.5">
-                <span class="size-8 shrink-0">
-                  <app-image-component
-                    imageClass="h-full w-full rounded-full object-cover"
-                    [src]="getAvatar(item['images'][0])"
-                    [alt]="item.name"
-                    loading="lazy"
-                    decode="async"
-                  />
-                </span>
+          <td [headers]="$index" class="align-middle">
+            @if (column.template) {
+              <ng-container
+                [ngTemplateOutlet]="column.template"
+                [ngTemplateOutletContext]="{ $implicit: item }"
+              ></ng-container>
+            } @else {
+              @if (column.field == 'name') {
+                <div class="flex items-center gap-1.5">
+                  <span class="size-8 shrink-0">
+                    <app-image-component
+                      imageClass="h-full w-full rounded-full object-cover"
+                      [src]="getAvatar(item['images'][0])"
+                      [alt]="item.name"
+                      loading="lazy"
+                      decode="async"
+                    />
+                  </span>
 
+                  <span>{{ item[column.field] }}</span>
+                </div>
+              } @else if (column.field == 'price') {
+                <span class="whitespace-nowrap">
+                  {{ item[column.field] | currency: 'VND' : 'symbol' : '1.0-0' }}
+                </span>
+              } @else {
                 <span>{{ item[column.field] }}</span>
-              </div>
-            </td>
-          } @else if (column.field == 'price') {
-            <td [headers]="$index" class="align-middle">
-              <span class="whitespace-nowrap">
-                {{ item[column.field] | currency: 'VND' : 'symbol' : '1.0-0' }}
-              </span>
-            </td>
-          } @else {
-            <td [headers]="$index" class="align-middle">
-              <span>{{ item[column.field] }}</span>
-            </td>
-          }
+              }
+            }
+          </td>
         }
       </tr>
     </ng-template>
