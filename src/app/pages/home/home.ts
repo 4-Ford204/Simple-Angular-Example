@@ -83,40 +83,32 @@ export class Home implements OnInit, AfterViewInit {
   }
 
   initChart() {
-    const keys = Object.keys(this.groupedProducts);
+    const studios = Object.keys(this.groupedProducts);
+    const types = [...new Set(this.products.map((p: any) => p.type))];
 
     this.chartData = {
-      labels: keys,
-      datasets: [
-        {
-          type: 'line',
-          label: 'Highest',
-          borderWidth: 1,
-          tension: 0.4,
-          data: keys.map((s) => Math.max(...this.groupedProducts[s].map((p: any) => p.price))),
-        },
-        {
-          type: 'line',
-          label: 'Average',
-          borderWidth: 1,
-          tension: 0.4,
-          data: keys.map((s) => {
-            const group = this.groupedProducts[s];
-            return group.reduce((sum: any, p: any) => sum + p.price, 0) / group.length;
-          }),
-        },
-        {
-          type: 'line',
-          label: 'Lowest',
-          borderWidth: 1,
-          tension: 0.4,
-          data: keys.map((s) => Math.min(...this.groupedProducts[s].map((p: any) => p.price))),
-        },
-      ],
+      labels: studios,
+      datasets: types.map((type) => ({
+        type: 'bar',
+        label: type,
+        borderWidth: 1,
+        tension: 0.4,
+        data: studios.map((studio) => {
+          const products = this.groupedProducts[studio].filter((p: any) => p.type == type);
+          return products.length;
+        }),
+      })),
     };
 
     this.chartOption = {
       maintainAspectRatio: false,
+      scales: {
+        x: {
+          stacked: true,
+          ticks: { maxRotation: 0, minRotation: 0, autoSkip: false },
+        },
+        y: { stacked: true },
+      },
     };
   }
 }

@@ -879,7 +879,7 @@ export const PRODUCTS = [
     type: 'One Piece',
     price: 2_050_000,
     images: [
-      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_CROCODILE_1_b2sqfm.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_CROCODILE_1_eqbp5a.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_CROCODILE_2_ro8mpl.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_CROCODILE_3_h9ivrw.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_CROCODILE_4_o7ebpo.jpg',
@@ -894,7 +894,13 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'One Piece',
     price: 2_200_000,
-    images: [],
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_KUMA_1_mkdx5o.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_KUMA_2_wbs73h.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_KUMA_3_u88txw.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_KUMA_4_b8l4xz.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_KUMA_5_n2am1j.jpg',
+    ],
   },
   {
     id: 'OMOSTUDIO_SHICHIBUKAI_MORIA',
@@ -920,7 +926,13 @@ export const PRODUCTS = [
     material: 'Resin',
     type: 'One Piece',
     price: 2_200_000,
-    images: [],
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_DOFLAMINGO_1_l1hw7s.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_DOFLAMINGO_2_txwkhi.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_DOFLAMINGO_3_h2fnu7.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_DOFLAMINGO_4_u1qney.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/OMOSTUDIO_SHICHIBUKAI_DOFLAMINGO_5_uxkylg.jpg',
+    ],
   },
   {
     id: 'OMOSTUDIO_SHICHIBUKAI_JINBE',
