@@ -46,6 +46,7 @@ export class Home implements OnInit, AfterViewInit {
       { field: 'series', header: 'Series' },
       { field: 'studio', header: 'Studio' },
       { field: 'material', header: 'Material' },
+      { field: 'type', header: 'Type' },
       { field: 'price', header: 'Price', sortable: true },
       { field: 'action', template: this.actionTemplate },
     ];

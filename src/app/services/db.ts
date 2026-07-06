@@ -426,6 +426,22 @@ export const PRODUCTS = [
     ],
   },
   {
+    id: 'WATERBREATHINGTANJIRO',
+    name: 'Kamado Tanjiro',
+    series: 'Water Breathing',
+    studio: 'G5 Studio',
+    material: 'Resin',
+    type: 'Demon Slayer',
+    price: 4_750_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/WATERBREATHINGTANJIRO_2_il2iwd.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/WATERBREATHINGTANJIRO_4_pzp0dz.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/WATERBREATHINGTANJIRO_5_ch3xqm.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/WATERBREATHINGTANJIRO_3_zdreu7.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/WATERBREATHINGTANJIRO_tifvsl.webp',
+    ],
+  },
+  {
     id: 'SURGESTUDIO_NARUTOWCFUCHIHACLANSUSANOOSERIES1.ITACHIUCHIHA',
     name: 'Uchiha Itachi',
     series: 'Uchiha Clan Susanoo Series',
