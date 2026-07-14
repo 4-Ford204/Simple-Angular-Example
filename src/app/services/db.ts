@@ -1411,4 +1411,130 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_EXPLUS_VINSMOKESANJI_8_l6db3r.jpg',
     ],
   },
+  {
+    id: 'YZSTUDIO_BANKAI_TOSHIRO',
+    name: 'Hitsugaya Toshiro',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_000_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_1_swkk4p.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_2_vofen1.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_3_n1blrs.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_4_izy9is.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_5_uwa4aj.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_AIZEN',
+    name: 'Sosuke Aizen',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_100_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_1_tt88kt.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_2_havpmp.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_3_oj0fxw.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_4_x1giaj.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_5_zrprp7.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_6_lnow6z.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_7_egrmdy.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_BYAKUYA',
+    name: 'Kuchiki Byakuya',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_200_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_1_kgc3ib.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_2_g5crgz.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_3_vpl3cb.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_4_nasgor.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_5_cjgff2.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_6_zio1rc.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_SHUNSUI',
+    name: 'Kyoraku Shunsui',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_200_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_1_uvglyp.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_2_nn2eck.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_3_n9tpwf.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_UNOHANA',
+    name: 'Retsu Unohana',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_250_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_1_nb9arw.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_2_clgkhn.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_3_nrjwnf.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_MAYURI',
+    name: 'Kurotsuchi Mayuri',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 6_880_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_1_fxriaj.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_2_tx1bka.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_3_uileg6.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_4_uankil.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_5_w63wie.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_YAMAMOTO',
+    name: 'Genryusai Shigekuni Yamamoto',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 1_950_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_1_fi1niz.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_2_les4n9.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_3_plmxby.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_4_oj7roa.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_5_nfws0b.jpg',
+    ]
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_SHINJI',
+    name: 'Hirako Shinji',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_950_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_1_dezggv.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_2_yeg2i5.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_3_dwqvtz.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_4_bs5tqf.jpg',
+    ]
+  }
 ];
