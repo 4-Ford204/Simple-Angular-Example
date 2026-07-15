@@ -1425,7 +1425,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_3_n1blrs.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_4_izy9is.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_TOSHIRO_5_uwa4aj.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_AIZEN',
@@ -1443,7 +1443,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_5_zrprp7.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_6_lnow6z.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_AIZEN_7_egrmdy.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_BYAKUYA',
@@ -1460,7 +1460,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_4_nasgor.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_5_cjgff2.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_BYAKUYA_6_zio1rc.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_SHUNSUI',
@@ -1474,7 +1474,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_1_uvglyp.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_2_nn2eck.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHUNSUI_3_n9tpwf.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_UNOHANA',
@@ -1488,7 +1488,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_1_nb9arw.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_2_clgkhn.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_UNOHANA_3_nrjwnf.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_MAYURI',
@@ -1504,7 +1504,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_3_uileg6.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_4_uankil.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_MAYURI_5_w63wie.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_YAMAMOTO',
@@ -1520,7 +1520,7 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_3_plmxby.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_4_oj7roa.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_YAMAMOTO_5_nfws0b.jpg',
-    ]
+    ],
   },
   {
     id: 'YZSTUDIO_BANKAI_SHINJI',
@@ -1535,6 +1535,6 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_2_yeg2i5.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_3_dwqvtz.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/YZSTUDIO_BANKAI_SHINJI_4_bs5tqf.jpg',
-    ]
-  }
+    ],
+  },
 ];

@@ -11,6 +11,7 @@ import { WeatherService } from '../../../services/weather.service';
   styleUrl: './footer.css',
 })
 export class Footer implements OnInit {
+  destination: string = 'Da Nang';
   weather: any;
   paymentMethods = [
     { name: 'ZaloPay', icon: 'https://cdn.simpleicons.org/zalo' },
@@ -33,7 +34,7 @@ export class Footer implements OnInit {
 
   async fetchWeather() {
     try {
-      this.weather = await this.weatherService.getWeather();
+      this.weather = await this.weatherService.getWeather(this.destination);
       console.log(this.weather);
     } catch (error) {
       console.error(error);
