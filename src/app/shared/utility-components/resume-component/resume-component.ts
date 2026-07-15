@@ -14,5 +14,5 @@ export class ResumeComponent {
   @Input() name: string | undefined;
   @Input() position: string | undefined;
   @Input() description: string | undefined;
-  @Input() technologies: string[] | undefined;
+  @Input() technologies: any[] | undefined;
 }
