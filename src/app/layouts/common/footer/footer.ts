@@ -35,7 +35,6 @@ export class Footer implements OnInit {
   async fetchWeather() {
     try {
       this.weather = await this.weatherService.getWeather(this.destination);
-      console.log(this.weather);
     } catch (error) {
       console.error(error);
     }

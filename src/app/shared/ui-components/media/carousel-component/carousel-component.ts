@@ -26,7 +26,7 @@ export class CarouselComponent {
   value: any[] = [];
   productImages: Record<string, number> = {};
 
-  @Input() set products(currentProducts: any[] | null) {
+  @Input() set products(currentProducts: any[] | undefined) {
     this.value = currentProducts ?? [];
     this.productImages = {};
 

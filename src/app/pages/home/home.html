@@ -45,7 +45,8 @@
   <div class="flex items-center justify-center">
     <app-button-component
       icon="pi pi-eye"
-      severity="contrast"
+      [rounded]="true"
+      [outlined]="true"
       size="small"
       (buttonPressed)="onActionButtonPressed(item)"
     />
