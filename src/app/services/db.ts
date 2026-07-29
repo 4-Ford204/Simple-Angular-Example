@@ -1025,7 +1025,7 @@ export const PRODUCTS = [
   },
   {
     id: 'STONECUSTOMSTUDIO_NAGATO',
-    name: 'Nagato',
+    name: 'Uzumaki Nagato',
     series: 'Six Paths Of Pain',
     studio: 'Stone Custom Studio',
     material: 'Resin',
@@ -1256,6 +1256,19 @@ export const PRODUCTS = [
     type: 'Katekyo Hitman Reborn',
     price: 1_700_000,
     images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO_2_asy5ic.jpg'],
+  },
+  {
+    id: 'TOYSTUDIO_NATSU',
+    name: 'Natsu',
+    series: 'Fairy Tail',
+    studio: 'TOY Studio',
+    material: 'Resin',
+    type: 'Fairy Tail',
+    price: 2_400_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIO_NATSU_1_cvfu65.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIO_NATSU_2_fr0pvh.webp',
+    ],
   },
   {
     id: 'OMOSTUDIO_SHICHIBUKAI_MIHAWK',
