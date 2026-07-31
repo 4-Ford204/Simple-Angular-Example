@@ -7,11 +7,11 @@
 >
   <ng-template let-product #item>
     <div class="flex h-full w-full justify-center">
-      <div class="flex h-full w-80 flex-col overflow-hidden rounded-xl border shadow-sm">
+      <div class="flex h-full w-100 flex-col overflow-hidden rounded-xl border shadow-sm">
         <div class="relative aspect-square overflow-hidden">
           <app-image-component
             imageClass="h-full w-full object-cover"
-            [src]="product.images[productImages[product.id]]"
+            [src]="product.images[productImage[product.id]]"
             [alt]="product.name"
             loading="lazy"
             decoding="async"
@@ -20,27 +20,47 @@
           />
         </div>
 
-        <div class="flex items-center gap-1 overflow-x-auto p-1">
-          @for (image of product.images; track $index) {
-            <div
-              class="size-14 shrink-0 cursor-pointer overflow-hidden rounded-md border"
-              [class.border-2]="productImages[product.id] === $index"
-              [class.opacity-50]="productImages[product.id] !== $index"
-              (click)="onImageChanged(product.id, $index)"
-              onkeypress=""
-            >
-              <img
-                imageClass="h-full w-full object-cover"
-                [src]="getThumbnail(image)"
-                [alt]="product.id"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          }
+        <div class="flex items-center justify-between gap-1">
+          <app-button-component
+            icon="pi pi-chevron-left"
+            [rounded]="true"
+            [text]="true"
+            severity="secondary"
+            size="small"
+            (buttonPressed)="onPreviousButtonPressed(product)"
+          />
+
+          <div class="flex items-center gap-1 py-1">
+            @for (image of getProductImages(product); track image.index) {
+              <div
+                class="size-14 shrink-0 cursor-pointer overflow-hidden rounded-md border"
+                [class.border-2]="productImage[product.id] === image.index"
+                [class.opacity-50]="productImage[product.id] !== image.index"
+                (click)="onImageChanged(product, image.index)"
+                onkeypress=""
+              >
+                <img
+                  imageClass="h-full w-full object-cover"
+                  [src]="getThumbnail(image.src)"
+                  [alt]="product.id"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            }
+          </div>
+
+          <app-button-component
+            icon="pi pi-chevron-right"
+            [rounded]="true"
+            [text]="true"
+            severity="secondary"
+            size="small"
+            (buttonPressed)="onNextButtonPressed(product)"
+          />
         </div>
 
-        <div class="flex flex-1 shrink-0 flex-col justify-between p-2 pt-1">
+        <div class="flex flex-1 shrink-0 flex-col justify-between px-2 pb-2">
           <div>
             <div class="my-1 text-lg font-semibold">
               <span>{{ product.name }}</span>
