@@ -28,8 +28,8 @@ jobs:
       - name: Copy 404.html
         run: cp dist/Simple-Angular-Example/browser/index.html dist/Simple-Angular-Example/browser/404.html
 
-      - name: Deploy To Github Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/Simple-Angular-Example/browser
+      # - name: Deploy To Github Pages
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: dist/Simple-Angular-Example/browser
