@@ -34,6 +34,7 @@
             @for (image of getProductImages(product); track image.index) {
               <div
                 class="size-14 shrink-0 cursor-pointer overflow-hidden rounded-md border"
+                [class.scale-110]="productImage[product.id] === image.index"
                 [class.border-2]="productImage[product.id] === image.index"
                 [class.opacity-50]="productImage[product.id] !== image.index"
                 (click)="onImageChanged(product, image.index)"
