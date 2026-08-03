@@ -7,7 +7,7 @@
 >
   <ng-template let-product #item>
     <div class="flex h-full w-full justify-center">
-      <div class="flex h-full w-100 flex-col overflow-hidden rounded-xl border shadow-sm">
+      <div class="flex h-full max-w-96 flex-col overflow-hidden rounded-xl border shadow-sm">
         <div class="relative aspect-square overflow-hidden">
           <app-image-component
             imageClass="h-full w-full object-cover"
@@ -34,6 +34,7 @@
             @for (image of getProductImages(product); track image.index) {
               <div
                 class="size-14 shrink-0 cursor-pointer overflow-hidden rounded-md border"
+                [class.scale-110]="productImage[product.id] === image.index"
                 [class.border-2]="productImage[product.id] === image.index"
                 [class.opacity-50]="productImage[product.id] !== image.index"
                 (click)="onImageChanged(product, image.index)"

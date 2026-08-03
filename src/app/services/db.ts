@@ -1258,6 +1258,16 @@ export const PRODUCTS = [
     images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIORANBO_2_asy5ic.jpg'],
   },
   {
+    id: 'TOYSTUDIOGIOTTO',
+    name: 'Giotto (Sawada Ieyasu)',
+    series: 'Katekyo Hitman Reborn',
+    studio: 'TOY Studio',
+    material: 'Resin',
+    type: 'Katekyo Hitman Reborn',
+    price: 1_600_000,
+    images: ['https://res.cloudinary.com/dahbzn13g/image/upload/TOYSTUDIOGIOTTO_igivkd.jpg'],
+  },
+  {
     id: 'TOYSTUDIO_NATSU',
     name: 'Natsu',
     series: 'Fairy Tail',
