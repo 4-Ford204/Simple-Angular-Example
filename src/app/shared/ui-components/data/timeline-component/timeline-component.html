@@ -1,11 +1,13 @@
 <p-timeline [value]="value" [align]="align" [layout]="layout">
   <ng-template #marker let-event>
-    <span
-      class="flex h-8 w-8 items-center justify-center rounded-full"
-      [style]="{ 'background-color': event.color }"
-    >
-      <i [class]="event.icon ?? 'pi pi-circle'"></i>
-    </span>
+    @if (event.icon) {
+      <span
+        class="flex h-8 w-8 items-center justify-center rounded-full"
+        [style]="{ 'background-color': event.color }"
+      >
+        <i [class]="event.icon"></i>
+      </span>
+    }
   </ng-template>
 
   <ng-template #opposite let-event>

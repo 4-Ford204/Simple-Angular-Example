@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
 import { Router } from '@angular/router';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
@@ -15,7 +15,7 @@ export class Sidebar {
   items: MenuItem[] = [
     {
       label: 'Button',
-      icon: 'pi pi-play-circle',
+      icon: PrimeIcons.PLAY_CIRCLE,
       command: () => {
         this.router.navigate(['/sandbox/button-sandbox']);
       },
@@ -23,7 +23,7 @@ export class Sidebar {
     },
     {
       label: 'Chart',
-      icon: 'pi pi-chart-bar',
+      icon: PrimeIcons.CHART_BAR,
       command: () => {
         this.router.navigate(['/sandbox/chart-sandbox']);
       },
@@ -31,11 +31,11 @@ export class Sidebar {
     },
     {
       label: 'Data',
-      icon: 'pi pi-database',
+      icon: PrimeIcons.DATABASE,
       items: [
         {
           label: 'Timeline',
-          icon: 'pi pi-chart-line',
+          icon: PrimeIcons.CHART_LINE,
           command: () => {
             this.router.navigate(['/sandbox/data/timeline-sandbox']);
           },
@@ -46,11 +46,11 @@ export class Sidebar {
     },
     {
       label: 'Form',
-      icon: 'pi pi-book',
+      icon: PrimeIcons.BOOK,
       items: [
         {
           label: 'Auto Complete',
-          icon: 'pi pi-bolt',
+          icon: PrimeIcons.BOLT,
           command: () => {
             this.router.navigate(['/sandbox/form/auto-complete-sandbox']);
           },
@@ -58,7 +58,7 @@ export class Sidebar {
         },
         {
           label: 'Checkbox',
-          icon: 'pi pi-check-circle',
+          icon: PrimeIcons.CHECK_CIRCLE,
           command: () => {
             this.router.navigate(['/sandbox/form/checkbox-sandbox']);
           },
@@ -73,7 +73,7 @@ export class Sidebar {
         },
         {
           label: 'Multi Select',
-          icon: 'pi pi-check-square',
+          icon: PrimeIcons.CHECK_SQUARE,
           command: () => {
             this.router.navigate(['/sandbox/form/multi-select-sandbox']);
           },
@@ -81,7 +81,7 @@ export class Sidebar {
         },
         {
           label: 'Toggle Switch',
-          icon: 'pi pi-twitch',
+          icon: PrimeIcons.TWITCH,
           command: () => {
             this.router.navigate(['/sandbox/form/toggle-switch-sandbox']);
           },
@@ -92,11 +92,11 @@ export class Sidebar {
     },
     {
       label: 'Messages',
-      icon: 'pi pi-comments',
+      icon: PrimeIcons.COMMENTS,
       items: [
         {
           label: 'Message',
-          icon: 'pi pi-comment',
+          icon: PrimeIcons.COMMENT,
           command: () => {
             this.router.navigate(['/sandbox/messages/message-sandbox']);
           },
@@ -104,7 +104,7 @@ export class Sidebar {
         },
         {
           label: 'Toast',
-          icon: 'pi pi-whatsapp',
+          icon: PrimeIcons.WHATSAPP,
           command: () => {
             this.router.navigate(['/sandbox/messages/toast-sandbox']);
           },
@@ -115,11 +115,11 @@ export class Sidebar {
     },
     {
       label: 'Overlay',
-      icon: 'pi pi-clone',
+      icon: PrimeIcons.CLONE,
       items: [
         {
           label: 'Tooltip',
-          icon: 'pi pi-info-circle',
+          icon: PrimeIcons.INFO_CIRCLE,
           command: () => {
             this.router.navigate(['/sandbox/overlay/tooltip-sandbox']);
           },
@@ -127,7 +127,7 @@ export class Sidebar {
         },
         {
           label: 'Dialog',
-          icon: 'pi pi-window-maximize',
+          icon: PrimeIcons.WINDOW_MAXIMIZE,
           routerLink: ['sandbox/dialog'],
         },
       ],
@@ -135,13 +135,12 @@ export class Sidebar {
     },
     {
       label: 'Card',
-      icon: 'pi pi-id-card',
+      icon: PrimeIcons.ID_CARD,
       items: [
-        { label: 'Basic Card', icon: 'pi pi-file', routerLink: ['card-sandbox/basic'] },
-        { label: 'Advanced Card', icon: 'pi pi-clone', routerLink: ['card-sandbox/advanced'] },
+        { label: 'Basic Card', icon: PrimeIcons.FILE, routerLink: ['card-sandbox/basic'] },
+        { label: 'Advanced Card', routerLink: ['card-sandbox/advanced'] },
         {
           label: 'Card with Actions',
-          icon: 'pi pi-hand-pointer',
           routerLink: ['card-sandbox/actions'],
         },
       ],
