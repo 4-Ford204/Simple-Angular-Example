@@ -1,8 +1,8 @@
 <app-sandbox #sandbox></app-sandbox>
 
 <div class="flex flex-col gap-5">
-  <ng-template #birthday>
-    <app-timeline-component [value]="birthdays" align="top" layout="horizontal" class="w-full" />
+  <ng-template #birthdays>
+    <app-timeline-component [value]="users" align="top" layout="horizontal" class="w-full" />
   </ng-template>
 
   <ng-template #template>
@@ -12,7 +12,7 @@
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
-      [ngTemplateOutletContext]="{ title: 'Birthday', content: birthday }"
+      [ngTemplateOutletContext]="{ title: 'Birthdays', content: birthdays }"
     ></ng-container>
 
     <ng-container

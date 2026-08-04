@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { PRODUCTS } from '../database/product';
+import { USERS } from '../database/user';
 
 @Injectable({ providedIn: 'root' })
-export class ProductService {
-  getProducts = (): Promise<any> => {
+export class UserService {
+  getUsers = (): Promise<any> => {
     return new Promise((resolve, reject) => {
       try {
-        resolve({ data: PRODUCTS });
+        resolve({ data: USERS });
       } catch (error) {
         reject(error);
       }

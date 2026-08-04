@@ -1,8 +1,10 @@
+import { Component, OnInit, inject } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { PrimeIcons } from 'primeng/api';
 import { Sandbox } from '../../sandboxes';
 import { TimelineComponent } from '../../../../shared/ui-components/data/timeline-component/timeline-component';
-import { PrimeIcons } from 'primeng/api';
+import { UserService } from '../../../../services/user.service';
 
 @Component({
   selector: 'app-timeline-sandbox',
@@ -10,12 +12,8 @@ import { PrimeIcons } from 'primeng/api';
   templateUrl: './timeline-sandbox.html',
   styleUrl: './timeline-sandbox.css',
 })
-export class TimelineSandbox {
-  birthdays: any[] = [
-    { status: 'Big', date: '30/07' },
-    { status: 'Nô', date: '16/09/2003' },
-    { status: 'Mẹ', date: '20/11/1974' },
-  ];
+export class TimelineSandbox implements OnInit {
+  users: any[] = [];
   events: any[] = [
     {
       status: 'Ordered',
@@ -32,4 +30,16 @@ export class TimelineSandbox {
     },
     { status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B' },
   ];
+
+  private readonly userService = inject(UserService);
+
+  ngOnInit(): void {
+    this.fetchUsers();
+  }
+
+  fetchUsers() {
+    this.userService.getUsers().then((response: any) => {
+      this.users = response.data.map((u: any) => ({ status: u.name, date: u.birthday }));
+    });
+  }
 }
