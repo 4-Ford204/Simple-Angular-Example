@@ -6,6 +6,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { ImageComponent } from '../../media/image-component/image-component';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { PrimeIcons } from 'primeng/api';
 import { TableModule } from 'primeng/table';
 
 @Component({
@@ -50,6 +51,8 @@ export class TableComponent {
   @Input() first: number | null = null;
   // Number of rows to display per page.
   @Input() rows: number | undefined = undefined;
+
+  PrimeIcons = PrimeIcons;
 
   getAvatar(src: string): string {
     return src.replace('/upload/', '/upload/w_50,h_50,c_fill,q_auto,f_auto/');

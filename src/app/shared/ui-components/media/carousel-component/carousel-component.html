@@ -7,8 +7,8 @@
 >
   <ng-template let-product #item>
     <div class="flex h-full w-full justify-center">
-      <div class="flex h-full max-w-96 flex-col overflow-hidden rounded-xl border shadow-sm">
-        <div class="relative aspect-square overflow-hidden">
+      <div class="flex h-full w-96 max-w-96 flex-col overflow-hidden rounded-xl border shadow-sm">
+        <div class="aspect-square overflow-hidden">
           <app-image-component
             imageClass="h-full w-full object-cover"
             [src]="product.images[productImage[product.id]]"
@@ -22,7 +22,7 @@
 
         <div class="flex items-center justify-between gap-1 px-1">
           <app-button-component
-            icon="pi pi-chevron-left"
+            [icon]="PrimeIcons.CHEVRON_LEFT"
             [rounded]="true"
             [text]="true"
             severity="secondary"
@@ -52,7 +52,7 @@
           </div>
 
           <app-button-component
-            icon="pi pi-chevron-right"
+            [icon]="PrimeIcons.CHEVRON_RIGHT"
             [rounded]="true"
             [text]="true"
             severity="secondary"
@@ -98,8 +98,12 @@
             </span>
 
             <div>
-              <app-button-component icon="pi pi-heart" severity="secondary" [outlined]="true" />
-              <app-button-component icon="pi pi-shopping-cart" styleClass="ml-2" />
+              <app-button-component
+                [icon]="PrimeIcons.HEART"
+                severity="secondary"
+                [outlined]="true"
+              />
+              <app-button-component [icon]="PrimeIcons.SHOPPING_CART" styleClass="ml-2" />
             </div>
           </div>
         </div>

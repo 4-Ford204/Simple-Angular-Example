@@ -14,7 +14,8 @@
   <div class="hearts">
     @for (heart of hearts; track $index) {
       <div
-        class="pi pi-heart-fill heart"
+        class="heart"
+        [class]="PrimeIcons.HEART_FILL"
         [ngStyle]="{
           left: heart.position + '%',
           fontSize: heart.size + 'px',

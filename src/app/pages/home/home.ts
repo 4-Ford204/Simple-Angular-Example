@@ -5,6 +5,7 @@ import { ButtonComponent } from '../../shared/ui-components/button-component/but
 import { CarouselComponent } from '../../shared/ui-components/media/carousel-component/carousel-component';
 import { ChartComponent } from '../../shared/ui-components/chart-component/chart-component';
 import { CommonModule } from '@angular/common';
+import { PrimeIcons } from 'primeng/api';
 import { ProductService } from '../../services/product.service';
 import { TableComponent } from '../../shared/ui-components/data/table-component/table-component';
 
@@ -33,6 +34,8 @@ export class Home implements OnInit, AfterViewInit {
   chartData: any;
   chartOption: any;
   groupedProducts: Record<string, any[]> = {};
+
+  PrimeIcons = PrimeIcons;
 
   private readonly productService = inject(ProductService);
 

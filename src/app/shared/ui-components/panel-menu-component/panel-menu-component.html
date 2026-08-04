@@ -22,7 +22,8 @@
 
         @if (item.items) {
           <i
-            class="pi pi-angle-left text-primary shrink-0 duration-300 group-hover:text-inherit"
+            class="text-primary shrink-0 duration-300 group-hover:text-inherit"
+            [class]="PrimeIcons.ANGLE_LEFT"
             [ngClass]="{ '-rotate-90': item.expanded }"
           ></i>
         }

@@ -15,7 +15,7 @@
   </ng-template>
 
   <ng-template #icon>
-    <app-message-component severity="info" icon="pi pi-send" text="Info Message" />
+    <app-message-component severity="info" [icon]="PrimeIcons.SEND" text="Info Message" />
   </ng-template>
 
   <ng-template #outlined>
@@ -37,9 +37,9 @@
   </ng-template>
 
   <ng-template #sizes>
-    <app-message-component icon="pi pi-send" size="small" text="Small Message" />
-    <app-message-component icon="pi pi-user" text="Normal Message" />
-    <app-message-component icon="pi pi-check" size="large" text="Large Message" />
+    <app-message-component [icon]="PrimeIcons.SEND" size="small" text="Small Message" />
+    <app-message-component [icon]="PrimeIcons.USER" text="Normal Message" />
+    <app-message-component [icon]="PrimeIcons.CHECK" size="large" text="Large Message" />
   </ng-template>
 
   @if (sandbox.panelTemplate) {

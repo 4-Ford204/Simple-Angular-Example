@@ -13,7 +13,7 @@
 
   @if (preview) {
     <ng-template #indicator>
-      <i class="pi pi-search"></i>
+      <i [class]="PrimeIcons.SEARCH"></i>
     </ng-template>
 
     <ng-template #preview let-style="style" let-previewCallback="previewCallback">

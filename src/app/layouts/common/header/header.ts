@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../../../shared/ui-components/media/image-component/image-component';
 import { InputTextModule } from 'primeng/inputtext';
-import { MenuItem, PrimeIcons } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { Ripple } from 'primeng/ripple';
 import { RouterLink } from '@angular/router';
@@ -54,6 +54,7 @@ export class Header implements OnInit {
       ],
     },
   ];
+
   PrimeIcons = PrimeIcons;
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-envelope-component',
@@ -10,6 +11,8 @@ import { Component } from '@angular/core';
 export class EnvelopeComponent {
   opened: boolean = false;
   hearts: { position: number; size: number; duration: number }[] = [];
+
+  PrimeIcons = PrimeIcons;
 
   constructor() {
     for (let i = 0; i < 15; i++) {

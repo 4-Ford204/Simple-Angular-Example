@@ -7,20 +7,20 @@
 
   <ng-template #icons>
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-home" aria-label="Save" />
-      <app-button-component icon="pi pi-user" label="Profile" />
-      <app-button-component icon="pi pi-check" iconPos="right" label="Save" />
+      <app-button-component [icon]="PrimeIcons.HOME" aria-label="Save" />
+      <app-button-component [icon]="PrimeIcons.USER" label="Profile" />
+      <app-button-component [icon]="PrimeIcons.CHECK" iconPos="right" label="Save" />
     </div>
 
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-search" iconPos="top" label="Search" />
-      <app-button-component icon="pi pi-refresh" iconPos="bottom" label="Update" />
+      <app-button-component [icon]="PrimeIcons.SEARCH" iconPos="top" label="Search" />
+      <app-button-component [icon]="PrimeIcons.REFRESH" iconPos="bottom" label="Update" />
     </div>
   </ng-template>
 
   <ng-template #loadingButton>
     <app-button-component
-      icon="pi pi-check"
+      [icon]="PrimeIcons.CHECK"
       label="Search"
       [loading]="loading"
       (buttonPressed)="onButtonLoading()"
@@ -99,44 +99,59 @@
 
   <ng-template #iconOnly>
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-check" />
-      <app-button-component icon="pi pi-bookmark" severity="secondary" />
-      <app-button-component icon="pi pi-search" severity="success" />
-      <app-button-component icon="pi pi-user" severity="info" />
-      <app-button-component icon="pi pi-bell" severity="warn" />
-      <app-button-component icon="pi pi-heart" severity="help" />
-      <app-button-component icon="pi pi-times" severity="danger" />
+      <app-button-component [icon]="PrimeIcons.CHECK" />
+      <app-button-component [icon]="PrimeIcons.BOOKMARK" severity="secondary" />
+      <app-button-component [icon]="PrimeIcons.SEARCH" severity="success" />
+      <app-button-component [icon]="PrimeIcons.USER" severity="info" />
+      <app-button-component [icon]="PrimeIcons.BELL" severity="warn" />
+      <app-button-component [icon]="PrimeIcons.HEART" severity="help" />
+      <app-button-component [icon]="PrimeIcons.TIMES" severity="danger" />
     </div>
 
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-check" [rounded]="true" />
-      <app-button-component icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
-      <app-button-component icon="pi pi-search" [rounded]="true" severity="success" />
-      <app-button-component icon="pi pi-user" [rounded]="true" severity="info" />
-      <app-button-component icon="pi pi-bell" [rounded]="true" severity="warn" />
-      <app-button-component icon="pi pi-heart" [rounded]="true" severity="help" />
-      <app-button-component icon="pi pi-times" [rounded]="true" severity="danger" />
+      <app-button-component [icon]="PrimeIcons.CHECK" [rounded]="true" />
+      <app-button-component [icon]="PrimeIcons.BOOKMARK" [rounded]="true" severity="secondary" />
+      <app-button-component [icon]="PrimeIcons.SEARCH" [rounded]="true" severity="success" />
+      <app-button-component [icon]="PrimeIcons.USER" [rounded]="true" severity="info" />
+      <app-button-component [icon]="PrimeIcons.BELL" [rounded]="true" severity="warn" />
+      <app-button-component [icon]="PrimeIcons.HEART" [rounded]="true" severity="help" />
+      <app-button-component [icon]="PrimeIcons.TIMES" [rounded]="true" severity="danger" />
     </div>
 
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-check" [rounded]="true" [outlined]="true" />
+      <app-button-component [icon]="PrimeIcons.CHECK" [rounded]="true" [outlined]="true" />
       <app-button-component
-        icon="pi pi-bookmark"
+        [icon]="PrimeIcons.BOOKMARK"
         [rounded]="true"
         severity="secondary"
         [outlined]="true"
       />
       <app-button-component
-        icon="pi pi-search"
+        [icon]="PrimeIcons.SEARCH"
         [rounded]="true"
         severity="success"
         [outlined]="true"
       />
-      <app-button-component icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true" />
-      <app-button-component icon="pi pi-bell" [rounded]="true" severity="warn" [outlined]="true" />
-      <app-button-component icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
       <app-button-component
-        icon="pi pi-times"
+        [icon]="PrimeIcons.USER"
+        [rounded]="true"
+        severity="info"
+        [outlined]="true"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.BELL"
+        [rounded]="true"
+        severity="warn"
+        [outlined]="true"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.HEART"
+        [rounded]="true"
+        severity="help"
+        [outlined]="true"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.TIMES"
         [rounded]="true"
         severity="danger"
         [outlined]="true"
@@ -144,44 +159,49 @@
     </div>
 
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-check" [raised]="true" [rounded]="true" [text]="true" />
       <app-button-component
-        icon="pi pi-bookmark"
+        [icon]="PrimeIcons.CHECK"
+        [raised]="true"
+        [rounded]="true"
+        [text]="true"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.BOOKMARK"
         [raised]="true"
         [rounded]="true"
         [text]="true"
         severity="secondary"
       />
       <app-button-component
-        icon="pi pi-search"
+        [icon]="PrimeIcons.SEARCH"
         [raised]="true"
         [rounded]="true"
         [text]="true"
         severity="success"
       />
       <app-button-component
-        icon="pi pi-user"
+        [icon]="PrimeIcons.USER"
         [raised]="true"
         [rounded]="true"
         [text]="true"
         severity="info"
       />
       <app-button-component
-        icon="pi pi-bell"
+        [icon]="PrimeIcons.BELL"
         [raised]="true"
         [rounded]="true"
         [text]="true"
         severity="warn"
       />
       <app-button-component
-        icon="pi pi-heart"
+        [icon]="PrimeIcons.HEART"
         [raised]="true"
         [rounded]="true"
         [text]="true"
         severity="help"
       />
       <app-button-component
-        icon="pi pi-times"
+        [icon]="PrimeIcons.TIMES"
         [raised]="true"
         [rounded]="true"
         [text]="true"
@@ -190,25 +210,50 @@
     </div>
 
     <div class="flex flex-wrap justify-center gap-4">
-      <app-button-component icon="pi pi-check" [rounded]="true" [text]="true" />
+      <app-button-component [icon]="PrimeIcons.CHECK" [rounded]="true" [text]="true" />
       <app-button-component
-        icon="pi pi-bookmark"
+        [icon]="PrimeIcons.BOOKMARK"
         [rounded]="true"
         [text]="true"
         severity="secondary"
       />
-      <app-button-component icon="pi pi-search" [rounded]="true" [text]="true" severity="success" />
-      <app-button-component icon="pi pi-user" [rounded]="true" [text]="true" severity="info" />
-      <app-button-component icon="pi pi-bell" [rounded]="true" [text]="true" severity="warn" />
-      <app-button-component icon="pi pi-heart" [rounded]="true" [text]="true" severity="help" />
-      <app-button-component icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" />
+      <app-button-component
+        [icon]="PrimeIcons.SEARCH"
+        [rounded]="true"
+        [text]="true"
+        severity="success"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.USER"
+        [rounded]="true"
+        [text]="true"
+        severity="info"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.BELL"
+        [rounded]="true"
+        [text]="true"
+        severity="warn"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.HEART"
+        [rounded]="true"
+        [text]="true"
+        severity="help"
+      />
+      <app-button-component
+        [icon]="PrimeIcons.TIMES"
+        [rounded]="true"
+        [text]="true"
+        severity="danger"
+      />
     </div>
   </ng-template>
 
   <ng-template #badge>
     <app-button-component badge="2" label="Emails" styleClass="m-0" />
     <app-button-component
-      icon="pi pi-users"
+      [icon]="PrimeIcons.USERS"
       badge="2"
       label="Messages"
       [outlined]="true"
@@ -217,9 +262,9 @@
   </ng-template>
 
   <ng-template #sizes>
-    <app-button-component icon="pi pi-check" label="Small" size="small" />
-    <app-button-component icon="pi pi-check" label="Normal" />
-    <app-button-component icon="pi pi-check" label="Large" size="large" />
+    <app-button-component [icon]="PrimeIcons.CHECK" label="Small" size="small" />
+    <app-button-component [icon]="PrimeIcons.CHECK" label="Normal" />
+    <app-button-component [icon]="PrimeIcons.CHECK" label="Large" size="large" />
   </ng-template>
 
   @if (sandbox.panelTemplate) {

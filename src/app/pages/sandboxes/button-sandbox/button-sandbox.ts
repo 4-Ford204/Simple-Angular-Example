@@ -1,6 +1,7 @@
 import { ButtonComponent } from '../../../shared/ui-components/button-component/button-component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { PrimeIcons } from 'primeng/api';
 import { Sandbox } from '../sandboxes';
 
 @Component({
@@ -11,6 +12,8 @@ import { Sandbox } from '../sandboxes';
 })
 export class ButtonSandbox {
   loading: boolean = false;
+
+  PrimeIcons = PrimeIcons;
 
   onButtonLoading() {
     this.loading = true;

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { Image } from 'primeng/image';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-image-component',
@@ -26,4 +27,6 @@ export class ImageComponent {
   // Target element to attach the overlay, valid values are "body" or a local ng-template variable of another element (note: use binding with brackets for template variables, e.g. [appendTo]="mydiv" for a div element having #mydiv as variable name).
   @Input() appendTo: string = 'self';
   @Input() decoding: 'async' | 'sync' | 'auto' = 'auto';
+
+  PrimeIcons = PrimeIcons;
 }

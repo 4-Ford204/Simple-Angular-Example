@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
-import { MenuItem } from 'primeng/api';
 import { PanelMenu } from 'primeng/panelmenu';
 import { Ripple } from 'primeng/ripple';
 
@@ -14,4 +14,6 @@ import { Ripple } from 'primeng/ripple';
 })
 export class PanelMenuComponent {
   @Input() items: MenuItem[] = [];
+
+  PrimeIcons = PrimeIcons;
 }

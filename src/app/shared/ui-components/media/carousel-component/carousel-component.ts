@@ -4,6 +4,7 @@ import { ButtonComponent } from '../../button-component/button-component';
 import { CarouselModule } from 'primeng/carousel';
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../image-component/image-component';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-carousel-component',
@@ -37,6 +38,8 @@ export class CarouselComponent {
       this.productListImageBegin[product.id] = 0;
     }
   }
+
+  PrimeIcons = PrimeIcons;
 
   getThumbnail(src: string): string {
     return src.replace('/upload/', '/upload/w_100,h_100,c_fill,q_auto,f_auto/');

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MessageComponent } from '../../../../shared/ui-components/messages/message-component/message-component';
+import { PrimeIcons } from 'primeng/api';
 import { Sandbox } from '../../sandboxes';
 
 @Component({
@@ -9,4 +10,6 @@ import { Sandbox } from '../../sandboxes';
   templateUrl: './message-sandbox.html',
   styleUrl: './message-sandbox.css',
 })
-export class MessageSandbox {}
+export class MessageSandbox {
+  PrimeIcons = PrimeIcons;
+}
