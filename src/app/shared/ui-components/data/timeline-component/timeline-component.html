@@ -1,8 +1,14 @@
-<p-timeline [value]="value" [align]="align" [layout]="layout">
+<p-timeline
+  [pt]="pt"
+  [value]="value"
+  [align]="align"
+  [layout]="layout"
+  class="h-full w-full overflow-auto"
+>
   <ng-template #marker let-event>
     @if (event.icon) {
       <span
-        class="flex h-8 w-8 items-center justify-center rounded-full"
+        class="flex size-8 shrink-0 items-center justify-center rounded-full"
         [style]="{ 'background-color': event.color }"
       >
         <i [class]="event.icon"></i>
@@ -11,7 +17,7 @@
   </ng-template>
 
   <ng-template #opposite let-event>
-    <small>{{ event.date }}</small>
+    <small [class.invisible]="isDateMarker(event.date)">{{ event.date }}</small>
   </ng-template>
 
   <ng-template #content let-event>

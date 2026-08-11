@@ -13,7 +13,20 @@ import { UserService } from '../../../../services/user.service';
   styleUrl: './timeline-sandbox.css',
 })
 export class TimelineSandbox implements OnInit {
-  users: any[] = [];
+  users: any[] = [
+    { status: 'January', date: '01-00', icon: 'fa-solid fa-aquarius', color: '#42A5F5' },
+    { status: 'February', date: '02-00', icon: 'fa-solid fa-pisces', color: '#AB47BC' },
+    { status: 'March', date: '03-00', icon: 'fa-solid fa-aries', color: '#EF5350' },
+    { status: 'April', date: '04-00', icon: 'fa-solid fa-taurus', color: '#66BB6A' },
+    { status: 'May', date: '05-00', icon: 'fa-solid fa-gemini', color: '#FBC02D' },
+    { status: 'June', date: '06-00', icon: 'fa-solid fa-cancer', color: '#26A69A' },
+    { status: 'July', date: '07-00', icon: 'fa-solid fa-leo', color: '#FF9800' },
+    { status: 'August', date: '08-00', icon: 'fa-solid fa-virgo', color: '#9CCC65' },
+    { status: 'September', date: '09-00', icon: 'fa-solid fa-libra', color: '#EC407A' },
+    { status: 'October', date: '10-00', icon: 'fa-solid fa-scorpio', color: '#8E24AA' },
+    { status: 'November', date: '11-00', icon: 'fa-solid fa-sagittarius', color: '#29B6F6' },
+    { status: 'December', date: '12-00', icon: 'fa-solid fa-capricorn', color: '#607D8B' },
+  ];
   events: any[] = [
     {
       status: 'Ordered',
@@ -39,7 +52,16 @@ export class TimelineSandbox implements OnInit {
 
   fetchUsers() {
     this.userService.getUsers().then((response: any) => {
-      this.users = response.data.map((u: any) => ({ status: u.name, date: u.birthday }));
+      this.users = [
+        ...this.users,
+        ...response.data.map((u: any) => {
+          const [day, month] = u.birthday.split(/[-/]/);
+          return {
+            status: u.name,
+            date: `${month}-${day}`,
+          };
+        }),
+      ].sort((a, b) => a.date.localeCompare(b.date));
     });
   }
 }

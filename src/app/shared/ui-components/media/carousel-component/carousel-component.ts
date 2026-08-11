@@ -47,7 +47,6 @@ export class CarouselComponent {
 
   getProductImages(product: any) {
     const begin = this.productListImageBegin[product.id];
-
     return product.images.slice(begin, begin + this.productImageMax).map((src: any, i: number) => ({
       src,
       index: begin + i,

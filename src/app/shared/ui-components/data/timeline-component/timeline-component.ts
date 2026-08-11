@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-import { Timeline } from 'primeng/timeline';
+import { Timeline, TimelinePassThrough } from 'primeng/timeline';
 
 @Component({
   selector: 'app-timeline-component',
@@ -9,10 +8,16 @@ import { Timeline } from 'primeng/timeline';
   styleUrl: './timeline-component.css',
 })
 export class TimelineComponent {
+  // Used to pass attributes to DOM elements inside the component.
+  @Input() pt: TimelinePassThrough | undefined = undefined;
   // An array of events to display.
   @Input() value: any[] = [];
   // Position of timeline bar relative to the content. Valid values are "left", "right" for vertical layout and "top", "bottom" for horizontal layout.
   @Input() align: string = 'left';
   // Orientation of the timeline.
   @Input() layout: 'vertical' | 'horizontal' = 'vertical';
+
+  isDateMarker(date: string): boolean {
+    return date.endsWith('-00');
+  }
 }
