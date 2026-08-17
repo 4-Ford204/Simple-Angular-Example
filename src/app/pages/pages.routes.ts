@@ -1,3 +1,4 @@
+import { Administration } from './administration/administration';
 import { Home } from './home/home';
 import { MainLayout } from '../layouts/main-layout/main-layout';
 import { Routes } from '@angular/router';
@@ -8,6 +9,10 @@ export const PagesRoutes: Routes = [
     component: MainLayout,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
+      {
+        path: 'administration',
+        component: Administration,
+      },
       { path: 'home', component: Home },
       {
         path: 'sandbox',

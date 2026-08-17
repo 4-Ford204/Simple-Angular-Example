@@ -6,6 +6,7 @@ import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../../../shared/ui-components/media/image-component/image-component';
 import { InputTextModule } from 'primeng/inputtext';
+import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
 import { Ripple } from 'primeng/ripple';
 import { RouterLink } from '@angular/router';
@@ -19,6 +20,7 @@ import { ToggleSwitchComponent } from '../../../shared/ui-components/form/toggle
     CommonModule,
     ImageComponent,
     InputTextModule,
+    MenuModule,
     MenubarModule,
     Ripple,
     RouterLink,
@@ -53,6 +55,9 @@ export class Header implements OnInit {
         },
       ],
     },
+  ];
+  avatarMenuItems: MenuItem[] = [
+    { label: 'Le Tu Huynh Duy', icon: PrimeIcons.USER, routerLink: ['/administration'] },
   ];
 
   PrimeIcons = PrimeIcons;

@@ -47,7 +47,11 @@
       <p-avatar
         image="https://www.ffcollectibles.com.au/cdn/shop/products/WARHEADSTUDIOREDROCLUFFY_1.jpg"
         shape="circle"
-      ></p-avatar>
+        (click)="avatarMenu.toggle($event)"
+        onkeypress=""
+      >
+        <p-menu #avatarMenu [model]="avatarMenuItems" [popup]="true"></p-menu>
+      </p-avatar>
     </div>
   </ng-template>
 </p-menubar>
