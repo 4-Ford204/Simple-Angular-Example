@@ -730,7 +730,7 @@ export const PRODUCTS = [
   },
   {
     id: 'SURGESTUDIO_NARUTOWCFUCHIHACLANSUSANOOSERIES.KAKASHI',
-    name: 'Hakate Kakashi',
+    name: 'Hatake Kakashi',
     series: 'Uchiha Clan Susanoo Series',
     studio: 'Surge Studio',
     material: 'Resin',
@@ -1802,6 +1802,20 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/v1785567187/APLUSSTUDIO_ARAMAKI_1_j7bir4.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/v1785567187/APLUSSTUDIO_ARAMAKI_2_hgjwfy.jpg',
       'https://res.cloudinary.com/dahbzn13g/image/upload/v1785567187/APLUSSTUDIO_ARAMAKI_3_ukhjhv.jpg',
+    ],
+  },
+  {
+    id: 'JLSTUDIO_KAKASHI',
+    name: 'Hatake Kakashi',
+    series: '',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_800_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_KAKASHI_1_ez1war.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_KAKASHI_2_ybkwoq.jpg',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_KAKASHI_3_giztgg.jpg',
     ],
   },
 ];
