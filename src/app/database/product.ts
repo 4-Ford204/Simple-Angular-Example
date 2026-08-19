@@ -1818,4 +1818,31 @@ export const PRODUCTS = [
       'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_KAKASHI_3_giztgg.jpg',
     ],
   },
+  {
+    id: 'JLSTUDIO_OBITO',
+    name: 'Uchiha Obito',
+    series: '',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_800_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_OBITO_1_uadhd1.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_OBITO_2_vwavls.webp',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_OBITO_3_eyh9mx.webp',
+    ],
+  },
+  {
+    id: 'JLSTUDIO_GUY',
+    name: 'Might Guy',
+    series: '',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_750_000,
+    images: [
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_GUY_1_curqnh.avif',
+      'https://res.cloudinary.com/dahbzn13g/image/upload/JLSTUDIO_GUY_2_psgdmk.avif',
+    ],
+  },
 ];
