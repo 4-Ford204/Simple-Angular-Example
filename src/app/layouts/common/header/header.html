@@ -44,14 +44,17 @@
 
       <app-toggle-switch-component [(model)]="checked" (valueChanged)="onDarkModeChanged()" />
 
-      <p-avatar
-        image="https://www.ffcollectibles.com.au/cdn/shop/products/WARHEADSTUDIOREDROCLUFFY_1.jpg"
-        shape="circle"
-        (click)="avatarMenu.toggle($event)"
-        onkeypress=""
-      >
-        <p-menu #avatarMenu [model]="avatarMenuItems" [popup]="true"></p-menu>
-      </p-avatar>
+      <button>
+        <p-avatar
+          image="https://www.ffcollectibles.com.au/cdn/shop/products/WARHEADSTUDIOREDROCLUFFY_1.jpg"
+          shape="circle"
+          class="cursor-pointer"
+          (click)="avatarMenu.toggle($event)"
+          onkeypress=""
+        >
+          <p-menu #avatarMenu [model]="avatarMenuItems" [popup]="true"></p-menu>
+        </p-avatar>
+      </button>
     </div>
   </ng-template>
 </p-menubar>

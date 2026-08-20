@@ -52,7 +52,7 @@ export class TimelineSandbox implements OnInit {
 
   fetchUsers() {
     this.userService.getUsers().then((response: any) => {
-      this.users = [
+      const users = [
         ...this.users,
         ...response.data.map((u: any) => {
           const [day, month] = u.birthday.split(/[-/]/);
@@ -61,7 +61,21 @@ export class TimelineSandbox implements OnInit {
             date: `${month}-${day}`,
           };
         }),
-      ].sort((a, b) => a.date.localeCompare(b.date));
+      ];
+
+      const groupedUsers = Object.values(
+        users.reduce((grouped: any, user: any) => {
+          if (!grouped[user.date]) {
+            grouped[user.date] = { ...user, status: user.status };
+          } else {
+            grouped[user.date].status += `<br>${user.status}`;
+          }
+
+          return grouped;
+        }, {})
+      );
+
+      this.users = groupedUsers.sort((a: any, b: any) => a.date.localeCompare(b.date));
     });
   }
 }

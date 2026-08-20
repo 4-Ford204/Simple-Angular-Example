@@ -21,6 +21,6 @@
   </ng-template>
 
   <ng-template #content let-event>
-    <span>{{ event.status }}</span>
+    <span [innerHTML]="event.status"></span>
   </ng-template>
 </p-timeline>
