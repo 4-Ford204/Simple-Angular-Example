@@ -62,7 +62,6 @@ export class TimelineSandbox implements OnInit {
           };
         }),
       ];
-
       const groupedUsers = Object.values(
         users.reduce((grouped: any, user: any) => {
           if (!grouped[user.date]) {
@@ -73,9 +72,8 @@ export class TimelineSandbox implements OnInit {
 
           return grouped;
         }, {})
-      );
-
-      this.users = groupedUsers.sort((a: any, b: any) => a.date.localeCompare(b.date));
+      ).sort((a: any, b: any) => a.date.localeCompare(b.date));
+      this.users = groupedUsers;
     });
   }
 }
