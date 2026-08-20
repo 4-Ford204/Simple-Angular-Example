@@ -23,7 +23,6 @@ import { TableComponent } from '../../shared/ui-components/data/table-component/
   styleUrl: './home.css',
 })
 export class Home implements OnInit, AfterViewInit {
-  @ViewChild('actionTemplate', { static: false }) actionTemplate!: TemplateRef<any>;
   columns: any[] = [];
   products: any[] = [];
 
@@ -36,6 +35,8 @@ export class Home implements OnInit, AfterViewInit {
   groupedProducts: Record<string, any[]> = {};
 
   PrimeIcons = PrimeIcons;
+
+  @ViewChild('actionTemplate', { static: false }) actionTemplate!: TemplateRef<any>;
 
   private readonly productService = inject(ProductService);
 
