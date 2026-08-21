@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const FormRoutes: Routes = [
+  { path: '', redirectTo: 'auto-complete-sandbox', pathMatch: 'full' },
   {
     path: 'auto-complete-sandbox',
     loadComponent: () =>

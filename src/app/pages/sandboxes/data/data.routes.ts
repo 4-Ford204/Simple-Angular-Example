@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const DataRoutes: Routes = [
+  { path: '', redirectTo: 'timeline-sandbox', pathMatch: 'full' },
   {
     path: 'timeline-sandbox',
     loadComponent: () =>
