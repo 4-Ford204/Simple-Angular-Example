@@ -2,13 +2,15 @@
 
 <div class="flex flex-col gap-5">
   <ng-template #birthdays>
-    <app-timeline-component
-      [pt]="{ event: { class: 'min-w-28' } }"
-      [value]="users"
-      align="top"
-      layout="horizontal"
-      class="h-80 w-full"
-    />
+    <div #birthdayTimeline class="h-80 w-full">
+      <app-timeline-component
+        [pt]="{ event: { class: 'min-w-32' } }"
+        [value]="users"
+        align="top"
+        layout="horizontal"
+        class="h-full w-full"
+      />
+    </div>
   </ng-template>
 
   <ng-template #template>

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
@@ -44,6 +44,8 @@ export class TimelineSandbox implements OnInit {
     { status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B' },
   ];
 
+  @ViewChild('birthdayTimeline', { read: ElementRef }) birthdayTimeline!: ElementRef<HTMLElement>;
+
   private readonly userService = inject(UserService);
 
   ngOnInit(): void {
@@ -74,6 +76,22 @@ export class TimelineSandbox implements OnInit {
         }, {})
       ).sort((a: any, b: any) => a.date.localeCompare(b.date));
       this.users = groupedUsers;
+
+      setTimeout(() => this.scrollBirthdayTimeline());
     });
+  }
+
+  scrollBirthdayTimeline() {
+    const date = new Date();
+    const index = this.users.findIndex((user) => {
+      const [month, day] = user.date.split('-').map(Number);
+      return (
+        month > date.getMonth() + 1 || (month === date.getMonth() + 1 && day >= date.getDate())
+      );
+    });
+    const target =
+      this.birthdayTimeline.nativeElement.querySelectorAll('.p-timeline-event')[Math.max(index, 0)];
+
+    target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
 }
