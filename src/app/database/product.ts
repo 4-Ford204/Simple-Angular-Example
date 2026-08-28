@@ -1614,7 +1614,7 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 2_100_000,
+    price: 2_200_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_AIZEN_1_tt88kt.jpg`,
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_AIZEN_2_havpmp.jpg`,
@@ -1677,7 +1677,7 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 6_880_000,
+    price: 7_000_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_MAYURI_1_fxriaj.jpg`,
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_MAYURI_2_tx1bka.jpg`,
@@ -1709,7 +1709,7 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 2_950_000,
+    price: 2_750_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_SHINJI_1_dezggv.jpg`,
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_SHINJI_2_yeg2i5.jpg`,
@@ -1724,7 +1724,7 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 6_100_000,
+    price: 3_000_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KISUKE_1_xjbiwh.jpg`,
       `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KISUKE_2_a1kccd.jpg`,
@@ -1739,7 +1739,7 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 2_600_000,
+    price: 1_700_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_ESPADA_GRIMMJOW_1_kinnpp.webp`,
       `${BASE_IMAGE_URL}/YZSTUDIO_ESPADA_GRIMMJOW_2_wap10z.webp`,
@@ -1759,13 +1759,31 @@ export const PRODUCTS = [
     studio: 'YZ Studio',
     material: 'Resin',
     type: 'Bleach',
-    price: 4_500_000,
+    price: 3_750_000,
     images: [
       `${BASE_IMAGE_URL}/YZSTUDIO_QUINCY_YHWACH_1_wlrdea.webp`,
       `${BASE_IMAGE_URL}/YZSTUDIO_QUINCY_YHWACH_2_iw9rtv.webp`,
       `${BASE_IMAGE_URL}/YZSTUDIO_QUINCY_YHWACH_3_j3obhv.webp`,
       `${BASE_IMAGE_URL}/YZSTUDIO_QUINCY_YHWACH_4_lch4bf.webp`,
       `${BASE_IMAGE_URL}/YZSTUDIO_QUINCY_YHWACH_5_rkg88l.webp`,
+    ],
+  },
+  {
+    id: 'YZSTUDIO_BANKAI_KENPACHI',
+    name: 'Zaraki Kenpachi',
+    series: 'Bankai Series',
+    studio: 'YZ Studio',
+    material: 'Resin',
+    type: 'Bleach',
+    price: 2_850_000,
+    images: [
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_1_odze0n.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_2_hyfhcp.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_4_mlthvz.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_6_wfg989.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_3_gnezfl.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_5_qkftom.webp`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_BANKAI_KENPACHI_7_kbzqum.webp`,
     ],
   },
   {

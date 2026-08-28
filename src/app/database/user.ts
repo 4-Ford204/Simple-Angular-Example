@@ -24,4 +24,5 @@ export const USERS = [
   { name: 'Quang Hải', birthday: '07/12/2002' },
   // University
   { name: 'Quang Hưng', birthday: '23/01/2002' },
+  { name: 'Thiện Nam', birthday: '02/05/2002' },
 ];
