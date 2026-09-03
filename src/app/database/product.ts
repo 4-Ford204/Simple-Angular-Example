@@ -1905,7 +1905,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_700_000,
+    price: 1_650_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_MADARA_1_kkwwg7.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_MADARA_2_whzzbn.jpg`,
@@ -1919,7 +1919,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_700_000,
+    price: 1_650_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_ITACHI_1_mvtudm.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_ITACHI_2_ceuypl.jpg`,
@@ -1932,7 +1932,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_700_000,
+    price: 1_650_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_SASORI_1_daztve.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_SASORI_2_mged0k.jpg`,
@@ -1945,7 +1945,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_750_000,
+    price: 1_700_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_HASHIRAMA_1_eal5jd.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_HASHIRAMA_2_z5sxss.jpg`,
@@ -1959,7 +1959,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_750_000,
+    price: 1_700_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_KISAME_1_hxp4nd.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_KISAME_2_dhsmvm.jpg`,
@@ -1973,10 +1973,23 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_750_000,
+    price: 1_700_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_SIXPATHSSAGE_NARUTO_1_qfl5im.jpg`,
       `${BASE_IMAGE_URL}/JLSTUDIO_SIXPATHSSAGE_NARUTO_2_ui6ybi.jpg`,
+    ],
+  },
+  {
+    id: 'JLSTUDIO_SIXPATHSRINNEGAN_SASUKE',
+    name: 'Uchiha Sasuke',
+    series: 'Six Paths Rinnegan',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_700_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_SIXPATHSRINNEGAN_SASUKE_1_lk168q`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_SIXPATHSRINNEGAN_SASUKE_2_im9nei`,
     ],
   },
 ];
