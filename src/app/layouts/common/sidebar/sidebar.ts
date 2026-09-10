@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
+
+import { Component } from '@angular/core';
 import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
 import { Router } from '@angular/router';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
