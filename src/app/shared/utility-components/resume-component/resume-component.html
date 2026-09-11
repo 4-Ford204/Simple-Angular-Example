@@ -1,19 +1,19 @@
-<div class="flex border border-gray-300">
-  <div class="w-2/5 border-r">
+<div class="mt-10 flex border border-gray-300">
+  <div class="mx-5 w-2/5 shrink-0" style="background-color: #d7e8de">
     @if (image) {
       <div class="flex aspect-square items-center justify-center">
         <app-image-component
           imageClass="h-full w-full rounded-full object-cover"
           [src]="image"
-          class="size-40"
+          class="size-50"
         />
       </div>
     }
 
-    <div class="mx-5 mb-5 flex flex-col">
+    <div class="mx-5 flex flex-col gap-5">
       <div>
         @if (name) {
-          <h1 class="text-2xl font-bold wrap-break-word">{{ name }}</h1>
+          <h2 class="text-2xl font-bold wrap-break-word">{{ name }}</h2>
         }
 
         @if (position) {
@@ -21,32 +21,50 @@
         }
       </div>
 
-      @if (description) {
-        <div class="mt-5">
-          <ng-container
-            [ngTemplateOutlet]="section"
-            [ngTemplateOutletContext]="{ name: 'About Me' }"
-          ></ng-container>
+      <div id="information">
+        <ng-container
+          [ngTemplateOutlet]="section"
+          [ngTemplateOutletContext]="{ name: 'Information' }"
+        ></ng-container>
 
-          <div class="px-5">
-            <div>{{ description }}</div>
-          </div>
+        <div>
+          <ul class="flex flex-col gap-2">
+            <ng-container
+              [ngTemplateOutlet]="information"
+              [ngTemplateOutletContext]="{ item: mail, icon: PrimeIcons.ENVELOPE }"
+            ></ng-container>
+
+            <ng-container
+              [ngTemplateOutlet]="information"
+              [ngTemplateOutletContext]="{ item: phone, icon: PrimeIcons.PHONE }"
+            ></ng-container>
+
+            <ng-container
+              [ngTemplateOutlet]="information"
+              [ngTemplateOutletContext]="{ item: birthday, icon: PrimeIcons.CALENDAR }"
+            ></ng-container>
+
+            <ng-container
+              [ngTemplateOutlet]="information"
+              [ngTemplateOutletContext]="{ item: address, icon: PrimeIcons.MAP_MARKER }"
+            ></ng-container>
+          </ul>
         </div>
-      }
+      </div>
 
       @if (technologies) {
-        <div class="mt-5">
+        <div id="technologies">
           <ng-container
             [ngTemplateOutlet]="section"
             [ngTemplateOutletContext]="{ name: 'Technologies' }"
           ></ng-container>
 
-          <div class="px-5">
-            <ul class="grid grid-cols-[auto_auto_1fr] gap-y-1.5">
+          <div>
+            <ul class="grid grid-cols-[auto_auto_1fr] gap-y-1">
               @for (technology of technologies; track $index) {
                 <li class="contents">
                   <span class="font-semibold">{{ technology.type }}</span>
-                  <span class="mx-1.5">:</span>
+                  <span class="mr-1 ml-0.5">:</span>
                   <span class="min-w-0">{{ technology.name }}</span>
                 </li>
               }
@@ -57,15 +75,30 @@
     </div>
   </div>
 
-  <div class="m-5 grow">
-    <ng-container
-      [ngTemplateOutlet]="section"
-      [ngTemplateOutletContext]="{ name: 'Experiences' }"
-    ></ng-container>
+  <div class="grow">
+    @if (description) {
+      <div id="description">
+        <ng-container
+          [ngTemplateOutlet]="section"
+          [ngTemplateOutletContext]="{ name: 'About Me' }"
+        ></ng-container>
 
-    <div>
-      <h3>ABC Company</h3>
-      <p>Backend Developer</p>
+        <div class="px-5">
+          <div>{{ description }}</div>
+        </div>
+      </div>
+    }
+
+    <div id="experiences">
+      <ng-container
+        [ngTemplateOutlet]="section"
+        [ngTemplateOutletContext]="{ name: 'Experiences' }"
+      ></ng-container>
+
+      <div>
+        <h3>ABC Company</h3>
+        <p>Backend Developer</p>
+      </div>
     </div>
   </div>
 </div>
@@ -74,8 +107,23 @@
   <div class="flex items-center gap-5">
     <div class="h-px flex-1 bg-gray-300"></div>
 
-    <span class="leading-8 font-medium">{{ name }}</span>
+    <span class="leading-8 font-medium uppercase">{{ name }}</span>
 
     <div class="h-px flex-1 bg-gray-300"></div>
   </div>
+</ng-template>
+
+<ng-template #information let-item="item" let-icon="icon">
+  @if (item) {
+    <li class="flex items-center gap-2">
+      <span
+        class="flex size-8 shrink-0 items-center justify-center rounded-full text-white"
+        style="background-color: #3a684c"
+      >
+        <i [class]="icon"></i>
+      </span>
+
+      <span>{{ item }}</span>
+    </li>
+  }
 </ng-template>
