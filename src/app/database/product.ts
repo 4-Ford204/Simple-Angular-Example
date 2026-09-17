@@ -7,7 +7,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 9_000_000,
+    price: 5_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHASHIRAMASENJU_2_dxgtps`,
       `${BASE_IMAGE_URL}/G5STUDIOHASHIRAMASENJU_1_flw2wn`,
@@ -23,7 +23,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 9_300_000,
+    price: 6_000_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESMADARAUCHIHA_2_ga1nlj`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESMADARAUCHIHA_1_kp1yef`,
@@ -38,7 +38,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 8_400_000,
+    price: 5_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIES_3_z9a1n7`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIES_1_pxzr9g`,
@@ -53,7 +53,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 9_000_000,
+    price: 6_100_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESOBITOUCHIHA_2_c6xclg`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESOBITOUCHIHA_1_qtiinu`,
@@ -69,7 +69,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 9_700_000,
+    price: 6_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESITACHIUCHIHA_2_fyamvf`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESITACHIUCHIHA_1_vctoqz`,
@@ -84,7 +84,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 9_300_000,
+    price: 6_550_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESSASUKEUCHIHA_2_hwrksy`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESSASUKEUCHIHA_1_ddw18o`,
@@ -99,7 +99,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 8_200_000,
+    price: 6_250_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESJIRAIYA_2_dnheee`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESJIRAIYA_1_z2lxw3`,
@@ -115,7 +115,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 14_850_000,
+    price: 8_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSIXPATHSOFPAIN_1_ftwje2`,
       `${BASE_IMAGE_URL}/G5STUDIOSIXPATHSOFPAIN_2_wuglfx`,
@@ -129,7 +129,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 18_650_000,
+    price: 9_800_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGHENDCUSTOMSERIESTHELIFEOFNARUTOUZUMAKI_2_tu5kbk`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGHENDCUSTOMSERIESTHELIFEOFNARUTOUZUMAKI_1_fp0qrq`,
@@ -147,7 +147,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 4_300_000,
+    price: 6_100_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESGAARA_2_axwfzg`,
       `${BASE_IMAGE_URL}/G5STUDIOHIGH-ENDCUSTOMSERIESGAARA_1_wuj6gd`,
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 5_000_000,
+    price: 6_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_DEIDARA_2_njxnso`,
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_DEIDARA_1_qm7kmn`,
@@ -179,7 +179,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 4_700_000,
+    price: 6_300_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_EIGHTHGATENIGHTGUY_3_m5sh01`,
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_EIGHTHGATENIGHTGUY_1_dlylzt`,
@@ -195,7 +195,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 5_100_000,
+    price: 6_700_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_KISAMEHOSHIGAKI_2_kv7rws`,
       `${BASE_IMAGE_URL}/G5STUDIO_NARUTOHIGH-ENDCUSTOMSERIES_KISAMEHOSHIGAKI_1_pwzmmu`,
@@ -207,11 +207,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY',
     name: 'Monkey D. Luffy',
-    series: 'Four Emperors Series',
+    series: 'Four Emperors',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_000_000,
+    price: 3_000_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_7_jfergr`,
       `${BASE_IMAGE_URL}/G5STUDIOFOUREMPERORSERIESMONKEYDLUFFY_1_chjdnv`,
@@ -229,7 +229,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 28_300_000,
+    price: 14_200_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOONEPIECETHEROADTOBEKING_10_wdq6my`,
       `${BASE_IMAGE_URL}/G5STUDIOONEPIECETHEROADTOBEKING_9_qs0kmp`,
@@ -243,13 +243,13 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 'G5STUDIOONEPIECEENMAFORMRORONOAZORO',
+    id: 'G5STUDIO_ONEPIECEENMAFORMRORONOAZORO',
     name: 'Roronoa Zoro',
     series: 'Enma Form',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_300_000,
+    price: 3_200_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_5_y3jy9u`,
       `${BASE_IMAGE_URL}/G5STUDIO_ONEPIECEENMAFORMRORONOAZORO_1_s3vcwm`,
