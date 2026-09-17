@@ -261,11 +261,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESLUFFY',
     name: 'Monkey D. Luffy',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 6_300_000,
+    price: 3_900_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESLUFFY_1_gyyxbk`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESLUFFY_6_ul1b70`,
@@ -277,11 +277,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESZORO',
     name: 'Roronoa Zoro',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_700_000,
+    price: 3_950_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESZORO_1_sfbppo`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESZORO_7_xzafyc`,
@@ -293,11 +293,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESSERIESNAMI',
     name: 'Nami',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 2_900_000,
+    price: 4_000_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESSERIESNAMI_1_a0o0l8`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESSERIESNAMI_2_dc1la1`,
@@ -308,11 +308,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESSERIESUSOPP',
     name: 'Usopp',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_700_000,
+    price: 4_100_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_1_zdfmeg`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESSERIESUSOPP_2_xhub5g`,
@@ -322,11 +322,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESSERIESSANJI',
     name: 'Vinsmoke Sanji',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_700_000,
+    price: 3_900_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESSANJI_1_bwouuo`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESSANJI_5_h5fzpi`,
@@ -337,11 +337,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESSERIESCHOPPER',
     name: 'Tony Tony Chopper',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 2_900_000,
+    price: 3_950_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_1_ss1ydb`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESCHOPPER_3_jdqdbq`,
@@ -352,11 +352,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESROBIN',
     name: 'Nico Robin',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 6_300_000,
+    price: 3_900_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESROBIN_1_kisc1x`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESROBIN_2_rjad8j`,
@@ -367,11 +367,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESFRANKY',
     name: 'Franky',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 6_100_000,
+    price: 3_850_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESFRANKY_1_ncnmtz`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESFRANKY_6_y2epwn`,
@@ -383,11 +383,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESBROOK',
     name: 'Brook',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 5_700_000,
+    price: 3_950_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESBROOK_1_tz5gyd`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESBROOK_3_waeebd`,
@@ -398,11 +398,11 @@ export const PRODUCTS = [
   {
     id: 'G5STUDIOSTRAWHATPIRATESERIESJINBE',
     name: 'Jinbe',
-    series: 'Straw Hat Pirates Series',
+    series: 'Straw Hat Pirates',
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 2_900_000,
+    price: 3_850_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESJINBE_1_d8ixa3`,
       `${BASE_IMAGE_URL}/G5STUDIOSTRAWHATPIRATESERIESJINBE_1_gv6jwe`,
@@ -417,7 +417,7 @@ export const PRODUCTS = [
     studio: 'G5 Studio',
     material: 'Resin',
     type: 'One Piece',
-    price: 2_900_000,
+    price: 4_000_000,
     images: [
       `${BASE_IMAGE_URL}/G5STUDIOYAMATO_1_xbejip`,
       `${BASE_IMAGE_URL}/G5STUDIOYAMATO_2_syorwi`,
