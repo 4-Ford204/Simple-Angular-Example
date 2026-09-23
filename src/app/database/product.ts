@@ -1028,17 +1028,17 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 'JLSTUDIO_KAKASHI',
+    id: 'JLSTUDIO_N001_KAKASHI',
     name: 'Hatake Kakashi',
     series: '',
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_500_000,
+    price: 1_700_000,
     images: [
-      `${BASE_IMAGE_URL}/JLSTUDIO_KAKASHI_1_ez1war`,
-      `${BASE_IMAGE_URL}/JLSTUDIO_KAKASHI_2_ybkwoq`,
-      `${BASE_IMAGE_URL}/JLSTUDIO_KAKASHI_3_giztgg`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N001_KAKASHI_1_ez1war`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N001_KAKASHI_2_ybkwoq`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N001_KAKASHI_3_giztgg`,
     ],
   },
   {
