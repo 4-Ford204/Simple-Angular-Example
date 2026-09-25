@@ -1141,7 +1141,7 @@ export const PRODUCTS = [
   {
     id: 'JLSTUDIO_N009_NARUTO',
     name: 'Uzumaki Naruto',
-    series: 'Six Paths Sage',
+    series: '',
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
@@ -1154,14 +1154,28 @@ export const PRODUCTS = [
   {
     id: 'JLSTUDIO_N010_SASUKE',
     name: 'Uchiha Sasuke',
-    series: 'Six Paths Rinnegan',
+    series: '',
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
     price: 1_850_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_1_lk168q`,
-      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_2_im9nei`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_2_lzdkyl`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_3_lnxmld`,
+    ],
+  },
+  {
+    id: 'JLSTUDIO_N011_PAIN',
+    name: 'Pain',
+    series: 'Akatsuki',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_850_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N011_PAIN_1_h7vkgj`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N011_PAIN_2_zgvio6`,
     ],
   },
   {
