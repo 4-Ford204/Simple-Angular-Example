@@ -718,12 +718,14 @@ export const PRODUCTS = [
     type: 'Bleach',
     price: 2_200_000,
     images: [
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_1_kgc3ib`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_2_g5crgz`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_3_vpl3cb`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_4_nasgor`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_5_cjgff2`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_6_zio1rc`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_1_gimzop`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_2_zwhtvy`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_3_ouxrai`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_4_ewupuq`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_5_cvblkw`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_6_ta2rco`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_7_jt6vn6`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC003_BYAKUYA_8_v1dguw`,
     ],
   },
   {
@@ -749,9 +751,10 @@ export const PRODUCTS = [
     type: 'Bleach',
     price: 2_250_000,
     images: [
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_1_nb9arw`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_2_clgkhn`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_3_nrjwnf`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_1_xunvvq`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_2_rxxoix`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_3_np0f7n`,
+      `${BASE_IMAGE_URL}/YZSTUDIO_EC005_RETSU_4_nfnviz`,
     ],
   },
   {
@@ -782,8 +785,6 @@ export const PRODUCTS = [
       `${BASE_IMAGE_URL}/YZSTUDIO_EC007_YAMAMOTO_1_fi1niz`,
       `${BASE_IMAGE_URL}/YZSTUDIO_EC007_YAMAMOTO_2_les4n9`,
       `${BASE_IMAGE_URL}/YZSTUDIO_EC007_YAMAMOTO_3_plmxby`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC007_YAMAMOTO_4_oj7roa`,
-      `${BASE_IMAGE_URL}/YZSTUDIO_EC007_YAMAMOTO_5_nfws0b`,
     ],
   },
   {
