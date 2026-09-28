@@ -1161,9 +1161,9 @@ export const PRODUCTS = [
     type: 'Naruto',
     price: 1_850_000,
     images: [
-      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_1_lk168q`,
-      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_2_lzdkyl`,
-      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_3_lnxmld`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_1_nni4uo`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_2_ebrb3v`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_3_kx4a6s`,
     ],
   },
   {
