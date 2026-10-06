@@ -1194,6 +1194,21 @@ export const PRODUCTS = [
     ],
   },
   {
+    id: 'JLSTUDIO_N012_TOBIRAMA',
+    name: 'Senju Tobirama',
+    series: '',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 2_000_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_1_afrwgd`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_2_l6htwm`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_3_vftsji`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_4_kg7nfg`,
+    ],
+  },
+  {
     id: 'ZSTUDIO_JK001_GOJO',
     name: 'Gojo Satoru',
     series: '',
