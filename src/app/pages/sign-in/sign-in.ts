@@ -17,4 +17,8 @@ export class SignIn {
   password: string = '';
 
   PrimeIcons = PrimeIcons;
+
+  onSignInButtonPressed() {
+    console.log(this.username, this.password);
+  }
 }

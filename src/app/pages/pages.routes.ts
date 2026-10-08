@@ -6,14 +6,16 @@ import { SignIn } from './sign-in/sign-in';
 
 export const PagesRoutes: Routes = [
   {
-    path: 'signin',
-    component: SignIn,
+    path: '',
+    children: [
+      { path: '', redirectTo: 'signin', pathMatch: 'full' },
+      { path: 'signin', component: SignIn },
+    ],
   },
   {
     path: '',
     component: MainLayout,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
         path: 'administration',
         component: Administration,
