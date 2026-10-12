@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { PrimeIcons } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -18,7 +19,11 @@ export class SignIn {
 
   PrimeIcons = PrimeIcons;
 
-  onSignInButtonPressed() {
-    console.log(this.username, this.password);
+  constructor(private readonly router: Router) {}
+
+  async onSignInButtonPressed() {
+    if (this.username == 'adminorh@gmail.com' && this.password == 'Admin#123') {
+      await this.router.navigateByUrl('/home');
+    }
   }
 }
