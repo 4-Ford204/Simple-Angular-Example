@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
+import { Router, RouterLink } from '@angular/router';
 
+import { AuthService } from '../../../core/services/auth.service';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
@@ -9,7 +11,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
 import { Ripple } from 'primeng/ripple';
-import { RouterLink } from '@angular/router';
 import { ToggleSwitchComponent } from '../../../shared/ui-components/form/toggle-switch-component/toggle-switch-component';
 
 @Component({
@@ -58,9 +59,15 @@ export class Header implements OnInit {
   ];
   avatarMenuItems: MenuItem[] = [
     { label: 'Le Tu Huynh Duy', icon: PrimeIcons.USER, routerLink: ['/administration'] },
+    { label: 'Sign Out', icon: PrimeIcons.SIGN_OUT, command: () => this.onSignOutPressed() },
   ];
 
   PrimeIcons = PrimeIcons;
+
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router: Router
+  ) {}
 
   ngOnInit(): void {
     this.onDarkModeChanged();
@@ -76,5 +83,10 @@ export class Header implements OnInit {
         element.classList.remove('dark-mode');
       }
     }
+  }
+
+  onSignOutPressed(): void {
+    this.authService.signOut();
+    this.router.navigateByUrl('signin');
   }
 }

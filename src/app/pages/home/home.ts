@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 
 import { AutoCompleteComponent } from '../../shared/ui-components/form/auto-complete-component/auto-complete-component';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
@@ -38,7 +38,7 @@ export class Home implements OnInit, AfterViewInit {
 
   @ViewChild('actionTemplate', { static: false }) actionTemplate!: TemplateRef<any>;
 
-  private readonly productService = inject(ProductService);
+  constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {
     this.fetchProducts();

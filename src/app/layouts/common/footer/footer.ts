@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../../../shared/ui-components/media/image-component/image-component';
@@ -26,7 +26,7 @@ export class Footer implements OnInit {
     { name: 'Youtube', icon: 'https://cdn.simpleicons.org/youtube' },
   ];
 
-  private readonly weatherService = inject(WeatherService);
+  constructor(private readonly weatherService: WeatherService) {}
 
   ngOnInit(): void {
     this.fetchWeather();

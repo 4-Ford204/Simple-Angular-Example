@@ -1,4 +1,4 @@
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../core/services/auth.service';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
 import { Component } from '@angular/core';
 import { FloatLabelModule } from 'primeng/floatlabel';

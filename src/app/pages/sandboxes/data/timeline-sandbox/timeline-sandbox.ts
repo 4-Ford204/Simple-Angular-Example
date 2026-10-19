@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
@@ -46,7 +46,7 @@ export class TimelineSandbox implements OnInit {
 
   @ViewChild('birthdayTimeline', { read: ElementRef }) birthdayTimeline!: ElementRef<HTMLElement>;
 
-  private readonly userService = inject(UserService);
+  constructor(private readonly userService: UserService) {}
 
   ngOnInit(): void {
     this.fetchUsers();

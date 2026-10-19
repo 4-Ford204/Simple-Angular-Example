@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { PrimeIcons } from 'primeng/api';
 import { TableComponent } from '../../shared/ui-components/data/table-component/table-component';
@@ -16,7 +16,7 @@ export class Administration implements OnInit {
 
   PrimeIcons = PrimeIcons;
 
-  private readonly universityService = inject(UniversityService);
+  constructor(private readonly universityService: UniversityService) {}
 
   ngOnInit(): void {
     this.columns = [
