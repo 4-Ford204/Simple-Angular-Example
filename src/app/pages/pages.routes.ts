@@ -5,7 +5,7 @@ import { MainLayout } from '../layouts/main-layout/main-layout';
 import { Routes } from '@angular/router';
 import { SignIn } from './sign-in/sign-in';
 
-export const PagesRoutes: Routes = [
+export const PageRoutes: Routes = [
   {
     path: 'signin',
     component: SignIn,

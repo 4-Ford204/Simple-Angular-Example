@@ -1,5 +1,6 @@
 import { MenuItem, PrimeIcons } from 'primeng/api';
 
+import { APP_ROUTES } from '../../../database/route';
 import { Component } from '@angular/core';
 import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
 import { Router } from '@angular/router';
@@ -18,7 +19,7 @@ export class Sidebar {
       label: 'Button',
       icon: PrimeIcons.PLAY_CIRCLE,
       command: () => {
-        this.router.navigate(['/sandbox/button-sandbox']);
+        this.router.navigateByUrl(APP_ROUTES.BUTTON_SANDBOX);
       },
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Button' }),
     },
@@ -26,7 +27,7 @@ export class Sidebar {
       label: 'Chart',
       icon: PrimeIcons.CHART_BAR,
       command: () => {
-        this.router.navigate(['/sandbox/chart-sandbox']);
+        this.router.navigateByUrl(APP_ROUTES.CHART_SANDBOX);
       },
       tooltipOptions: new TooltipOptions({ tooltipLabel: 'Chart' }),
     },
@@ -38,7 +39,7 @@ export class Sidebar {
           label: 'Timeline',
           icon: PrimeIcons.CHART_LINE,
           command: () => {
-            this.router.navigate(['/sandbox/data/timeline-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.TIMELINE_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Timeline' }),
         },
@@ -53,7 +54,7 @@ export class Sidebar {
           label: 'Auto Complete',
           icon: PrimeIcons.BOLT,
           command: () => {
-            this.router.navigate(['/sandbox/form/auto-complete-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.AUTO_COMPLETE_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Auto Complete' }),
         },
@@ -61,14 +62,14 @@ export class Sidebar {
           label: 'Checkbox',
           icon: PrimeIcons.CHECK_CIRCLE,
           command: () => {
-            this.router.navigate(['/sandbox/form/checkbox-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.CHECKBOX_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Checkbox' }),
         },
         {
           label: 'Float Label',
           command: () => {
-            this.router.navigate(['/sandbox/form/float-label-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.FLOAT_LABEL_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Float Label' }),
         },
@@ -76,7 +77,7 @@ export class Sidebar {
           label: 'Multi Select',
           icon: PrimeIcons.CHECK_SQUARE,
           command: () => {
-            this.router.navigate(['/sandbox/form/multi-select-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.MULTI_SELECT_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Multi Select' }),
         },
@@ -84,7 +85,7 @@ export class Sidebar {
           label: 'Toggle Switch',
           icon: PrimeIcons.TWITCH,
           command: () => {
-            this.router.navigate(['/sandbox/form/toggle-switch-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.TOGGLE_SWITCH_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Toggle Switch' }),
         },
@@ -99,7 +100,7 @@ export class Sidebar {
           label: 'Message',
           icon: PrimeIcons.COMMENT,
           command: () => {
-            this.router.navigate(['/sandbox/messages/message-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.MESSAGE_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Message' }),
         },
@@ -107,7 +108,7 @@ export class Sidebar {
           label: 'Toast',
           icon: PrimeIcons.WHATSAPP,
           command: () => {
-            this.router.navigate(['/sandbox/messages/toast-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.TOAST_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Toast' }),
         },
@@ -122,7 +123,7 @@ export class Sidebar {
           label: 'Tooltip',
           icon: PrimeIcons.INFO_CIRCLE,
           command: () => {
-            this.router.navigate(['/sandbox/overlay/tooltip-sandbox']);
+            this.router.navigateByUrl(APP_ROUTES.TOOLTIP_SANDBOX);
           },
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Tooltip' }),
         },

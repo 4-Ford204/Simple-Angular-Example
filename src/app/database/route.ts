@@ -1,0 +1,15 @@
+export const APP_ROUTES = {
+  AUTO_COMPLETE_SANDBOX: 'sandbox/form/auto-complete-sandbox',
+  BUTTON_SANDBOX: 'sandbox/button-sandbox',
+  CHART_SANDBOX: 'sandbox/chart-sandbox',
+  CHECKBOX_SANDBOX: 'sandbox/form/checkbox-sandbox',
+  FLOAT_LABEL_SANDBOX: 'sandbox/form/float-label-sandbox',
+  HOME: 'home',
+  MESSAGE_SANDBOX: 'sandbox/messages/message-sandbox',
+  MULTI_SELECT_SANDBOX: 'sandbox/form/multi-select-sandbox',
+  SIGN_IN: 'signin',
+  TIMELINE_SANDBOX: 'sandbox/data/timeline-sandbox',
+  TOAST_SANDBOX: 'sandbox/messages/toast-sandbox',
+  TOGGLE_SWITCH_SANDBOX: 'sandbox/form/toggle-switch-sandbox',
+  TOOLTIP_SANDBOX: 'sandbox/overlay/tooltip-sandbox',
+};

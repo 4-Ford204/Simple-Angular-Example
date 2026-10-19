@@ -1,3 +1,4 @@
+import { APP_ROUTES } from '../../database/route';
 import { AuthService } from '../../core/services/auth.service';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
 import { Component } from '@angular/core';
@@ -29,7 +30,7 @@ export class SignIn {
   async onSignInButtonPressed() {
     if (this.authService.signIn(this.username, this.password)) {
       this.error = '';
-      await this.router.navigateByUrl('/home');
+      await this.router.navigateByUrl(APP_ROUTES.HOME);
     } else {
       this.error = 'Incorrect username or password';
     }

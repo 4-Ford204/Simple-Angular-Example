@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { Router, RouterLink } from '@angular/router';
 
+import { APP_ROUTES } from '../../../database/route';
 import { AuthService } from '../../../core/services/auth.service';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
@@ -87,6 +88,6 @@ export class Header implements OnInit {
 
   onSignOutPressed(): void {
     this.authService.signOut();
-    this.router.navigateByUrl('signin');
+    this.router.navigateByUrl(APP_ROUTES.SIGN_IN);
   }
 }
