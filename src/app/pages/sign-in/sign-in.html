@@ -18,6 +18,8 @@
         <label for="password">Password</label>
       </p-floatlabel>
 
+      <span class="text-red-700">{{ error }}</span>
+
       <div>
         <app-button-component label="Sign In" (buttonPressed)="onSignInButtonPressed()" />
       </div>
