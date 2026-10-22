@@ -1,4 +1,4 @@
-import { APP_ROUTES } from '../../database/route';
+import { APP_ROUTES } from '../../database/app-route';
 import { AuthService } from '../../core/services/auth.service';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
 import { Component } from '@angular/core';

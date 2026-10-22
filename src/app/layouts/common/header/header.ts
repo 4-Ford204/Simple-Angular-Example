@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { Router, RouterLink } from '@angular/router';
 
-import { APP_ROUTES } from '../../../database/route';
+import { APP_ROUTES } from '../../../database/app-route';
 import { AuthService } from '../../../core/services/auth.service';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
@@ -60,7 +60,7 @@ export class Header implements OnInit {
   ];
   avatarMenuItems: MenuItem[] = [
     { label: 'Le Tu Huynh Duy', icon: PrimeIcons.USER, routerLink: ['/administration'] },
-    { label: 'Sign Out', icon: PrimeIcons.SIGN_OUT, command: () => this.onSignOutPressed() },
+    { label: 'Sign Out', icon: PrimeIcons.SIGN_OUT, command: () => this.onSignOutButtonPressed() },
   ];
 
   PrimeIcons = PrimeIcons;
@@ -86,7 +86,7 @@ export class Header implements OnInit {
     }
   }
 
-  onSignOutPressed(): void {
+  onSignOutButtonPressed(): void {
     this.authService.signOut();
     this.router.navigateByUrl(APP_ROUTES.SIGN_IN);
   }

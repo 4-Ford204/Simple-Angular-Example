@@ -1,6 +1,6 @@
 import { MenuItem, PrimeIcons } from 'primeng/api';
 
-import { APP_ROUTES } from '../../../database/route';
+import { APP_ROUTES } from '../../../database/app-route';
 import { Component } from '@angular/core';
 import { PanelMenuComponent } from '../../../shared/ui-components/panel-menu-component/panel-menu-component';
 import { Router } from '@angular/router';
