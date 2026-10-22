@@ -15,7 +15,7 @@ export class AuthService {
   }
 
   signIn(username: string, password: string): boolean {
-    if (username != this.DEFAULT_USERNAME || password != this.DEFAULT_PASSWORD) {
+    if (username !== this.DEFAULT_USERNAME || password !== this.DEFAULT_PASSWORD) {
       return false;
     }
 

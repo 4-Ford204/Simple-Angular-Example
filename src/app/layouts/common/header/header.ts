@@ -60,6 +60,7 @@ export class Header implements OnInit {
   ];
   avatarMenuItems: MenuItem[] = [
     { label: 'Le Tu Huynh Duy', icon: PrimeIcons.USER, routerLink: ['/administration'] },
+    { separator: true },
     { label: 'Sign Out', icon: PrimeIcons.SIGN_OUT, command: () => this.onSignOutButtonPressed() },
   ];
 
