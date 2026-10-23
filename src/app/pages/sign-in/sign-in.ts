@@ -7,9 +7,11 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { FloatLabelPasswordComponent } from '../../shared/ui-components/form/float-label/float-label-password-component/float-label-password-component';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { MessageService } from 'primeng/api';
 import { PasswordModule } from 'primeng/password';
 import { PrimeIcons } from 'primeng/api';
 import { Router } from '@angular/router';
+import { ToastComponent } from '../../shared/ui-components/messages/toast-component/toast-component';
 
 @Component({
   selector: 'app-sign-in',
@@ -21,9 +23,11 @@ import { Router } from '@angular/router';
     PasswordModule,
     FloatLabelInputComponent,
     FloatLabelPasswordComponent,
+    ToastComponent,
   ],
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.css',
+  providers: [MessageService],
 })
 export class SignIn {
   username: string = '';
@@ -34,6 +38,7 @@ export class SignIn {
 
   constructor(
     private readonly authService: AuthService,
+    private readonly messageService: MessageService,
     private readonly router: Router
   ) {}
 
@@ -42,7 +47,11 @@ export class SignIn {
       this.error = '';
       await this.router.navigateByUrl(APP_ROUTES.HOME);
     } else {
-      this.error = 'Incorrect username or password';
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'Incorrect username or password',
+      });
     }
   }
 }
