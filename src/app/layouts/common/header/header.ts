@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { Router, RouterLink } from '@angular/router';
 
@@ -31,7 +31,7 @@ import { ToggleSwitchComponent } from '../../../shared/ui-components/form/toggle
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
 })
-export class Header implements OnInit {
+export class Header implements OnInit, OnDestroy {
   checked = true;
   items: MenuItem[] = [
     { label: 'Home', routerLink: ['/'] },
@@ -75,16 +75,12 @@ export class Header implements OnInit {
     this.onDarkModeChanged();
   }
 
-  onDarkModeChanged() {
-    const element = document.querySelector('html');
+  ngOnDestroy(): void {
+    document.documentElement.classList.remove('dark-mode');
+  }
 
-    if (element) {
-      if (this.checked) {
-        element.classList.add('dark-mode');
-      } else {
-        element.classList.remove('dark-mode');
-      }
-    }
+  onDarkModeChanged() {
+    document.documentElement.classList.toggle('dark-mode', this.checked);
   }
 
   onSignOutButtonPressed(): void {

@@ -1,3 +1,5 @@
+import { MessageService, PrimeIcons } from 'primeng/api';
+
 import { APP_ROUTES } from '../../database/app-route';
 import { AuthService } from '../../core/services/auth.service';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
@@ -7,9 +9,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { FloatLabelPasswordComponent } from '../../shared/ui-components/form/float-label/float-label-password-component/float-label-password-component';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { MessageService } from 'primeng/api';
 import { PasswordModule } from 'primeng/password';
-import { PrimeIcons } from 'primeng/api';
 import { Router } from '@angular/router';
 import { ToastComponent } from '../../shared/ui-components/messages/toast-component/toast-component';
 

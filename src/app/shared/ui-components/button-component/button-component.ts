@@ -10,6 +10,8 @@ import { Ripple } from 'primeng/ripple';
   styleUrl: './button-component.css',
 })
 export class ButtonComponent {
+  // Type of the button.
+  @Input() type: string = 'button';
   // Position of the icon.
   @Input() iconPos: 'left' | 'right' | 'top' | 'bottom' = 'left';
   // Name of the icon.

@@ -5,28 +5,26 @@
     <div></div>
 
     <div class="flex flex-col gap-5">
-      <app-float-label-input-component
-        variant="on"
-        label="Username"
-        [fluid]="true"
-        [(model)]="username"
-      />
-
-      <app-float-label-password-component
-        variant="on"
-        [fluid]="true"
-        [feedback]="false"
-        [toggleMask]="true"
-        [(model)]="password"
-      />
-
-      <div>
-        <app-button-component
-          label="Sign In"
-          styleClass="w-full"
-          (buttonPressed)="onSignInButtonPressed()"
+      <form class="flex flex-col gap-5" (ngSubmit)="onSignInButtonPressed()">
+        <app-float-label-input-component
+          variant="on"
+          label="Username"
+          [fluid]="true"
+          [(model)]="username"
         />
-      </div>
+
+        <app-float-label-password-component
+          variant="on"
+          [fluid]="true"
+          [feedback]="false"
+          [toggleMask]="true"
+          [(model)]="password"
+        />
+
+        <div>
+          <app-button-component type="submit" label="Sign In" styleClass="w-full" />
+        </div>
+      </form>
 
       <div class="flex justify-center gap-5">
         <app-button-component [icon]="PrimeIcons.GOOGLE" [rounded]="true" />
