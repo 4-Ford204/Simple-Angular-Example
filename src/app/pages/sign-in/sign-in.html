@@ -3,20 +3,20 @@
     <div></div>
 
     <div class="flex flex-col gap-5">
-      <p-floatlabel variant="on">
-        <input id="username" pInputText [(ngModel)]="username" autocomplete="off" fluid />
-        <label for="username">Username</label>
-      </p-floatlabel>
+      <app-float-label-input-component
+        variant="on"
+        label="Username"
+        [fluid]="true"
+        [(model)]="username"
+      />
 
-      <p-floatlabel variant="on">
-        <p-password
-          inputId="password"
-          [feedback]="false"
-          [toggleMask]="true"
-          [(ngModel)]="password"
-        />
-        <label for="password">Password</label>
-      </p-floatlabel>
+      <app-float-label-password-component
+        variant="on"
+        [fluid]="true"
+        [feedback]="false"
+        [toggleMask]="true"
+        [(model)]="password"
+      />
 
       <span class="text-red-700">{{ error }}</span>
 

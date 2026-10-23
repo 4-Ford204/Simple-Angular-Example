@@ -2,7 +2,9 @@ import { APP_ROUTES } from '../../database/app-route';
 import { AuthService } from '../../core/services/auth.service';
 import { ButtonComponent } from '../../shared/ui-components/button-component/button-component';
 import { Component } from '@angular/core';
+import { FloatLabelInputComponent } from '../../shared/ui-components/form/float-label/float-label-input-component/float-label-input-component';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { FloatLabelPasswordComponent } from '../../shared/ui-components/form/float-label/float-label-password-component/float-label-password-component';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -11,7 +13,15 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
-  imports: [ButtonComponent, FloatLabelModule, FormsModule, InputTextModule, PasswordModule],
+  imports: [
+    ButtonComponent,
+    FloatLabelModule,
+    FormsModule,
+    InputTextModule,
+    PasswordModule,
+    FloatLabelInputComponent,
+    FloatLabelPasswordComponent,
+  ],
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.css',
 })

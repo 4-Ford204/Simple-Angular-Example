@@ -2,7 +2,7 @@
 
 <div class="flex flex-col gap-5">
   <ng-template #basic>
-    <app-float-label-component
+    <app-float-label-input-component
       id="username"
       label="Username"
       [(model)]="username"
@@ -12,28 +12,38 @@
 
   <ng-template #variants>
     <div class="flex flex-wrap items-end justify-center gap-4">
-      <app-float-label-component variant="in" id="in_label" label="In Label" [(model)]="username" />
-      <app-float-label-component variant="on" id="on_label" label="On Label" [(model)]="username" />
+      <app-float-label-input-component
+        variant="in"
+        id="in_label"
+        label="In Label"
+        [(model)]="username"
+      />
+      <app-float-label-input-component
+        variant="on"
+        id="on_label"
+        label="On Label"
+        [(model)]="username"
+      />
     </div>
   </ng-template>
 
   <ng-template #invalid>
     <div class="flex flex-wrap items-end justify-center gap-4">
-      <app-float-label-component
+      <app-float-label-input-component
         variant="over"
         [invalid]="!username"
         id="value1"
         label="Username"
         [(model)]="username"
       />
-      <app-float-label-component
+      <app-float-label-input-component
         variant="in"
         [invalid]="!username"
         id="value2"
         label="Username"
         [(model)]="username"
       />
-      <app-float-label-component
+      <app-float-label-input-component
         variant="on"
         [invalid]="!username"
         id="value3"

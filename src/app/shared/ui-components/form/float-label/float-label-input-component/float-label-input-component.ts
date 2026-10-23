@@ -6,18 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
-  selector: 'app-float-label-component',
+  selector: 'app-float-label-input-component',
   imports: [FloatLabelModule, FormsModule, InputTextModule],
-  templateUrl: './float-label-component.html',
-  styleUrl: './float-label-component.css',
+  templateUrl: './float-label-input-component.html',
+  styleUrl: './float-label-input-component.css',
 })
-export class FloatLabelComponent implements OnInit {
+export class FloatLabelInputComponent implements OnInit {
   // Defines the positioning of the label relative to the input.
   @Input() variant: 'in' | 'on' | 'over' = 'over';
   // When present, it specifies that the component should have invalid state style.
   @Input() invalid: boolean = false;
   @Input() id: string = '';
   @Input() label: string = '';
+  @Input() fluid: boolean = false;
   @Input() model: any;
 
   @Output() modelChange = new EventEmitter<any>();

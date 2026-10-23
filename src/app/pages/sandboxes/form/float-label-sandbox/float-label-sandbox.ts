@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FloatLabelComponent } from '../../../../shared/ui-components/form/float-label-component/float-label-component';
+import { FloatLabelInputComponent } from '../../../../shared/ui-components/form/float-label/float-label-input-component/float-label-input-component';
 import { Sandbox } from '../../sandboxes';
 
 @Component({
   selector: 'app-float-label-sandbox',
-  imports: [CommonModule, FloatLabelComponent, Sandbox],
+  imports: [CommonModule, FloatLabelInputComponent, Sandbox],
   templateUrl: './float-label-sandbox.html',
   styleUrl: './float-label-sandbox.css',
 })
