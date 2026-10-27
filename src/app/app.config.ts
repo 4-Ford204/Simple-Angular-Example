@@ -8,6 +8,9 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 import Aura from '@primeuix/themes/aura';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import Lara from '@primeuix/themes/lara';
+import Material from '@primeuix/themes/material';
+import Nora from '@primeuix/themes/nora';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { provideRouter } from '@angular/router';
