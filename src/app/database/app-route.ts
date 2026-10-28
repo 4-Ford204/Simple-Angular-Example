@@ -3,6 +3,7 @@ export const APP_ROUTES = {
   BUTTON_SANDBOX: 'sandbox/button-sandbox',
   CHART_SANDBOX: 'sandbox/chart-sandbox',
   CHECKBOX_SANDBOX: 'sandbox/form/checkbox-sandbox',
+  DATE_PICKER_SANDBOX: 'sandbox/form/date-picker-sandbox',
   FLOAT_LABEL_SANDBOX: 'sandbox/form/float-label-sandbox',
   HOME: 'home',
   MESSAGE_SANDBOX: 'sandbox/messages/message-sandbox',

@@ -13,6 +13,11 @@ export const FormRoutes: Routes = [
       import('./checkbox-sandbox/checkbox-sandbox').then((m) => m.CheckboxSandbox),
   },
   {
+    path: 'date-picker-sandbox',
+    loadComponent: () =>
+      import('./date-picker-sandbox/date-picker-sandbox').then((m) => m.DatePickerSandbox),
+  },
+  {
     path: 'float-label-sandbox',
     loadComponent: () =>
       import('./float-label-sandbox/float-label-sandbox').then((m) => m.FloatLabelSandbox),

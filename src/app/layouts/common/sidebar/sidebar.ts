@@ -74,6 +74,14 @@ export class Sidebar {
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Float Label' }),
         },
         {
+          label: 'Date Picker',
+          icon: PrimeIcons.CALENDAR_CLOCK,
+          command: () => {
+            this.router.navigateByUrl(APP_ROUTES.DATE_PICKER_SANDBOX);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Date Picker' }),
+        },
+        {
           label: 'Multi Select',
           icon: PrimeIcons.CHECK_SQUARE,
           command: () => {

@@ -1,0 +1,63 @@
+<app-sandbox #sandbox></app-sandbox>
+
+<div class="flex flex-col gap-5">
+  <ng-template #basic>
+    <app-date-picker-component [(model)]="date" />
+  </ng-template>
+
+  <ng-template #format>
+    <app-date-picker-component dateFormat="dd.mm.yy" [(model)]="date" />
+  </ng-template>
+
+  <ng-template #icon>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex-auto">
+        <label for="buttondisplay" class="mb-2 block font-bold">Button</label>
+        <app-date-picker-component
+          inputId="buttondisplay"
+          [showIcon]="true"
+          [showOnFocus]="false"
+          [(model)]="date"
+        />
+      </div>
+
+      <div class="flex-auto">
+        <label for="icondisplay" class="mb-2 block font-bold">Default Icon</label>
+        <app-date-picker-component
+          iconDisplay="input"
+          inputId="icondisplay"
+          [showIcon]="true"
+          [(model)]="date"
+        />
+      </div>
+
+      <div class="flex-auto">
+        <label for="timedisplay" class="mb-2 block font-bold">Time</label>
+        <app-date-picker-component
+          inputId="timedisplay"
+          [showIcon]="true"
+          [icon]="PrimeIcons.CLOCK"
+          [timeOnly]="true"
+          [(model)]="time"
+        />
+      </div>
+    </div>
+  </ng-template>
+
+  @if (sandbox.panelTemplate) {
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Basic', content: basic }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Format', content: format }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Icon', content: icon }"
+    ></ng-container>
+  }
+</div>
