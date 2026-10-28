@@ -9,10 +9,12 @@
       <div class="flex items-center">
         @if (weather) {
           <span>{{ destination }}</span>
-          <img
+          <app-image-component
+            imageClass="size-15"
             [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"
-            class="size-15"
             alt=""
+            pTooltip
+            [tooltipOptions]="weatherTooltipOptions"
           />
           <span class="font-bold">{{ weather.main.temp | number: '1.0-0' }}°</span>
         }
