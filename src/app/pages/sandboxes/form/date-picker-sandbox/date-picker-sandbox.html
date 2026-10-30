@@ -44,6 +44,52 @@
     </div>
   </ng-template>
 
+  <ng-template #min_max>
+    <app-date-picker-component
+      [readonlyInput]="true"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [(model)]="date"
+    />
+  </ng-template>
+
+  <ng-template #buttonBar>
+    <app-date-picker-component placeholder="Basic" [showButtonBar]="true" [(model)]="date" />
+  </ng-template>
+
+  <ng-template #time>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex-auto">
+        <label for="calendar-12h" class="mb-2 block font-bold">12h Format</label>
+        <app-date-picker-component
+          inputId="calendar-12h"
+          hourFormat="12"
+          [showTime]="true"
+          [(model)]="dates"
+        />
+      </div>
+
+      <div class="flex-auto">
+        <label for="calendar-24h" class="mb-2 block font-bold">24h Format</label>
+        <app-date-picker-component
+          inputId="calendar-24h"
+          hourFormat="24"
+          [showTime]="true"
+          [(model)]="dates"
+        />
+      </div>
+
+      <div class="flex-auto">
+        <label for="calendar-timeonly" class="mb-2 block font-bold">Time Only</label>
+        <app-date-picker-component
+          inputId="calendar-timeonly"
+          [timeOnly]="true"
+          [(model)]="times"
+        />
+      </div>
+    </div>
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -58,6 +104,21 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Icon', content: icon }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Min / Max', content: min_max }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Button Bar', content: buttonBar }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Time', content: time }"
     ></ng-container>
   }
 </div>
