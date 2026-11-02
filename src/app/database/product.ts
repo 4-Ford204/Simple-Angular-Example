@@ -1392,4 +1392,17 @@ export const PRODUCTS = [
       `${BASE_IMAGE_URL}/ZSTUDIO_JK014_GOJO_5_zas2ay`,
     ],
   },
+  {
+    id: 'ZSTUDIO_JK015_JOGO',
+    name: 'Jogo',
+    series: '',
+    studio: 'Z Studio',
+    material: 'Resin',
+    type: 'Jujutsu Kaisen',
+    price: 1_350_000,
+    images: [
+      `${BASE_IMAGE_URL}/ZSTUDIO_JK015_JOGO_1_m9jk9i`,
+      `${BASE_IMAGE_URL}/ZSTUDIO_JK015_JOGO_2_dncwr1`,
+    ],
+  },
 ];
