@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DatePickerModule, DatePickerTypeView } from 'primeng/datepicker';
 
-import { DatePickerModule } from 'primeng/datepicker';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -35,12 +35,16 @@ export class DatePickerComponent {
   @Input() showOnFocus: boolean = true;
   // Whether to display today and clear buttons at the footer.
   @Input() showButtonBar: boolean = false;
+  // Defines the size of the component.
+  @Input() size: 'small' | 'large' | undefined = undefined;
   // The minimum selectable date.
   @Input() minDate: Date | null | undefined = null;
   // The maximum selectable date.
   @Input() maxDate: Date | null | undefined = null;
   // Whether to display timepicker.
   @Input() showTime: boolean = false;
+  // Type of view to display, valid values are "date" for datepicker and "month" for month picker.
+  @Input() view: DatePickerTypeView = 'date';
   @Input() model: any;
 
   @Output() modelChange = new EventEmitter<any>();

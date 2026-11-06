@@ -6,7 +6,7 @@ export const USERS = [
   { name: 'Big', birthday: '30/07/2012' },
   // Secondary School
   { name: 'Phúc Hỷ', birthday: '01/12/2001' },
-  { name: 'Hồng Phước', birthday: '20/12/2002' },
+  { name: 'Hồng Phước', birthday: '20/12/2001' },
   { name: 'Bảo Hân', birthday: '03/01/2002' },
   { name: 'Ngọc Hùng', birthday: '24/02/2002' },
   { name: 'Minh Hiếu', birthday: '06/03/2002' },
@@ -20,6 +20,7 @@ export const USERS = [
   { name: 'Việt Hoàng', birthday: '13/07/2002' },
   { name: 'Tuấn Kha', birthday: '30/07/2002' },
   { name: 'Duy Khương', birthday: '08/08/2002' },
+  { name: 'Trí Hiếu', birthday: '12/09/2002' },
   { name: 'Bá Long', birthday: '26/09/2002' },
   { name: 'Quang Hải', birthday: '07/12/2002' },
   // University

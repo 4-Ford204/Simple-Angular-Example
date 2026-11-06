@@ -90,6 +90,46 @@
     </div>
   </ng-template>
 
+  <ng-template #monthPicker>
+    <app-date-picker-component
+      dateFormat="mm/yy"
+      [readonlyInput]="true"
+      view="month"
+      [(model)]="date"
+    />
+  </ng-template>
+
+  <ng-template #yearPicker>
+    <app-date-picker-component dateFormat="yy" view="year" [(model)]="date" />
+  </ng-template>
+
+  <ng-template #sizes>
+    <div class="flex flex-col items-center gap-4">
+      <app-date-picker-component
+        iconDisplay="input"
+        placeholder="Small"
+        [showIcon]="true"
+        size="small"
+        [(model)]="date"
+      />
+
+      <app-date-picker-component
+        iconDisplay="input"
+        placeholder="Normal"
+        [showIcon]="true"
+        [(model)]="date"
+      />
+
+      <app-date-picker-component
+        iconDisplay="input"
+        placeholder="Large"
+        [showIcon]="true"
+        size="large"
+        [(model)]="date"
+      />
+    </div>
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -119,6 +159,21 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Time', content: time }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Month Picker', content: monthPicker }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Year Picker', content: yearPicker }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes }"
     ></ng-container>
   }
 </div>
