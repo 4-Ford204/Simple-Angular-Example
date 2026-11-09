@@ -11,14 +11,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class DatePickerComponent {
   @Input() iconDisplay: 'button' | 'input' = 'button';
-  // The value must be greater than or equal to the value.
-  @Input() min: number | null | undefined = undefined;
-  // The value must be less than or equal to the value.
-  @Input() max: number | null | undefined = undefined;
+  // Style class of the component.
+  @Input() styleClass: string | undefined = undefined;
   // Identifier of the focus input to match a label defined for the component.
   @Input() inputId: string | undefined = undefined;
   // Placeholder text for the input.
   @Input() placeholder: string | undefined = undefined;
+  // When specified, disables the component.
+  @Input() disabled: boolean = false;
   // Format of the date which can also be defined at locale settings.
   @Input() dateFormat: string | undefined = undefined;
   // When enabled, displays a button with icon next to input.
@@ -35,6 +35,8 @@ export class DatePickerComponent {
   @Input() showOnFocus: boolean = true;
   // Whether to display today and clear buttons at the footer.
   @Input() showButtonBar: boolean = false;
+  // Specifies the input variant of the component.
+  @Input() variant: 'outlined' | 'filled' | undefined = undefined;
   // Defines the size of the component.
   @Input() size: 'small' | 'large' | undefined = undefined;
   // The minimum selectable date.

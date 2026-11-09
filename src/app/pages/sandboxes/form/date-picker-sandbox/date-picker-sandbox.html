@@ -130,6 +130,18 @@
     </div>
   </ng-template>
 
+  <ng-template #filled>
+    <app-date-picker-component variant="filled" [(model)]="date" />
+  </ng-template>
+
+  <ng-template #invalid>
+    <app-date-picker-component styleClass="ng-invalid ng-dirty" [(model)]="date" />
+  </ng-template>
+
+  <ng-template #disabled>
+    <app-date-picker-component [disabled]="true" [(model)]="date" />
+  </ng-template>
+
   @if (sandbox.panelTemplate) {
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
@@ -174,6 +186,21 @@
     <ng-container
       [ngTemplateOutlet]="sandbox.panelTemplate"
       [ngTemplateOutletContext]="{ title: 'Sizes', content: sizes }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Filled', content: filled }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Invalid', content: invalid }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="sandbox.panelTemplate"
+      [ngTemplateOutletContext]="{ title: 'Disabled', content: disabled }"
     ></ng-container>
   }
 </div>

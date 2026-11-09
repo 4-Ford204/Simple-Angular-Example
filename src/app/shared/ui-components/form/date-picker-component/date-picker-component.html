@@ -1,9 +1,8 @@
 <p-datepicker
   [iconDisplay]="iconDisplay"
-  [min]="min"
-  [max]="max"
   [inputId]="inputId"
   [placeholder]="placeholder"
+  [disabled]="disabled"
   [dateFormat]="dateFormat"
   [showIcon]="showIcon"
   [icon]="icon"
@@ -12,6 +11,7 @@
   [timeOnly]="timeOnly"
   [showOnFocus]="showOnFocus"
   [showButtonBar]="showButtonBar"
+  [variant]="variant"
   [size]="size"
   [minDate]="minDate"
   [maxDate]="maxDate"
@@ -19,6 +19,7 @@
   [view]="view"
   [(ngModel)]="model"
   (onSelect)="onValueChanged($event)"
+  [class]="styleClass"
 ></p-datepicker>
 
 <!--
