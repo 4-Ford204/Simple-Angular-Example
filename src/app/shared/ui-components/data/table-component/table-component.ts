@@ -2,10 +2,13 @@ import { Component, Input } from '@angular/core';
 
 import { Column } from './column';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { IconFieldModule } from 'primeng/iconfield';
 import { ImageComponent } from '../../media/image-component/image-component';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputType } from '../../../../core/enums/input-type.enum';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { PrimeIcons } from 'primeng/api';
 import { TableModule } from 'primeng/table';
 
@@ -13,10 +16,12 @@ import { TableModule } from 'primeng/table';
   selector: 'app-table-component',
   imports: [
     CommonModule,
+    FormsModule,
     IconFieldModule,
     ImageComponent,
     InputIconModule,
     InputTextModule,
+    MultiSelectModule,
     TableModule,
   ],
   templateUrl: './table-component.html',
@@ -52,7 +57,16 @@ export class TableComponent {
   // Number of rows to display per page.
   @Input() rows: number | undefined = undefined;
 
+  InputType = InputType;
   PrimeIcons = PrimeIcons;
+
+  getFilterOptions(field: string) {
+    return [
+      ...new Set(
+        this.value.map((item) => item[field]).filter((x) => x !== null && x !== undefined)
+      ),
+    ];
+  }
 
   getAvatar(src: string): string {
     return src.replace('/upload/', '/upload/w_50,h_50,c_fill,q_auto,f_auto/');

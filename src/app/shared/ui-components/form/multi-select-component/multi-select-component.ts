@@ -20,6 +20,8 @@ export class MultiSelectComponent {
   @Input() maxSelectedLabels: number | null | undefined = undefined;
   // Name of the label field of an option.
   @Input() optionLabel: string | undefined = undefined;
+  // Name of the value field of an option.
+  @Input() optionValue: string | undefined = undefined;
   // Whether the multiselect is in loading state
   @Input() loading: boolean = false;
   // Defines how the selected items are displayed.

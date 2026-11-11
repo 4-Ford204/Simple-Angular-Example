@@ -5,6 +5,7 @@ import { ButtonComponent } from '../../shared/ui-components/button-component/but
 import { CarouselComponent } from '../../shared/ui-components/media/carousel-component/carousel-component';
 import { ChartComponent } from '../../shared/ui-components/chart-component/chart-component';
 import { CommonModule } from '@angular/common';
+import { InputType } from '../../core/enums/input-type.enum';
 import { PrimeIcons } from 'primeng/api';
 import { ProductService } from '../../services/product.service';
 import { TableComponent } from '../../shared/ui-components/data/table-component/table-component';
@@ -46,9 +47,9 @@ export class Home implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.columns = [
-      { field: 'name', header: 'Name' },
+      { field: 'name', header: 'Name', filterable: InputType.TEXT },
       { field: 'series', header: 'Series' },
-      { field: 'studio', header: 'Studio' },
+      { field: 'studio', header: 'Studio', filterable: InputType.MULTI_SELECT },
       { field: 'material', header: 'Material' },
       { field: 'type', header: 'Type' },
       { field: 'price', header: 'Price', sortable: true },

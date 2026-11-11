@@ -1,3 +1,4 @@
+import { InputType } from '../../../../core/enums/input-type.enum';
 import { TemplateRef } from '@angular/core';
 
 export interface Column {
@@ -5,5 +6,6 @@ export interface Column {
   header?: string;
   width?: string;
   sortable?: boolean;
+  filterable?: InputType;
   template?: TemplateRef<any>;
 }
