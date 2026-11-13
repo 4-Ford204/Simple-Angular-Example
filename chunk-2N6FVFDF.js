@@ -1,0 +1,1 @@
+import"./chunk-4CLCTAJ7.js";var o=[{path:"",redirectTo:"timeline-sandbox",pathMatch:"full"},{path:"timeline-sandbox",loadComponent:()=>import("./chunk-J4GCK543.js").then(t=>t.TimelineSandbox)}];export{o as DataRoutes};

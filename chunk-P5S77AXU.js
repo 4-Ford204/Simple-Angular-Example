@@ -1,0 +1,1 @@
+import"./chunk-4CLCTAJ7.js";var t=[{path:"",redirectTo:"resume-sample",pathMatch:"full"},{path:"letter-sample",loadComponent:()=>import("./chunk-3SUOUVIU.js").then(e=>e.EnvelopeSample)},{path:"resume-sample",loadComponent:()=>import("./chunk-L7XH5Y4U.js").then(e=>e.ResumeSample)}];export{t as SampleRoutes};

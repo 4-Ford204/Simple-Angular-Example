@@ -1,0 +1,1 @@
+import"./chunk-4CLCTAJ7.js";var t=[{path:"",redirectTo:"message-sandbox",pathMatch:"full"},{path:"message-sandbox",loadComponent:()=>import("./chunk-JORPHJN2.js").then(o=>o.MessageSandbox)},{path:"toast-sandbox",loadComponent:()=>import("./chunk-LG5MNVX3.js").then(o=>o.ToastSandbox)}];export{t as MessagesRoutes};

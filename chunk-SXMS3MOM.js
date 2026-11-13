@@ -1,0 +1,1 @@
+import"./chunk-4CLCTAJ7.js";var t=[{path:"",redirectTo:"tooltip-sandbox",pathMatch:"full"},{path:"tooltip-sandbox",loadComponent:()=>import("./chunk-Q6HMMJFD.js").then(o=>o.TooltipSandbox)}];export{t as OverlayRoutes};
