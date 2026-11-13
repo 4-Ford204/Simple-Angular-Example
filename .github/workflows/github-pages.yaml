@@ -19,6 +19,11 @@ jobs:
           node-version: 20
           cache: 'npm'
 
+      - name: Check Node and NPM versions
+        run: |
+          node -v
+          npm -v
+
       - name: Install Dependencies
         run: npm ci
 
