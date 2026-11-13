@@ -1049,7 +1049,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_700_000,
+    price: 1_350_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N001_KAKASHI_1_ez1war`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N001_KAKASHI_2_ybkwoq`,
@@ -1063,7 +1063,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_800_000,
+    price: 1_350_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N002_OBITO_1_uadhd1`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N002_OBITO_2_vwavls`,
@@ -1077,7 +1077,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_750_000,
+    price: 1_400_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N003_GUY_1_curqnh`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N003_GUY_2_psgdmk`,
@@ -1090,7 +1090,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_500_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N004_MADARA_1_kkwwg7`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N004_MADARA_2_whzzbn`,
@@ -1104,7 +1104,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_500_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N005_ITACHI_1_mvtudm`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N005_ITACHI_2_ceuypl`,
@@ -1117,7 +1117,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_400_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N006_SASORI_1_r7mdrf`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N006_SASORI_2_wjiwwi`,
@@ -1128,11 +1128,11 @@ export const PRODUCTS = [
   {
     id: 'JLSTUDIO_N007_HASHIRAMA',
     name: 'Senju Hashirama',
-    series: '',
+    series: 'Hokage',
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_500_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N007_HASHIRAMA_1_eal5jd`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N007_HASHIRAMA_2_z5sxss`,
@@ -1146,7 +1146,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_500_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N008_KISAME_1_hxp4nd`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N008_KISAME_2_dhsmvm`,
@@ -1160,7 +1160,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_450_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N009_NARUTO_1_qfl5im`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N009_NARUTO_2_ui6ybi`,
@@ -1173,7 +1173,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_450_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_1_nni4uo`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N010_SASUKE_2_ebrb3v`,
@@ -1187,7 +1187,7 @@ export const PRODUCTS = [
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 1_850_000,
+    price: 1_450_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N011_PAIN_1_h7vkgj`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N011_PAIN_2_zgvio6`,
@@ -1196,16 +1196,58 @@ export const PRODUCTS = [
   {
     id: 'JLSTUDIO_N012_TOBIRAMA',
     name: 'Senju Tobirama',
-    series: '',
+    series: 'Hokage',
     studio: 'JL Studio',
     material: 'Resin',
     type: 'Naruto',
-    price: 2_000_000,
+    price: 1_500_000,
     images: [
       `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_1_afrwgd`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_2_l6htwm`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_3_vftsji`,
       `${BASE_IMAGE_URL}/JLSTUDIO_N012_TOBIRAMA_4_kg7nfg`,
+    ],
+  },
+  {
+    id: 'JLSTUDIO_N013_MINATO',
+    name: 'Namikaze Minato',
+    series: 'Hokage',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_550_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N013_MINATO_1_wipfmh`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N013_MINATO_2_iiat7f`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N013_MINATO_3_zxsfw7`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N013_MINATO_4_h0ppia`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N013_MINATO_5_cqqd1f`,
+    ],
+  },
+  {
+    id: 'JLSTUDIO_N014_KABUTO',
+    name: 'Yakushi Kabuto',
+    series: '',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_500_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N014_KABUTO_1_jethsb`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N014_KABUTO_2_x0wvig`,
+    ],
+  },
+  {
+    id: 'JLSTUDIO_N015_KAKASHI',
+    name: 'Hatake Kakashi',
+    series: 'Hokage',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_550_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N015_KAKASHI_1_htrbms`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N015_KAKASHI_2_eva8im`,
     ],
   },
   {
@@ -1404,5 +1446,15 @@ export const PRODUCTS = [
       `${BASE_IMAGE_URL}/ZSTUDIO_JK015_JOGO_1_m9jk9i`,
       `${BASE_IMAGE_URL}/ZSTUDIO_JK015_JOGO_2_dncwr1`,
     ],
+  },
+  {
+    id: 'ZSTUDIO_CM001_MAKIMA',
+    name: 'Makima',
+    series: '',
+    studio: 'Z Studio',
+    material: 'Resin',
+    type: 'Chainsaw Man',
+    price: 1_300_000,
+    images: [`${BASE_IMAGE_URL}/ZSTUDIO_CM001_MAKIMA_1_jykp5z`],
   },
 ];

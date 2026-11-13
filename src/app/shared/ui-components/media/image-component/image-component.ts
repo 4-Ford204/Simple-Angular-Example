@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Image } from 'primeng/image';
 import { PrimeIcons } from 'primeng/api';
@@ -29,4 +29,7 @@ export class ImageComponent {
   @Input() decoding: 'async' | 'sync' | 'auto' = 'auto';
 
   PrimeIcons = PrimeIcons;
+
+  @Output() imageLoad = new EventEmitter<any>();
+  @Output() imageError = new EventEmitter<any>();
 }

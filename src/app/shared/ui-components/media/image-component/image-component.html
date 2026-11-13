@@ -8,6 +8,8 @@
       [attr.width]="width"
       [attr.height]="height"
       [class]="imageClass"
+      (load)="imageLoad.emit($event)"
+      (error)="imageError.emit($event)"
     />
   </ng-template>
 
