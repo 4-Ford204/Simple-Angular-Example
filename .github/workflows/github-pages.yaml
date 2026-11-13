@@ -19,6 +19,9 @@ jobs:
           node-version: 20
           cache: 'npm'
 
+      - name: Setup NPM
+        run: npm install -g npm@11
+
       - name: Check Node and NPM versions
         run: |
           node -v
