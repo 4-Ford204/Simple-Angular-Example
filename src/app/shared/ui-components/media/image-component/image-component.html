@@ -1,17 +1,22 @@
-<p-image class="h-full w-full" [preview]="preview" [appendTo]="appendTo">
-  <ng-template #image>
-    <div class="relative h-full w-full">
-      @if (!loaded) {
-        <div class="absolute inset-0 z-10 flex items-center justify-center">
-          <app-progress-spinner-component
-            strokeWidth="3"
-            fill="transparent"
-            animationDuration="1.5s"
-            [style]="{ width: '50px', height: '50px' }"
-          />
-        </div>
-      }
+<div class="relative h-full w-full">
+  @if (!loaded) {
+    <div class="absolute inset-0 z-10 flex items-center justify-center">
+      <app-progress-spinner-component
+        strokeWidth="3"
+        fill="transparent"
+        animationDuration="1.5s"
+        [style]="{ width: '50px', height: '50px' }"
+      />
+    </div>
+  }
 
+  <p-image
+    class="h-full w-full"
+    [preview]="preview"
+    [appendTo]="appendTo"
+    (onImageError)="imageError.emit($event)"
+  >
+    <ng-template #image>
       <img
         [src]="src"
         [alt]="alt"
@@ -22,27 +27,26 @@
         [class]="imageClass"
         [class.invisible]="!loaded"
         (load)="onImageLoaded($event)"
-        (error)="imageError.emit($event)"
-      />
-    </div>
-  </ng-template>
-
-  @if (preview) {
-    <ng-template #indicator>
-      <i [class]="PrimeIcons.SEARCH"></i>
-    </ng-template>
-
-    <ng-template #preview let-style="style" let-previewCallback="previewCallback">
-      <img
-        [src]="src"
-        [alt]="alt"
-        [loading]="loading"
-        [decoding]="decoding"
-        [style]="style"
-        class="max-h-screen max-w-screen object-contain"
-        (click)="previewCallback()"
-        onkeypress=""
       />
     </ng-template>
-  }
-</p-image>
+
+    @if (preview) {
+      <ng-template #indicator>
+        <i [class]="PrimeIcons.SEARCH"></i>
+      </ng-template>
+
+      <ng-template #preview let-style="style" let-previewCallback="previewCallback">
+        <img
+          [src]="src"
+          [alt]="alt"
+          [loading]="loading"
+          [decoding]="decoding"
+          [style]="style"
+          class="max-h-screen max-w-screen object-contain"
+          (click)="previewCallback()"
+          onkeypress=""
+        />
+      </ng-template>
+    }
+  </p-image>
+</div>

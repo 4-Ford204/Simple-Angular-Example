@@ -33,7 +33,7 @@ export class ImageComponent implements OnChanges {
 
   PrimeIcons = PrimeIcons;
 
-  @Output() imageLoad = new EventEmitter<any>();
+  @Output() imageLoaded = new EventEmitter<any>();
   @Output() imageError = new EventEmitter<any>();
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -44,6 +44,6 @@ export class ImageComponent implements OnChanges {
 
   onImageLoaded(event: any) {
     this.loaded = true;
-    this.imageLoad.emit(event);
+    this.imageLoaded.emit(event);
   }
 }
