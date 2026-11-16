@@ -1251,6 +1251,20 @@ export const PRODUCTS = [
     ],
   },
   {
+    id: 'JLSTUDIO_N016_DEIDARA',
+    name: 'Deidara',
+    series: 'Akatsuki',
+    studio: 'JL Studio',
+    material: 'Resin',
+    type: 'Naruto',
+    price: 1_500_000,
+    images: [
+      `${BASE_IMAGE_URL}/JLSTUDIO_N016_DEIDARA_1_f7ooub`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N016_DEIDARA_2_kydpgl`,
+      `${BASE_IMAGE_URL}/JLSTUDIO_N016_DEIDARA_3_l7texv`,
+    ],
+  },
+  {
     id: 'ZSTUDIO_JK001_GOJO',
     name: 'Gojo Satoru',
     series: '',
