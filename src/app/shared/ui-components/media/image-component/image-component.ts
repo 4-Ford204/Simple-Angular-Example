@@ -1,15 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
-import { Image } from 'primeng/image';
+import { ImageModule } from 'primeng/image';
 import { PrimeIcons } from 'primeng/api';
+import { ProgressSpinnerComponent } from '../../../utility-components/progress/progress-spinner-component/progress-spinner-component';
 
 @Component({
   selector: 'app-image-component',
-  imports: [Image],
+  imports: [ImageModule, ProgressSpinnerComponent],
   templateUrl: './image-component.html',
   styleUrl: './image-component.css',
 })
-export class ImageComponent {
+export class ImageComponent implements OnChanges {
   // Style class of the image element.
   @Input() imageClass: string | undefined = undefined;
   // The source path for the main image.
@@ -28,8 +29,21 @@ export class ImageComponent {
   @Input() appendTo: string = 'self';
   @Input() decoding: 'async' | 'sync' | 'auto' = 'auto';
 
+  loaded = false;
+
   PrimeIcons = PrimeIcons;
 
   @Output() imageLoad = new EventEmitter<any>();
   @Output() imageError = new EventEmitter<any>();
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['src']) {
+      this.loaded = false;
+    }
+  }
+
+  onImageLoaded(event: any) {
+    this.loaded = true;
+    this.imageLoad.emit(event);
+  }
 }

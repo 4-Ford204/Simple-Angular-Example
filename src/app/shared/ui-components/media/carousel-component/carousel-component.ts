@@ -5,17 +5,10 @@ import { CarouselModule } from 'primeng/carousel';
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../image-component/image-component';
 import { PrimeIcons } from 'primeng/api';
-import { ProgressSpinnerComponent } from '../../../utility-components/progress/progress-spinner-component/progress-spinner-component';
 
 @Component({
   selector: 'app-carousel-component',
-  imports: [
-    ButtonComponent,
-    CarouselModule,
-    CommonModule,
-    ImageComponent,
-    ProgressSpinnerComponent,
-  ],
+  imports: [ButtonComponent, CarouselModule, CommonModule, ImageComponent],
   templateUrl: './carousel-component.html',
   styleUrl: './carousel-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -35,7 +28,6 @@ export class CarouselComponent {
   productImage: Record<string, number> = {};
   productListImageBegin: Record<string, number> = {};
   productImageMax: number = 5;
-  productLoadedImage: Record<string, Record<number, boolean>> = {};
 
   @Input() set products(currentProducts: any[] | undefined) {
     this.value = currentProducts ?? [];
@@ -48,11 +40,6 @@ export class CarouselComponent {
   }
 
   PrimeIcons = PrimeIcons;
-
-  onImageLoaded(product: any, index: number): void {
-    this.productLoadedImage[product.id] ??= {};
-    this.productLoadedImage[product.id][index] = true;
-  }
 
   getThumbnail(src: string): string {
     return src.replace('/upload/', '/upload/w_100,h_100,c_fill,q_auto,f_auto/');

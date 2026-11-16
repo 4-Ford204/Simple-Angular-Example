@@ -1,16 +1,30 @@
 <p-image class="h-full w-full" [preview]="preview" [appendTo]="appendTo">
   <ng-template #image>
-    <img
-      [src]="src"
-      [alt]="alt"
-      [loading]="loading"
-      [decoding]="decoding"
-      [attr.width]="width"
-      [attr.height]="height"
-      [class]="imageClass"
-      (load)="imageLoad.emit($event)"
-      (error)="imageError.emit($event)"
-    />
+    <div class="relative h-full w-full">
+      @if (!loaded) {
+        <div class="absolute inset-0 z-10 flex items-center justify-center">
+          <app-progress-spinner-component
+            strokeWidth="3"
+            fill="transparent"
+            animationDuration="1.5s"
+            [style]="{ width: '50px', height: '50px' }"
+          />
+        </div>
+      }
+
+      <img
+        [src]="src"
+        [alt]="alt"
+        [loading]="loading"
+        [decoding]="decoding"
+        [attr.width]="width"
+        [attr.height]="height"
+        [class]="imageClass"
+        [class.invisible]="!loaded"
+        (load)="onImageLoaded($event)"
+        (error)="imageError.emit($event)"
+      />
+    </div>
   </ng-template>
 
   @if (preview) {
