@@ -28,6 +28,10 @@ export const FormRoutes: Routes = [
       import('./multi-select-sandbox/multi-select-sandbox').then((m) => m.MultiSelectSandbox),
   },
   {
+    path: 'rating-sandbox',
+    loadComponent: () => import('./rating-sandbox/rating-sandbox').then((m) => m.RatingSandbox),
+  },
+  {
     path: 'toggle-switch-sandbox',
     loadComponent: () =>
       import('./toggle-switch-sandbox/toggle-switch-sandbox').then((m) => m.ToggleSwitchSandbox),

@@ -90,6 +90,14 @@ export class Sidebar {
           tooltipOptions: new TooltipOptions({ tooltipLabel: 'Multi Select' }),
         },
         {
+          label: 'Rating',
+          icon: PrimeIcons.STAR,
+          command: () => {
+            this.router.navigateByUrl(APP_ROUTES.RATING);
+          },
+          tooltipOptions: new TooltipOptions({ tooltipLabel: 'Rating' }),
+        },
+        {
           label: 'Toggle Switch',
           icon: PrimeIcons.TWITCH,
           command: () => {

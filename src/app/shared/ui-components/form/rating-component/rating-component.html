@@ -1,0 +1,11 @@
+<p-rating
+  [disabled]="disabled"
+  [readonly]="readonly"
+  [stars]="stars"
+  [iconOnClass]="iconOnClass"
+  [iconOnStyle]="iconOnStyle"
+  [iconOffClass]="iconOffClass"
+  [iconOffStyle]="iconOffStyle"
+  [(ngModel)]="model"
+  (onRate)="onValueChanged($event)"
+></p-rating>

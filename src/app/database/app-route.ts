@@ -8,6 +8,7 @@ export const APP_ROUTES = {
   HOME: 'home',
   MESSAGE_SANDBOX: 'sandbox/messages/message-sandbox',
   MULTI_SELECT_SANDBOX: 'sandbox/form/multi-select-sandbox',
+  RATING: 'sandbox/form/rating-sandbox',
   SIGN_IN: 'signin',
   TIMELINE_SANDBOX: 'sandbox/data/timeline-sandbox',
   TOAST_SANDBOX: 'sandbox/messages/toast-sandbox',
